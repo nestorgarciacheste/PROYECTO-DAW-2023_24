@@ -1,4 +1,4 @@
-export class Opiniones {
+export class Opinion {
     constructor(usuario, puntuacion, opinion) {
       this.usuario = usuario;
       try {
