@@ -1,21 +1,35 @@
+import { Opinion } from "Opinion.js";
+
 class Producto {
   constructor(
     titulo = "",
     descripcion = "",
     precio = 0.0,
-    opiniones = [],
     puntuacion_Media = 0.0,
+    opiniones = [],
     oferta = false,
     num_Ventas = 0
   ) {
+    if (
+      typeof titulo !== "string" ||
+      !/^.{2,20}$/.test(titulo) ||
+      !/^.{2,200}$/.test(descripcion) ||
+      typeof descripcion !== "string" ||
+      typeof precio !== "number"
+    ) {
+      throw new Error("Los valores proporcionados no son válidos");
+    }
+
     this._titulo = titulo;
     this._descripcion = descripcion;
     this._precio = precio;
-    this._opiniones = opiniones;
     this._puntuacion_Media = puntuacion_Media;
+    this._opiniones = opiniones;
     this._oferta = oferta;
     this._num_Ventas = num_Ventas;
   }
+
+  // Resto de la implementación de la clase...
 
   get titulo() {
     return this._titulo;
