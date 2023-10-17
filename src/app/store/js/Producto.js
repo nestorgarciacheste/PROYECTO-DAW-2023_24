@@ -1,4 +1,4 @@
-import { Opinion } from "Opinion.js";
+import { Opinion } from "./Opinion";
 
 class Producto {
   constructor(
