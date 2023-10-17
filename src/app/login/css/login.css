@@ -1,0 +1,54 @@
+.custom-button {
+  background-color: #0f7173;
+  color: #fff;
+}
+.custom-button:hover {
+  background-color: #0f7173;
+  transform: scale(0.9);
+}
+
+.button-imagesGitHub {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+}
+.button-imagesGoogle {
+  position: absolute;
+  top: 60%;
+  left: 80%;
+}
+
+a {
+  color: gray;
+  text-align: center;
+  font-size: 10pt;
+  text-decoration: none;
+  display: block;
+}
+
+a:hover {
+  color: #0f7173;
+}
+
+div {
+  margin: 2%;
+}
+
+input {
+  border: 0cm;
+  background-color: #eef6f7;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+}
+
+.shadow-rectangle {
+  width: 50%;
+  padding-top: 5%;
+  background-color: #f2f6f7;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
