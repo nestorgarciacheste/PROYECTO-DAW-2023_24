@@ -10,7 +10,6 @@
     <title>Sign up</title>
     <script src="headerFooter.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="validacion.js"></script>
 </head>
 <body >
     <header id="header-container"></header>
@@ -51,15 +50,14 @@
 
         <div class="col-md-4">
             <label for="validationDefault01" class="form-label">Email</label>
-            <input type="email" class="form-control" id="validationDefault01" required>
+            <input name="email" type="email" class="form-control" id="validationDefault01" required>
             <div class="invalid-feedback">
                 Please select a valid email.
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationDefault02" class="form-label">Phone</label>
-            <input type="tel" class="form-control" id="validationDefault02"
-                pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+            <input name="telefono" type="tel" class="form-control" id="validationDefault02" required>
             <div class="invalid-feedback">
                 Please select a valid phone.
             </div>
@@ -69,14 +67,14 @@
 
         <div class="col-md-4">
             <label for="validationDefault01" class="form-label">Password</label>
-            <input type="password" class="form-control" id="validationDefault01" required>
+            <input name="password" type="password" class="form-control" id="validationDefault01" required>
             <div class="invalid-feedback">
-                Please select a valid password.
+                The password must have uppercase, lowercase, digits and 8 characters.
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationDefault02" class="form-label">Confirmation password</label>
-            <input type="password" class="form-control" id="validationDefault02" required>
+            <input name="confPassword" type="password" class="form-control" id="validationDefault02" required>
             <div class="invalid-feedback">
                 Password not matched.
             </div>
@@ -144,6 +142,7 @@
             <button class="btn btn-primary" type="submit">Submit form</button>
         </div>
     </form>
+    <script src="validacion.js"></script>
 </body>
 <footer id="footer-container"></footer>
 
