@@ -26,3 +26,8 @@
     max-height: 90%;
     height: 90%; /* Ajusta la altura deseada en píxeles */
 }
+
+.ln-right{
+    border: 19px ;
+    border-color: #71a191;
+}
