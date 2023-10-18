@@ -1,1 +1,14 @@
-@import url(../../header_footer/css/topbar_style.css);
+.divrojo{
+    background-color: #d8a47f;
+}
+.cuerpocartas{
+    background-color: #f05d5e;
+    border-radius: 0 0 10px 10px;
+}
+.textocartas{
+    color: white ;
+}
+.card{
+    background-color: #d8a47f;
+    border: 0;
+}
