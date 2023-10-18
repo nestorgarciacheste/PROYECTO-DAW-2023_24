@@ -38,11 +38,45 @@
     transform: translate(-50%, -50%); /* Centrar el círculo */
 }
 
+.icono_imagen {
+    width: 15%; /* El ancho es el 110% del contenedor principal */
+    padding-bottom: 50%; /* La altura es igual al ancho para hacerlo circular */
+    color: black;
+    position: absolute;
+    left: 400px; /* El centro horizontal del círculo */
+    top: 800px; /* El centro vertical del círculo */
+    transform: translate(-50%, -50%); /* Centrar el círculo */
+}
+
+.icono_nombre {
+    color: black;
+}
+
+.icono_email {
+    position: absolute;
+    width: 20px;
+    padding-left: 1%;
+    color: black;
+}
+
 .section {
     background-color: white;
-    margin: 80px , 20px, 20px, 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .titulo {
-    display: flex;
+    align-self: center;
+    width: 70%;
+    margin-bottom: 12vh;
+}
+
+.opciones {
+    height: 30vh;
+}
+
+.opciones > h2 {
+    padding: 20px 0;
+    margin-left: 5%;
 }
