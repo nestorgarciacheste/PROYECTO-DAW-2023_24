@@ -1,0 +1,28 @@
+
+
+.bordes{
+    border-radius: 20px;
+}
+
+.imagenPrincipal{
+    max-width: 100%;
+    height: auto;
+}
+
+.imagenSecundaria{
+    width: 100%;
+    max-width: 100%;
+    height: 100%; /* Ajusta la altura deseada en píxeles */
+}
+
+.custom-container {
+    max-width: 80%; /* Cambia el valor a la anchura deseada */
+    margin: 0 auto; /* Esto centra el contenedor en la página */
+  }
+
+  .imagenPequeña{
+    width: 70%;
+    max-width: 70%;
+    max-height: 90%;
+    height: 90%; /* Ajusta la altura deseada en píxeles */
+}
