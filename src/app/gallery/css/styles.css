@@ -26,3 +26,7 @@
     max-height: 90%;
     height: 90%; /* Ajusta la altura deseada en píxeles */
 }
+
+.img-container{
+    height: 100%;
+}
