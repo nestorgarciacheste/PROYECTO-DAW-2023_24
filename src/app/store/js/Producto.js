@@ -21,8 +21,6 @@ class Producto {
     this._num_Ventas = 0;
   }
 
-  // Resto de la implementación de la clase...
-
   get titulo() {
     return this._titulo;
   }
