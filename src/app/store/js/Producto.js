@@ -1,15 +1,7 @@
 import { Opinion } from "./Opinion";
 
 class Producto {
-  constructor(
-    titulo = "",
-    descripcion = "",
-    precio = 0.0,
-    puntuacion_Media = 0.0,
-    opiniones = [],
-    oferta = false,
-    num_Ventas = 0
-  ) {
+  constructor(titulo = "", descripcion = "", precio = 0.0, oferta = false) {
     if (
       typeof titulo !== "string" ||
       !/^.{2,20}$/.test(titulo) ||
@@ -23,13 +15,11 @@ class Producto {
     this._titulo = titulo;
     this._descripcion = descripcion;
     this._precio = precio;
-    this._puntuacion_Media = puntuacion_Media;
-    this._opiniones = opiniones;
+    this._puntuacion_Media = 0;
+    this._opiniones = [];
     this._oferta = oferta;
-    this._num_Ventas = num_Ventas;
+    this._num_Ventas = 0;
   }
-
-  // Resto de la implementación de la clase...
 
   get titulo() {
     return this._titulo;
@@ -87,3 +77,5 @@ class Producto {
     this._num_Ventas = value;
   }
 }
+
+var hola;
