@@ -14,7 +14,9 @@
             margin: 30px;
         }
     </style>
+    <script src="headerFooter.js"></script>
 </head>
+<header id="header-container"></header>
 
 <body>
     <h2>Sign up</h2>
@@ -62,8 +64,8 @@
         </div>
         <div class="col-md-4">
             <label for="validationDefault02" class="form-label">Phone</label>
-            <input type="tel" class="form-control" id="validationDefault02" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
-                required>
+            <input type="tel" class="form-control" id="validationDefault02"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
             <div class="invalid-feedback">
                 Please select a valid phone.
             </div>
@@ -160,5 +162,6 @@
         })()
     </script>
 </body>
+<footer id="footer-container"></footer>
 
 </html>
