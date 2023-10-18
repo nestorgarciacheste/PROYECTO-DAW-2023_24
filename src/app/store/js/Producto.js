@@ -78,4 +78,4 @@ class Producto {
   }
 }
 
-var hola;
+export default producto;
