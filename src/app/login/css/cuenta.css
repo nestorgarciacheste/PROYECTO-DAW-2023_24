@@ -59,6 +59,10 @@
     color: black;
 }
 
+.icono_email:hover, .icono_imagen:hover, .icono_nombre:hover {
+    color: gray;
+}
+
 .section {
     background-color: white;
     display: flex;
@@ -76,7 +80,17 @@
     height: 30vh;
 }
 
-.opciones > h2 {
+.opciones > a > h2 {
     padding: 20px 0;
     margin-left: 5%;
+    width: 50%;
+}
+
+.opciones > a {
+    text-decoration: none;
+    color: black;
+}
+
+.opciones > a:hover {
+    color: gray;
 }
