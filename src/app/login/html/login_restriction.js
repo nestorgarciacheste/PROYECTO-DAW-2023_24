@@ -1,21 +1,39 @@
 function checkform() {
-    var correo = document.getElementById("email").value;
-    var contraseña = document.getElementById("password").value;
-    if (!esCorrecto(correo)) {
-      alert("El correo debe tener el formato xxx@yyyy.zzzz");
-    } else if (!esCorrecta(contraseña)) {
-      alert("La contraseña debe tener entre 8 y 10 caracteres");
-    } else {
-      alert("Tus datos han sido enviados");
-    }
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var emailError = document.getElementById("emailError");
+  var passwordError = document.getElementById("passwordError");
+
+  if (!isCorrect(email)) {
+      emailError.style.display = "block"; 
+  } else {
+      emailError.style.display = "none"; 
+  }
+
+  if (!isPasswordCorrect(password)) {
+      passwordError.style.display = "block";
+  } else {
+      passwordError.style.display = "none"; 
+  }
+
+  if (isCorrect(email) && isPasswordCorrect(password)) {
+      window.location.href = ""; 
+   }
+}
+  
+  function isCorrect(email) {
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(email);
   }
   
-  function esCorrecto(correo) {
-    var correoRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return correoRegex.test(correo);
-  }
-  
-  function esCorrecta(contraseña) {
-    var contraseñaRegex = /.{8,10}/;
-    return contraseñaRegex.test(contraseña);
+  function isPasswordCorrect(password) {
+    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;    
+    /*
+    (?=.*[a-z])-> al menos una minúscula
+    (?=.*[A-Z]) -> al menos una mayúscula
+    (?=.*\d) -> al menos un dígito
+    (?=.*[\W_]) -> al menos un carácter especial
+    {8,} -> longitud mínima de 8
+    */
+    return passwordRegex.test(password);
   }
