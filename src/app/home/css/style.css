@@ -1,9 +1,14 @@
 .divrojo{
     background-color: #d8a47f;
-}
+    border-radius: 1.5rem;
+    width: 50%;
+    border: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}   
 .cuerpocartas{
     background-color: #f05d5e;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 15px 15px;
 }
 .textocartas{
     color: white ;
