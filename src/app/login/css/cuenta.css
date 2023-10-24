@@ -11,6 +11,90 @@
     font-family: "Ubuntu", sans-serif;
   }
 
+
+  /* VENTANA NOMBRE EMAIL Y FOTO DE PERFIL*/
+
+#ventana_nombre {
+    width: 0%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.3);
+  overflow-x: hidden;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .overlay-content > div {
+    width: 22%;
+    height: 300px;
+    align-self: center;
+    border-radius: 2%;
+    background-color: white;
+    box-shadow: 10px 10px 25px black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.overlay-content > div > h3{
+    padding-top: 50px;
+}
+
+.overlay-content > div > p{
+    padding: 25px 0;
+}
+
+.overlay-content > div > p > input{
+    border-radius: 10px;
+}
+
+.overlay-content > div > div {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.overlay-content > div > div > button{
+    border: 0px;
+    padding: 5px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px black;
+}
+
+.overlay-content > div > div > button:hover{
+    border: 0px;
+    background-color: #B0B0B0;
+    padding: 5px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px black;
+}
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    text-decoration: none;
+  }
+
+
 .main {
     width: 100%;
     height: 90vh;
@@ -27,47 +111,78 @@
     width: 15%;
 }
 
-#circulo {
-    width: 100%; /* El ancho es el 110% del contenedor principal */
-    padding-bottom: 100%; /* La altura es igual al ancho para hacerlo circular */
-    border-radius: 50%;
-    background: #D8A47F;
+.circulo {
+    width: 100%;
+    padding-bottom: 100%;border-radius: 50%;
+    background-image:url("https://i.pinimg.com/736x/34/cb/b9/34cbb9329d194cae02d75c7337bd19d4.jpg");
+    background-size: cover;
     position: absolute;
-    border: 1px solid red;
-    left: 100%; /* El centro horizontal del círculo */
-    top: 25%; /* El centro vertical del círculo */
-    transform: translate(-50%, -50%); /* Centrar el círculo */
+    left: 100%;
+    top: 25%;
+    transform: translate(-50%, -50%);
 }
 
-.imagen {
+.circulo > a {
+    display: none;
+    text-decoration: none;
+}
+
+.circulo_dentro {
     width: 100%;
-    position: absolute;
+    padding-bottom: 100%;
     border-radius: 50%;
-    top: 2px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: background 0.3s;
+    transform: translate(-50%, -50%);
+}
+
+.circulo_dentro:hover {
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .icono_imagen {
-    width: 50%; /* El ancho es el 110% del contenedor principal */
-    padding-bottom: 50%; /* La altura es igual al ancho para hacerlo circular */
+    font-size: 200%; /* Ajusta el tamaño del ícono según tus preferencias */
+    position: fixed;
+    left: 50%; /* El centro horizontal del círculo */
+    top: 50%; /* El centro vertical del círculo */
+    transform: translate(-50%, -50%); /* Centrar el ícono en el círculo */
+    color: white; /* Color del ícono */
+}
+
+#icono_nombre {
     color: black;
+    transition: color 0.3s;
+    display: none;
+    padding-top: 25%;
+    padding-left: 25%;
+    font-size: 30px;
+}
+
+#link_nombre {
+    text-decoration: none;
+}
+
+#icono_email {
+    display: none;
     position: absolute;
-    left: 160px; /* El centro horizontal del círculo */
-    top: 320px; /* El centro vertical del círculo */
-    transform: translate(-50%, -50%); /* Centrar el círculo */
-}
-
-.icono_nombre {
+    padding-left: 0.5%;
     color: black;
+    transition: color 0.3s;
 }
 
-.icono_email {
-    position: absolute;
-    width: 20px;
-    padding-left: 1%;
-    color: black;
-}
-
-.icono_email:hover, .icono_imagen:hover, .icono_nombre:hover {
+#icono_email:hover, #icono_nombre:hover {
     color: gray;
 }
 
@@ -82,6 +197,13 @@
     align-self: center;
     width: 70%;
     margin-bottom: 12vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo > div {
+    display: flex;
+    flex-direction: row;
 }
 
 .opciones {
@@ -97,6 +219,7 @@
 .opciones > a {
     text-decoration: none;
     color: black;
+    transition: color 0.3s;
 }
 
 .opciones > a:hover {
