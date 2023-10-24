@@ -1,0 +1,28 @@
+body{
+    display: flex;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+}
+
+.first{
+    padding: 2px;
+    justify-content: space-around;
+}
+
+.imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.im{
+    justify-content: space-around;
+}
