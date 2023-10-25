@@ -104,7 +104,6 @@ class Product {
     if (!existingReview) {
       let opn = new Opinion(user, punctuation, opinion);
       this.#reviews.push(opn);
-      reviews.push(opn);
     }
   }
 }
