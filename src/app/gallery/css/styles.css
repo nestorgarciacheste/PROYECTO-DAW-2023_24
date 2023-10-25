@@ -1,17 +1,21 @@
-*{
+@import url("../../header_footer/css/topbar_style.css");
+.ctn *{
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-body{
-    
+.body{
     background-color: #E7ECEF;
+}
+
+.ctn{
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 
 .main-container{
@@ -29,7 +33,7 @@ body{
     flex-direction: row;
     justify-content: center;
     margin-bottom: 3%;
-    
+    align-items: center;
 }
 
 .line{
@@ -96,11 +100,13 @@ body{
     height: 20%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .big-img{
     width: 70%;
-    height: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -116,10 +122,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     margin: 2%;
-    border-radius: 5%;
-    overflow: hidden;
+    
+    
 }
 
 .im{
@@ -129,6 +135,8 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
     margin: 1%;
+    border-radius: 5%;
+    overflow: hidden;
 }
 
 .img{
