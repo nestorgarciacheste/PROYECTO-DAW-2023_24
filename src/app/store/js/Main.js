@@ -2,6 +2,7 @@ import producto from "./Product";
 import { Opinion } from "./Opinion";
 
 var productList = [];
+var selectedProductID = 0;
 
 function add_Product(product) {
   const existingProduct = productList.find(
@@ -28,4 +29,8 @@ function deleteProduct(product) {
   if (existingProductIndex !== -1) {
     productList.splice(existingProductIndex, 1);
   }
+}
+
+function selectProduct(id) {
+  selectedProductID = id;
 }
