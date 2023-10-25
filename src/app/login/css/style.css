@@ -1,1 +1,34 @@
 @import url(../../header_footer/css/topbar_style.css);
+.form-control{
+    background-color: #EFE2D8;
+    border: 1px solid #e4d0c2;
+   
+}
+.form-control:focus{
+    box-shadow: 0 0 15px #e4d0c2;
+    border: 1px solid #e4d0c2;
+    outline: none;
+}
+.btn{
+    color: #0F7173;
+    border: 2px solid #0F7173;
+   
+}
+.btn:hover{
+    color: white;
+    background-color: #0F7173;
+}
+.form-check-input:checked{
+    background-color: #EFE2D8;
+    border: 1px solid #e4d0c2;
+    box-shadow: #D8A47F;
+}
+.form-check-input:focus{
+    border: 1px solid #e4d0c2;
+    box-shadow: 0 0 10px #D8A47F;
+}
+tr,td{
+   padding-right: 50px;
+   padding-bottom: 30px;
+   vertical-align: top;
+}
