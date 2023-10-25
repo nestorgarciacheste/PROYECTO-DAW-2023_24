@@ -1,25 +1,25 @@
 export class Opinion {
-    constructor(usuario, puntuacion, opinion) {
-      this.usuario = usuario;
-      try {
-        if (!Number.isInteger(puntuacion) || puntuacion < 0 || puntuacion > 5) {
-          throw new Error(
-            "La puntuación elegida no es la correcta, debe ser un número entero mayor o igual a 0 e inferior o igual a 5."
-          );
-        }
-        this.puntuacion = puntuacion;
-      } catch (error) {
-        alert(error.message);
+  constructor(user, rating, comment) {
+    this.user = user;
+    try {
+      if (!Number.isInteger(rating) || rating < 0 || rating > 5) {
+        throw new Error(
+          "The chosen rating is incorrect, it should be an integer between 0 and 5."
+        );
       }
-  
-      try {
-        if (opinion.length > 300) {
-          throw new Error("La opinión debe tener menos de 300 caracteres.");
-        }
-        this.opinion = opinion;
-      } catch (error) {
-        alert(error.message);
-      }
-      this.fecha = new Date();
+      this.rating = rating;
+    } catch (error) {
+      alert(error.message);
     }
+
+    try {
+      if (comment.length > 300) {
+        throw new Error("The comment should have less than 300 characters.");
+      }
+      this.comment = comment;
+    } catch (error) {
+      alert(error.message);
+    }
+    this.date = new Date();
   }
+}
