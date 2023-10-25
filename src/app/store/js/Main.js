@@ -52,14 +52,15 @@ function createProducts() {
   ];
 
   var idProduct = 0;
-  for (let i = 0; i < 12; i += 2) {
-    let o = new Product(
+  for (let i = 0; i < 10; i += 2) {
+    var o = new Product(
       idProduct,
       data[i],
       data[i + 1],
       getRandomNumber(30, 300),
       isOnSale()
     );
+    o.add_Review(user, getRandomNumber(0, 10), "Vegetta");
     idProduct++;
     add_Product(o);
   }
