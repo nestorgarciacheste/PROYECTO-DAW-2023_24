@@ -19,7 +19,6 @@ function edit() {
 }
 
 function cambiarNombre() {
-
     let nombre = document.getElementById("enter_name").value
     document.getElementById("enter_name").value = ""
     document.getElementById("nombre").innerHTML = `Buenas, ${nombre}`
@@ -27,12 +26,15 @@ function cambiarNombre() {
 }
 
 function cambiarEmail() {
-    let nombre = document.getElementById("enter_email").value
+    let email = document.getElementById("enter_email").value
+    document.getElementById("enter_email").value = ""
+    document.getElementById("email").innerHTML = `${email}`
+    document.getElementById("ventana_email").style.width = "0%";
     /*let nombre = prompt("Introduce el nombre")
     document.getElementById("email").innerHTML = `${nombre}`*/
 }
 
-function openName() {
+  function openName() {
     document.getElementById("ventana_nombre").style.width = "100%";
   }
   
@@ -41,9 +43,9 @@ function openName() {
   }
 
   function openEmail() {
-    document.getElementById("ventana_nombre").style.width = "100%";
+    document.getElementById("ventana_email").style.width = "100%";
   }
   
   function closeEmail() {
-    document.getElementById("ventana_nombre").style.width = "0%";
+    document.getElementById("ventana_email").style.width = "0%";
   }

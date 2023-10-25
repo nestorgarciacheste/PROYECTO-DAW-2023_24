@@ -20,15 +20,28 @@
   <body>
     <header id="header-container"></header>
 
-    <!-- Ventana de cambiar el nombre -->
+    <!-- Ventana de cambiar el Nombre -->
     <div id="ventana_nombre" class="overlay">
       <div class="overlay-content">
         <div>
-          <h3>Cambiar el nombre</h3>
           <p>Nombre: <input type="text" id="enter_name" placeholder="nombre"></p>
           <div>
-            <button value="cambiar_nombre" onclick="cambiarNombre()">Cambiar Nombre</button>
-            <button value="cambiar_nombre" onclick="closeName()">Cancelar</button>
+            <button value="cambiar_nombre" id="boton_nombre" onclick="cambiarNombre()">Cambiar Nombre</button>
+            <button value="cancelar" id="boton_cancelar1" onclick="closeName()">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ventana de cambio de Email -->
+    <div id="ventana_email" class="overlay">
+      <div class="overlay-content">
+        <div>
+          <h3>Cambiar el Email</h3>
+          <p>Email: <input type="text" id="enter_email" placeholder="email"></p>
+          <div>
+            <button value="cambiar_email" onclick="cambiarEmail()">Cambiar Email</button>
+            <button value="cancelar" onclick="closeEmail()">Cancelar</button>
           </div>
         </div>
       </div>
@@ -50,7 +63,6 @@
         <div class="col-sm-10 p-3 section">
           <div class="titulo">
             <div class="iconos"><h1 id ="nombre">Buenas, (Nombres)</h1><a href="javascript:void(0);" id="link_nombre" onclick="openName()"><span class="material-symbols-outlined" id="icono_nombre">edit</span></a></div>
-
             <div class="iconos"><p id="email">usuarios@gtmail.com</p><a href="javascript:void(0);" onclick="openEmail()"><span class="material-symbols-outlined" id="icono_email">edit</span></a></div>
           </div>
           <div class="opciones">

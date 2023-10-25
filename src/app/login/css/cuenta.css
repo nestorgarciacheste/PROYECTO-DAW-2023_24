@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
   }
   
   header,
@@ -18,14 +19,18 @@
     width: 0%;
 }
 
+#ventana_emial {
+    width: 0%;
+}
+
 .overlay {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(255,255,255, 0.3);
   overflow-x: hidden;
 }
 
@@ -41,15 +46,18 @@
   }
 
   .overlay-content > div {
-    width: 22%;
-    height: 300px;
+    padding: 20px;
+    width: 25vw;
+    height: 20%;
     align-self: center;
     border-radius: 2%;
     background-color: white;
-    box-shadow: 10px 10px 25px black;
-    display: flex;
+    display: relative;
+    float: left;
+    border: 2px solid gray;
     justify-content: center;
     flex-wrap: wrap;
+    box-shadow: 2px 2px 20px gray;
 }
 
 .overlay-content > div > h3 {
@@ -57,35 +65,38 @@
 }
 
 .overlay-content > div > p {
-    padding: 25px 0;
+    margin: 20px;
 }
 
 .overlay-content > div > p > input {
-    border-radius: 5px;
-    border: 2px solid gray
+    border-radius: 10px;
+    border: 2px solid gray;
+    width: 75%;
 }
 
 .overlay-content > div > div {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    display: inline-block;
+    border: 1px solid green;
 }
 
 .overlay-content > div > div > button{
     border: 2px solid gray;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
     border-radius: 10px;
     background-color: white;
+    margin-left: 10px;
+    border: 1px solid red;
 }
 
 .overlay-content > div > div > button:hover{
     border: 2px solid gray;
     color: white;
     background-color: rgb(56, 56, 56);
-    padding: 5px;
-    border-radius: 10px;
-    transition: linear 0.3s;
+    padding: 8px;
+    border-radius: 8px;
+    transition: linear 0.1s;
 }
 
   .overlay .closebtn {
@@ -226,4 +237,54 @@
 
 .opciones > a:hover {
     color: gray;
+}
+
+/* Mobile */
+@media only screen and (max-width: 866px) {
+    .aside {
+        width: 100%;
+    }
+
+    .circulo {
+        width: 19%;
+        padding-bottom: 19%;
+        border-radius: 50%;
+        background-image:url("https://i.pinimg.com/736x/34/cb/b9/34cbb9329d194cae02d75c7337bd19d4.jpg");
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .circulo > a {
+        display: none;
+        text-decoration: none;
+    }
+    
+    .circulo_dentro {
+        width: 100%;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.4);
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition: background 0.3s;
+        transform: translate(-50%, -50%);
+    }
+    
+    .circulo_dentro:hover {
+        width: 100%;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }
