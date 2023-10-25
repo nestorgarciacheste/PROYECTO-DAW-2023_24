@@ -19,9 +19,9 @@ class Product {
   ) {
     if (
       typeof title !== "string" ||
-      !/^.{2,}$/.test(title) ||
+      title.length < 2 ||
       typeof description !== "string" ||
-      !/^.{2,}$/.test(description) ||
+      description.length < 2 ||
       typeof price !== "number" ||
       typeof id !== "number"
     ) {
@@ -97,8 +97,8 @@ class Product {
     this.#onSale = onSale;
   }
 
-  add_Review(user, punctuation, opinion) {
-    const existingReview = reviews.find(
+  addReview(user, punctuation, opinion) {
+    const existingReview = this.#reviews.find(
       (existingReview) => existingReview.opinion === opinion
     );
     if (!existingReview) {

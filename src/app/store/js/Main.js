@@ -1,10 +1,10 @@
 import { Opinion } from "./Opinion";
 import Product from "./Product";
 
-var productList = [];
-var selectedProductID = 0;
+const productList = [];
+let selectedProductID = 0;
 
-function add_Product(product) {
+function addProduct(product) {
   const existingProduct = productList.find(
     (existingProduct) => existingProduct.id === product.id
   );
@@ -13,13 +13,12 @@ function add_Product(product) {
   }
 }
 
-function list_Products() {
-  for (let i = 0; i < productList.length; i++) {
-    const product = productList[i];
+function listProducts() {
+  productList.forEach((product) => {
     console.log(
       `${product.id}, ${product.title}, ${product.description}, ${product.price}€`
     );
-  }
+  });
 }
 
 function deleteProduct(product) {
@@ -36,7 +35,7 @@ function selectProduct(id) {
 }
 
 function createProducts() {
-  var data = [
+  const data = [
     "Introduction to Programming",
     "This course provides the fundamentals of programming, including basic concepts of algorithms and data structures.",
     "Front-end Web Development",
@@ -51,18 +50,18 @@ function createProducts() {
     "Introduces the Python programming language and its applications in software development, data analysis, and more.",
   ];
 
-  var idProduct = 0;
-  for (let i = 0; i < 10; i += 2) {
-    var o = new Product(
+  let idProduct = 0;
+  for (let i = 0; i < data.length; i += 2) {
+    const product = new Product(
       idProduct,
       data[i],
       data[i + 1],
       getRandomNumber(30, 300),
       isOnSale()
     );
-    o.add_Review(user, getRandomNumber(0, 10), "Vegetta");
+    product.addReview(user, getRandomNumber(0, 10), "Vegetta");
     idProduct++;
-    add_Product(o);
+    addProduct(product);
   }
 }
 
@@ -71,14 +70,9 @@ function getRandomNumber(min, max) {
     [min, max] = [max, min];
   }
 
-  const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-  return randomNum;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function isOnSale() {
-  const randomNum = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
-  if (randomNum === 1) {
-    return false;
-  }
-  return true;
+  return Math.random() < 0.5;
 }
