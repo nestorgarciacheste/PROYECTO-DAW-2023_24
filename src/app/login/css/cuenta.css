@@ -52,16 +52,17 @@
     flex-wrap: wrap;
 }
 
-.overlay-content > div > h3{
+.overlay-content > div > h3 {
     padding-top: 50px;
 }
 
-.overlay-content > div > p{
+.overlay-content > div > p {
     padding: 25px 0;
 }
 
-.overlay-content > div > p > input{
-    border-radius: 10px;
+.overlay-content > div > p > input {
+    border-radius: 5px;
+    border: 2px solid gray
 }
 
 .overlay-content > div > div {
@@ -72,18 +73,19 @@
 }
 
 .overlay-content > div > div > button{
-    border: 0px;
+    border: 2px solid gray;
     padding: 5px;
-    border-radius: 5%;
-    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .overlay-content > div > div > button:hover{
-    border: 0px;
-    background-color: #B0B0B0;
+    border: 2px solid gray;
+    color: white;
+    background-color: rgb(56, 56, 56);
     padding: 5px;
-    border-radius: 5%;
-    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    transition: linear 0.3s;
 }
 
   .overlay .closebtn {
