@@ -31,8 +31,9 @@
 .shadow-rectangle {
   background-image: url(../../../assets/img/vector-1.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   width: 47%;
-  height: 55vh;
+  height: 60vh;
   background-color: #f2f6f7;
   border-radius: 10px;
   box-shadow: 1px 2px 13px 7px #c3c9cc; 
@@ -54,8 +55,8 @@
       justify-content: center;
       margin-left: 30%;
     }
-
   }
+
   input {
     width: 350px;
     border: 0cm;
@@ -63,7 +64,6 @@
     border-bottom: 1px solid black;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 0px;
-    outline: none;
   }
   .pwd{
     padding-top: 10%;
