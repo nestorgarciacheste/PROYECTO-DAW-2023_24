@@ -1,28 +1,181 @@
-@import url(../../header_footer/css/topbar_style.css);
-
-.bordes{
-    border-radius: 20px;
-}
-
-.imagenPrincipal{
-    max-width: 100%;
-    height: auto;
-}
-
-.imagenSecundaria{
+*{
+    height: 100%;
     width: 100%;
-    max-width: 100%;
-    height: 100%; /* Ajusta la altura deseada en píxeles */
+    margin: 0;
+    padding: 0;
 }
 
-.custom-container {
-    max-width: 80%; /* Cambia el valor a la anchura deseada */
-    margin: 0 auto; /* Esto centra el contenedor en la página */
-  }
+body{
+    
+    background-color: #E7ECEF;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-  .imagenPequeña{
+.main-container{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+}
+
+.first-container{
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3%;
+    
+}
+
+.line{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.line2{
+    width: 3%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.line3{
+    width: 3%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p1{
+    width: 96.5%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px #0F7173;
+}
+
+.p2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-right: solid 2px #0F7173;
+}
+
+.p3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-right: solid 2px #0F7173;
+}
+
+.second-container{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+
+.therd-container{
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.big-img{
     width: 70%;
-    max-width: 70%;
-    max-height: 90%;
-    height: 90%; /* Ajusta la altura deseada en píxeles */
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 2%;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+
+.imgs{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 2%;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.im{
+    width: 100%;
+    height: 32.5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.img{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.txt{
+    color: white;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #0F7173;
+    margin: 5%;
+}
+
+.string{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.second-img{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.therd-img{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5%;
+    overflow: hidden;
 }
