@@ -1,5 +1,6 @@
-@import url(../../header_footer/css/topbar_style.css);
-.custom-button {
+@import url(../../header_footer/css/topbar_style.css); /*header and footer of the website*/
+
+.custom-button {  /*button to log in*/
   width: 200px;
   background-color: #0f7173;
   color: #fff;
@@ -8,32 +9,34 @@
   font-weight: bold;
   padding-bottom: 1%;
 }
-.custom-button:hover {
+.custom-button:hover {  /*button to log in when is hover*/
   background-color: #0f7173;
   transform: scale(0.95);
 }
 
-.links {
-  a:hover {
-    color: #0f7173;
-  }
+.links { /*links to sign up or restablice the password*/
   a {
     color: gray;
     text-align: center;
     font-size: 10pt;
     text-decoration: none;
   }
+  a:hover {
+    color: #0f7173;
+  }
   display: flex;
   flex-direction: column;
   margin: 4%;
 }
 
-.shadow-rectangle {
+.shadow-rectangle { /*shadow rectangle which contains everything*/
   background-image: url(../../../assets/img/vector-1.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 47%;
+  min-width: 400px;
   height: 60vh;
+  min-height: 400px;
   background-color: #f2f6f7;
   border-radius: 10px;
   box-shadow: 1px 2px 13px 7px #c3c9cc; 
@@ -44,51 +47,49 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  form{
+  margin: auto;
+
+  form{ /*formulary to log in*/
     width: 100%;
-    display: flex;
-    .container{
+    position: relative;
+    left: 15%;
+    
+    .container{  /*to distribute things at the container*/
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-left: 30%;
     }
   }
 
-  input {
+  input {  /*enter here the password and email*/
     width: 350px;
     border: 0cm;
     padding-top: 10%;
     border-bottom: 1px solid black;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 0px;
-  }
-  .pwd{
-    padding-top: 10%;
+    outline: none;
   }
 }
 
-.text-center{
+.text-center{  /*to distribute buttons*/
   position: absolute;
-  top: 45%;
-  left: 67%;
+  top: 44%;
+  left: 74%;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  font-size: 24px; 
-
 }
 
-.btn.btn-floating {
+.btn.btn-floating { /*insert propierties to the buttons*/
   font-size: 24px; 
-  width: 70px; 
-  height: 70px; 
+  width: 50px; 
+  height: 50px; 
+  margin-bottom: 20%;
 }
 
 
-.img-container{
+.img-container{ /*to distribute the logo*/
   width: 150px;
   height: 150px;
   background-image: url(../../../assets/img/logo.svg);
@@ -98,3 +99,41 @@
   border-radius: 50%;
 }
 
+/*Responsive*/
+
+@media screen and (max-width: 1350px) { /*medium*/
+    .shadow-rectangle { /*shadow rectangle which contains everything*/
+      background-image: url(../../../assets/img/logo-opacity.svg);
+      background-size: contain;
+      form{ /*formulary to log in*/
+        width: 100%;
+        position: relative;
+        left: 0%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) { /*small*/
+  .shadow-rectangle { /*shadow rectangle which contains everything*/
+    background-image: url(../../../assets/img/logo-opacity.svg);
+    background-size: cover;
+    form{ /*formulary to log in*/
+      width: 100%;
+      position: relative;
+      left: 0%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) { /*so small*/
+  .shadow-rectangle { /*shadow rectangle which contains everything*/
+    background-image: url(../../../assets/img/logo-opacity.svg);
+    background-size: cover;
+    margin-top: 10%;
+    form{ /*formulary to log in*/
+      width: 100%;
+      position: relative;
+      left: 0%;
+    }
+  }
+}

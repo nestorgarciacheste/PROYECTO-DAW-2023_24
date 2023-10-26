@@ -3,15 +3,20 @@ function checkform() {
   var password = document.getElementById("password").value;
   var emailError = document.getElementById("emailError");
   var passwordError = document.getElementById("passwordError");
+  var google = document.getElementById("google");
 
   if (!isCorrect(email)) {
-      emailError.style.display = "block"; 
+      emailError.style.display = "block";
+      google.style.marginTop = "-15px"; 
+      google.style.marginBottom = "40px"; 
   } else {
       emailError.style.display = "none"; 
   }
 
   if (!isPasswordCorrect(password)) {
       passwordError.style.display = "block";
+      google.style.marginTop = "-40px";
+      google.style.marginBottom = "15px";  
   } else {
       passwordError.style.display = "none"; 
   }
@@ -19,6 +24,10 @@ function checkform() {
   if (isCorrect(email) && isPasswordCorrect(password)) {
       window.location.href = ""; 
    }
+
+   if (!isCorrect(email) && !isPasswordCorrect(password)) {
+    google.style.marginTop = "-40px"; 
+    google.style.marginBottom = "40px";  }
 }
   
   function isCorrect(email) {
