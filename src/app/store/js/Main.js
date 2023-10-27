@@ -1,5 +1,4 @@
-import { Opinion } from "./Opinion";
-import Product from "./Product";
+const Product = require("./Product");
 
 const productList = [];
 let selectedProductID = 0;
