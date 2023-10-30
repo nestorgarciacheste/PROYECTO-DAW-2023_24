@@ -6,9 +6,50 @@
     padding: 0;
 }
 
-.body{
-    background-color: #E7ECEF;
-}
+@media screen and (max-width: 767px) {
+    /* Estilos para pantallas de tamaño móvil */
+    body {
+      background-color: lightblue; /* Cambia el fondo para móvil */
+    }
+  
+    .main-container {
+      width: 90%; /* Ajusta el ancho del contenedor principal para móvil */
+      margin-bottom: 30%;
+    }
+  
+    /* Define más estilos específicos para móvil aquí */
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos para pantallas de tamaño portátil */
+    body {
+      background-color: lightgreen; /* Cambia el fondo para portátil */
+    }
+  
+    .main-container {
+      width: 70%; /* Ajusta el ancho del contenedor principal para portátil */
+    }
+  
+    /* Define más estilos específicos para portátil aquí */
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* Estilos para pantallas de tamaño ordenador */
+    body {
+      background-color: lightgray; /* Cambia el fondo para ordenador */
+    }
+  
+    .main-container {
+      width: 50%; /* Ajusta el ancho del contenedor principal para ordenador */
+      margin-bottom: 3%;
+    }
+  
+    /* Define más estilos específicos para ordenador aquí */
+  }
+
+
+
+
 
 .ctn{
     height: 100%;
@@ -18,14 +59,7 @@
     
 }
 
-.main-container{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2%;
-}
+
 
 .first-container{
     height: 45%;
