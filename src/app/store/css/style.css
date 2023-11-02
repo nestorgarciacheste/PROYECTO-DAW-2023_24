@@ -1,34 +1,47 @@
 @import url(../../header_footer/css/topbar_style.css);
 
 .btn-custom {
-    background-color: transparent;
-    color: #0F7173;
-    border: 2px solid #0F7173;
-  }
+  background-color: transparent;
+  color: #0f7173;
+  border: 2px solid #0f7173;
+}
 
-  .btn-custom:hover {
-    background-color: #0F7173;
-    color: #fff; /* Cambiar el color del texto al pasar el mouse */
-  }
+.btn-custom:hover {
+  background-color: #0f7173;
+  color: #fff; /* Cambiar el color del texto al pasar el mouse */
+}
 
-  .btn-custom:focus {
-    background-color: #0F7173; /* Cambiar el color al hacer clic */
-    color: #fff;
-  }
+.btn-custom:focus {
+  background-color: #0f7173; /* Cambiar el color al hacer clic */
+  color: #fff;
+}
 
-  /* Estilos para la barra lateral */
-.l-navbar {
-    position: fixed;
-    top: var(--header-height); /* Coloca la barra lateral debajo del encabezado */
-    left: 0;
-    width: 250px; /* Ancho de la barra lateral según tus preferencias */
-    height: 100%; /* O ajusta la altura según tus necesidades */
-    background-color: #333; /* Color de fondo de la barra lateral */
-    padding: 1rem;
-    color: #fff; /* Color del texto en la barra lateral */
-  }
+.btn-custom-alt {
+  background-color: #0f7173;
+  color: white; /* Cambia el color del texto según tus necesidades */
+  /* Otros estilos personalizados según tus necesidades */
+}
 
-  main {
-    margin-left: 260px; /* Ajusta según el ancho de la barra lateral + margen */
-  }
-  
+.btn-custom-alt:hover,
+.btn-custom-alt:active {
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #272932;
+  color: #fff; /* Color del texto */
+}
+
+.btn-secondary:hover {
+  background-color: #272932; /* Mismo color cuando se pasa el mouse */
+  color: #fff; /* Cambiar el color del texto al pasar el mouse (opcional) */
+}
+
+/* Estilos personalizados para el icono del carrito */
+.cart-icon {
+  font-size: 20px; /* Tamaño del icono (ajusta según sea necesario) */
+  color: #000; /* Color negro */
+  display: inline-flex; /* Para alinear verticalmente con el contenido de la barra de búsqueda */
+  align-items: center; /* Para alinear verticalmente con el contenido de la barra de búsqueda */
+  height: 100%; /* Igualar la altura con la barra de búsqueda */
+}

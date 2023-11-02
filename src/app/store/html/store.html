@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header id="header-container"></header>
+    <!-- Barra de búsqueda -->
+    <div class="container text-center mt-5">
+      <div class="custom-input-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">
+            <img src="64673.png" width="20" height="20" />
+          </span>
+        </div>
+        <input
+          type="text"
+          class="form-control rounded"
+          aria-label="Default"
+          aria-describedby="inputGroup-sizing-default"
+        />
+        <!-- Icono de carrito -->
+        <a href="/carrito.html" class="btn btn-link cart-icon">
+          <!-- Aplica la clase cart-icon aquí -->
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </div>
+    <br />
+    <!-- Botones -->
+    <div
+      class="btn-toolbar d-flex justify-content-center"
+      role="toolbar"
+      aria-label="Toolbar with button groups"
+    >
+      <div class="btn-group mr-5" role="group" aria-label="First group">
+        <button type="button" class="btn btn-custom">Web positioning</button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Second group">
+        <button type="button" class="btn btn-custom">Hosting</button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Third group">
+        <button type="button" class="btn btn-custom">E-Commerce</button>
+      </div>
+      <div class="btn-group" role="group" aria-label="Fourth group">
+        <select class="btn btn-custom-alt" id="filterSelect">
+          <option value="#">Filter by</option>
+          <option value="asc">Lowest Price</option>
+          <option value="desc">Highest Price</option>
+          <option value="alpha">Alphabetical</option>
+          <option value="ven">Best Sellers</option>
+          <option value="nov">New Arrivals</option>
+          <option value="rel">Relevance</option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <!-- Productos -->
+    <div class="card-deck">
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-left: 2%;
+        "
+      >
+        <img
+          src="https://prixton.es/wp-content/uploads/2019/07/ORDENADOR-PORTATIL-PANTALLA-TACTIL-FLEX13-PRO-INFORMATICA-PRIXTON.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Título de la tarjeta</h5>
+          <p class="card-text">
+            Esta es una tarjeta más ancha con texto de apoyo a continuación como
+            introducción natural a contenido adicional. Este contenido es un
+            poco más largo.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              Ejemplo
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="width: 18rem; border-radius: 20px; overflow: hidden"
+      >
+        <img
+          src="https://prixton.es/wp-content/uploads/2019/07/ORDENADOR-PORTATIL-PANTALLA-TACTIL-FLEX13-PRO-INFORMATICA-PRIXTON.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Título de la tarjeta</h5>
+          <p class="card-text">
+            Esta es una tarjeta más ancha con texto de apoyo a continuación como
+            introducción natural a contenido adicional. Este contenido es un
+            poco más largo.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              Ejemplo
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-right: 2%;
+        "
+      >
+        <img
+          src="https://prixton.es/wp-content/uploads/2019/07/ORDENADOR-PORTATIL-PANTALLA-TACTIL-FLEX13-PRO-INFORMATICA-PRIXTON.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Título de la tarjeta</h5>
+          <p class="card-text">
+            Esta es una tarjeta más ancha con texto de apoyo a continuación como
+            introducción natural a contenido adicional. Este contenido es un
+            poco más largo.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              Ejemplo
+            </button></small
+          >
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="card-deck">
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-left: 2%;
+        "
+      >
+        <img
+          src="https://prixton.es/wp-content/uploads/2019/07/ORDENADOR-PORTATIL-PANTALLA-TACTIL-FLEX13-PRO-INFORMATICA-PRIXTON.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Título de la tarjeta</h5>
+          <p class="card-text">
+            Esta es una tarjeta más ancha con texto de apoyo a continuación como
+            introducción natural a contenido adicional. Este contenido es un
+            poco más largo.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              Ejemplo
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="width: 18rem; border-radius: 20px; overflow: hidden"
+      >
+        <img
+          src="https://prixton.es/wp-content/uploads/2019/07/ORDENADOR-PORTATIL-PANTALLA-TACTIL-FLEX13-PRO-INFORMATICA-PRIXTON.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Título de la tarjeta</h5>
+          <p class="card-text">
+            Esta es una tarjeta más ancha con texto de apoyo a continuación como
+            introducción natural a contenido adicional. Este contenido es un
+            poco más largo.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              Ejemplo
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-right: 2%;
+        "
+      >
+        <img
+          src="https://prixton.es/wp-content/uploads/2019/07/ORDENADOR-PORTATIL-PANTALLA-TACTIL-FLEX13-PRO-INFORMATICA-PRIXTON.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Título de la tarjeta</h5>
+          <p class="card-text">
+            Esta es una tarjeta más ancha con texto de apoyo a continuación como
+            introducción natural a contenido adicional. Este contenido es un
+            poco más largo.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              Ejemplo
+            </button></small
+          >
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer id="footer-container"></footer>
+  </body>
+</html>
