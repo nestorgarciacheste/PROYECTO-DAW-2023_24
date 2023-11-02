@@ -1,4 +1,4 @@
-const Product = require("./Product");
+import { Product } from "./Product.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const headerContainer = document.getElementById("header-container");

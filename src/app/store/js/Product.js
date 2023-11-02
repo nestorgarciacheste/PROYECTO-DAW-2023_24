@@ -1,6 +1,6 @@
-const Opinion = require("./Opinion");
+import { Opinion } from "./Opinion.js";
 
-class Product {
+export class Product {
   #id;
   #title;
   #description;
@@ -9,13 +9,15 @@ class Product {
   #reviews;
   #onSale;
   #numSales;
+  #image;
 
   constructor(
     id = 0,
     title = "",
     description = "",
     price = 0.0,
-    onSale = false
+    onSale = false,
+    image = ""
   ) {
     if (
       typeof title !== "string" ||
@@ -23,7 +25,9 @@ class Product {
       typeof description !== "string" ||
       description.length < 2 ||
       typeof price !== "number" ||
-      typeof id !== "number"
+      typeof id !== "number" ||
+      typeof image !== "string" ||
+      image.length === 0
     ) {
       throw new Error("Provided values are not valid");
     }
@@ -36,6 +40,7 @@ class Product {
     this.#reviews = [];
     this.#onSale = onSale;
     this.#numSales = 0;
+    this.#image = image;
   }
 
   get id() {
@@ -106,6 +111,15 @@ class Product {
       this.#reviews.push(opn);
     }
   }
-}
 
-module.exports = Product;
+  get image() {
+    return this.#image;
+  }
+
+  set image(image) {
+    if (typeof image !== "string" || image.length === 0) {
+      throw new Error("Image must be a non-empty string (image path).");
+    }
+    this.#image = image;
+  }
+}
