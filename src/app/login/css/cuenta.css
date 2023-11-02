@@ -13,13 +13,9 @@
   }
 
 
-  /* VENTANA NOMBRE EMAIL Y FOTO DE PERFIL*/
+  /* OVERLAY EMIAL AND NAME */
 
-#ventana_nombre {
-    width: 0%;
-}
-
-#ventana_emial {
+#ventana_nombre, #ventana_email {
     width: 0%;
 }
 
@@ -46,57 +42,58 @@
   }
 
   .overlay-content > div {
-    padding: 20px;
-    width: 25vw;
-    height: 20%;
     align-self: center;
     border-radius: 2%;
     background-color: white;
+    box-shadow: 2px 2px 20px gray;
     display: relative;
     float: left;
-    border: 2px solid gray;
-    justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 2px 2px 20px gray;
+    justify-content: center;
+    padding: 20px;
+    height: 20%;
+    width: 25vw;
 }
 
 .overlay-content > div > h3 {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .overlay-content > div > p {
     margin: 20px;
 }
 
-.overlay-content > div > p > input {
-    border-radius: 10px;
-    border: 2px solid gray;
+.overlay-content > div >  input {
+    margin-bottom: 10px;
+    outline: none; /* Al seleccionar el input, el cuadro azul de seleccionar desaparece */
+    caret-color: gray; /* Cambiar el color de Cursor de texto */
+    border: 0px;
+    border-bottom: 2px solid gray;
     width: 75%;
 }
 
 .overlay-content > div > div {
     margin: 0 auto;
     display: inline-block;
-    border: 1px solid green;
 }
 
 .overlay-content > div > div > button{
-    border: 2px solid gray;
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;
+    border: 0px;
     background-color: white;
     margin-left: 10px;
-    border: 1px solid red;
+}
+
+.overlay-content > div > div > button::after{
+    background-color: red;
+    content: " ";
 }
 
 .overlay-content > div > div > button:hover{
-    border: 2px solid gray;
-    color: white;
-    background-color: rgb(56, 56, 56);
     padding: 8px;
-    border-radius: 8px;
-    transition: linear 0.1s;
+    border: 0px;
+    border-bottom: 2px solid gray;
 }
 
   .overlay .closebtn {
@@ -107,7 +104,7 @@
     text-decoration: none;
   }
 
-
+/* MAIN PAGE */
 .main {
     width: 100%;
     height: 90vh;
@@ -124,6 +121,7 @@
     width: 15%;
 }
 
+/* CIRCLE */
 .circulo {
     width: 100%;
     padding-bottom: 100%;border-radius: 50%;
@@ -165,6 +163,7 @@
     transform: translate(-50%, -50%);
 }
 
+ /* ICON */
 .icono_imagen {
     font-size: 200%; /* Ajusta el tamaño del ícono según tus preferencias */
     position: fixed;
@@ -239,7 +238,8 @@
     color: gray;
 }
 
-/* Mobile */
+
+/* MOBILE */
 @media only screen and (max-width: 866px) {
     .aside {
         width: 100%;

@@ -18,41 +18,58 @@
     <script src="script.js"></script>
   </head>
   <body>
+
+    <!-- HEADER -->
     <header id="header-container"></header>
 
-    <!-- Ventana de cambiar el Nombre -->
-    <div id="ventana_nombre" class="overlay">
+    <!-- OVERLAY IMAGE -->
+    <div id="ventana_imagen" class="overlay">
       <div class="overlay-content">
         <div>
-          <p>Nombre: <input type="text" id="enter_name" placeholder="nombre"></p>
+          <h3>Cambiar Image</h3>
+          <input type="file" id="enter_file">
           <div>
-            <button value="cambiar_nombre" id="boton_nombre" onclick="cambiarNombre()">Cambiar Nombre</button>
-            <button value="cancelar" id="boton_cancelar1" onclick="closeName()">Cancelar</button>
+            <button value="cambiar_nombre" onclick="cambiarImage()">Cambiar</button>
+            <button value="cancelar" onclick="closeImage()">Cancelar</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Ventana de cambio de Email -->
+    <!-- OVERLAY NAME -->
+    <div id="ventana_nombre" class="overlay">
+      <div class="overlay-content">
+        <div>
+          <h3>Cambiar Nombre</h3>
+          <input type="text" id="enter_name" placeholder="nombre">
+          <div>
+            <button value="cambiar_nombre" onclick="cambiarNombre()">Cambiar</button>
+            <button value="cancelar" onclick="closeName()">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERLAY EMAIL -->
     <div id="ventana_email" class="overlay">
       <div class="overlay-content">
         <div>
           <h3>Cambiar el Email</h3>
-          <p>Email: <input type="text" id="enter_email" placeholder="email"></p>
+          <input type="text" id="enter_email" placeholder="email">
           <div>
-            <button value="cambiar_email" onclick="cambiarEmail()">Cambiar Email</button>
+            <button value="cambiar_email" onclick="cambiarEmail()">Cambiar</button>
             <button value="cancelar" onclick="closeEmail()">Cancelar</button>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- MAIN  -->
     <div class="container-fluid main">
-      <!-- Main -->
       <div class="row">
         <div class="col-sm-2 p-3 aside text-white">
             <div class="circulo">
-              <a href="" id="link_edit"><div class="circulo_dentro">
+              <a href="javascript:void(0);" id="link_edit" onclick="openImage()"><div class="circulo_dentro">
                 <span class="material-symbols-outlined icono_imagen">edit</span>
               </div></a>
             </div>
@@ -69,13 +86,15 @@
             <a href="javascript:void(0);" onclick="edit()">
               <h2>Configuración</h2></a>
             <hr/>
-            <a href=""><h2>Mis Proyectos</h2></a>
+            <a href=""><h2>Contactos</h2></a>
             <hr/>
             <a href=""><h2>Log Out</h2></a>
           </div>
         </div>
       </div>
     </div>
+    
+    <!-- FOOTER -->
     <footer id="footer-container"></footer>
   </body>
 </html>

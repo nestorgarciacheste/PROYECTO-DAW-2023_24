@@ -19,10 +19,19 @@ function edit() {
 }
 
 function cambiarNombre() {
-    let nombre = document.getElementById("enter_name").value
-    document.getElementById("enter_name").value = ""
-    document.getElementById("nombre").innerHTML = `Buenas, ${nombre}`
-    document.getElementById("ventana_nombre").style.width = "0%";
+    let esValido = false;
+    let nombre = ""
+    while(esValido == false) {
+      nombre = document.getElementById("enter_name").value
+      if (nombre === "") {
+        esValido = false
+      } else {
+        esValido = true
+      }
+    }
+      document.getElementById("enter_name").value = ""
+      document.getElementById("nombre").innerHTML = `Buenas, ${nombre}`
+      document.getElementById("ventana_nombre").style.width = "0%";
 }
 
 function cambiarEmail() {
@@ -33,6 +42,8 @@ function cambiarEmail() {
     /*let nombre = prompt("Introduce el nombre")
     document.getElementById("email").innerHTML = `${nombre}`*/
 }
+
+
 
   function openName() {
     document.getElementById("ventana_nombre").style.width = "100%";
@@ -48,4 +59,12 @@ function cambiarEmail() {
   
   function closeEmail() {
     document.getElementById("ventana_email").style.width = "0%";
+  }
+
+  function openImage() {
+    document.getElementById("ventana_imagen").style.width = "100%";
+  }
+
+  function closeImage() {
+    document.getElementById("ventana_imagen").style.width = "0%";
   }
