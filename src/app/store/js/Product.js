@@ -1,4 +1,4 @@
-import { Opinion } from "./Opinion";
+const Opinion = require("./Opinion");
 
 class Product {
   #id;
@@ -108,4 +108,4 @@ class Product {
   }
 }
 
-export default Product;
+module.exports = Product;
