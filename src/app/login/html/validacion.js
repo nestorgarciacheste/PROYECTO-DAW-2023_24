@@ -1,11 +1,10 @@
 function validacion() {
-  "use strict";
   var forms = document.querySelectorAll(".needs-validation");
   Array.from(forms).forEach((form) => {
     form.addEventListener("submit", function (event) {
       // Validación email
-      var email = form.querySelector('[name="email"]').value;
-      var emailPat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      const email = form.querySelector('[name="email"]').value;
+      const emailPat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
       if (!emailPat.test(email)) {
         event.preventDefault();
@@ -14,9 +13,9 @@ function validacion() {
       }
 
       // Validación contraseña
-      var password = form.querySelector('[name="password"]').value;
-      var confPassword = form.querySelector('[name="confPassword"]').value;
-      var contPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+      const password = document.getElementById("pass");
+      const confPassword = form.querySelector('[name="confPassword"]').value;
+      const contPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
       if (!contPat.test(password)) {
         event.preventDefault();
@@ -31,8 +30,8 @@ function validacion() {
       }
 
       // Validación teléfono
-      var telefono = form.querySelector('[name="telefono"]').value;
-      var telPat = /^\d{9}$/;
+      const telefono = form.querySelector('[name="telefono"]').value;
+      const telPat = /^\d{9}$/;
 
       if (!telPat.test(telefono)) {
         event.preventDefault();
@@ -41,8 +40,8 @@ function validacion() {
       }
 
       // Validación código postal
-      var zip = form.querySelector('[name="zip"]').value;
-      var zipPat = /^\d{5}$/;
+      const zip = form.querySelector('[name="zip"]').value;
+      const zipPat = /^\d{5}$/;
 
       if (!zipPat.test(zip)) {
         event.preventDefault();

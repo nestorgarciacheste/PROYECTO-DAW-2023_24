@@ -20,7 +20,7 @@
   </head>
   <body>
     <header id="header-container"></header>
-    <form style="margin: 30px; padding: 0px" class="row g-3 needs-validation" novalidate>
+    <form style="margin: 30px; padding: 0px" class="row g-3 needs-validation" id="miFormulario" novalidate>
       <table>
         <tr>
           <td colspan="3"><h2>Sign up</h2></td>
@@ -29,7 +29,7 @@
           <td>
             <div>
               <label for="validationCustom01" class="form-label">Name</label>
-              <input type="text" class="form-control" id="validationCustom01" required/>
+              <input type="text" class="form-control" id="miVal" required/>
               <div class="valid-feedback">Looks good!</div>
               <div class="invalid-feedback">Please provide a valid name.</div>
             </div>
@@ -37,7 +37,7 @@
           <td>
             <div>
               <label for="validationCustom02" class="form-label">Surname</label>
-              <input type="text" class="form-control" id="validationCustom02" required/>
+              <input type="text" class="form-control" id="miVal" required/>
               <div class="valid-feedback">Looks good!</div>
               <div class="invalid-feedback">
                 Please provide a valid surname.
@@ -50,14 +50,14 @@
           <td>
             <div>
               <label class="form-label">Email</label>
-              <input name="email" type="email" class="form-control" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required/>
+              <input id="miVal" name="email" type="email" class="form-control" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required/>
               <div class="invalid-feedback">Please select a valid email.</div>
             </div>
           </td>
           <td>
             <div>
               <label for="validationCustom04" class="form-label">Phone</label>
-              <input name="telefono" type="tel" class="form-control" id="validationCustom01" pattern="[0-9]{9}" required/>
+              <input name="telefono" type="tel" class="form-control" id="miVal" pattern="[0-9]{9}" required/>
               <div class="invalid-feedback">Please select a valid phone.</div>
             </div>
           </td>
@@ -67,7 +67,7 @@
           <td>
             <div>
               <label for="validationCustom05" class="form-label">Password</label>
-              <input name="password" type="password" class="form-control" id="validationCustom01" required/>
+              <input name="password" type="password" class="form-control" id="pass" pattern="[a-zA-Z0-9._-]{8,}" required/>
               <div class="invalid-feedback">
                 Please select a valid password.
               </div>
@@ -76,7 +76,7 @@
           <td>
             <div>
               <label for="validationCustom06" class="form-label">Confirmation password</label>
-              <input name="passConf" type="password" class="form-control" id="validationCustom01" required/>
+              <input name="passConf" type="password" class="form-control" id="miVal" required/>
               <div class="invalid-feedback">Password not matched.</div>
             </div>
           </td>
@@ -86,14 +86,14 @@
           <td>
             <div>
               <label for="validationCustom07" class="form-label">City</label>
-              <input type="text" class="form-control" id="validationCustom03" required/>
+              <input type="text" class="form-control" id="miVal" required/>
               <div class="invalid-feedback">Please provide a valid city.</div>
             </div>
           </td>
           <td>
             <div>
               <label for="validationCustom08" class="form-label">Country</label>
-              <input type="text" class="form-control" id="validationCustom04" required/>
+              <input type="text" class="form-control" id="miVal" required/>
               <div class="invalid-feedback">
                 Please provide a valid country.
               </div>
@@ -102,7 +102,7 @@
           <td>
             <div>
               <label for="validationCustom09" class="form-label">Zip</label>
-              <input name="zip" type="text" class="form-control" id="validationCustom05" maxlength="5" pattern="[0-9]{5}" required/>
+              <input name="zip" type="text" class="form-control" id="miVal" maxlength="5" pattern="[0-9]{5}" required/>
               <div class="invalid-feedback">Please provide a valid zip.</div>
             </div>
           </td>
