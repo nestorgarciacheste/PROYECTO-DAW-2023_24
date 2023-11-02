@@ -76,14 +76,6 @@
 }
 
 
-footer {
-    background-color: #0F7173;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-
 .contacto {
     font-size: 16px;
     margin-bottom: 10px;
@@ -94,12 +86,6 @@ footer {
     text-decoration: none;
     margin: 0 10px;
     color: white;
-}
-
-.redes-sociales img {
-    width: 30px;
-    height: 30px;
-    border: none;
 }
 
 
@@ -116,6 +102,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #0F7173;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 .navbar .hamburger-menu {

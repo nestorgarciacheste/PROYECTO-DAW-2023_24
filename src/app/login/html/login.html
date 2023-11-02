@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/login.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script src="script.js"></script>
+        <script src="login_restriction.js"></script>
+        
+        <!-- Auth0 -->
+        <script src="app.js"></script>
+        <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    </head>
+    <body>
+        <header id="header-container"></header>
+        
+        <div class="shadow-rectangle">
+            <form>
+                <div class="container">
+
+                    <div class="img-container">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                    <input type="email" id="email" placeholder="Email" title="Please write your email" required>
+                    <div class="invalid-feedback" id="emailError">
+                        Email must be xxx@yyyy.zzzz.
+                    </div>
+                </div>
+
+                    <!-- Password -->
+                    <div>
+                    <input type="password" id="password" placeholder="Password" title="Please write your password" required>
+                    <div class="invalid-feedback" id="passwordError">
+                        Password must be at least 8 characters: <br>
+                        one uppercase and lower case letter <br>
+                        one digit and one special character.
+                    </div>
+                </div>
+
+                    <!-- Forgot password-->
+                    <div class="links">
+                        <a href="" id="forgotPassword" onclick="forgot()">Forgot password?</a>
+                        <a href="">Sign up</a>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <button type="button" class="custom-button" onclick="checkform()">Log in</button>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-floating" id="google" onclick="loginWithGoogle()"> <i class="fab fa-google"></i> </button>
+                    <br />
+                    <button type="button" class="btn btn-floating" id="github" onclick="loginWithGitHub()"> <i class="fab fa-github"></i> </button>
+                </div>
+            </form>
+        </div>
+        <footer id="footer-container"></footer>
+    </body>
+</html>
