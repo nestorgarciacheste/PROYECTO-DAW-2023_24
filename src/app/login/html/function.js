@@ -18,6 +18,7 @@ function edit() {
     }
 }
 
+/* CHANGE NAME */
 function cambiarNombre() {
     let esValido = false;
     let nombre = ""
@@ -34,6 +35,7 @@ function cambiarNombre() {
       document.getElementById("ventana_nombre").style.width = "0%";
 }
 
+/* CHANGE EMAIL */
 function cambiarEmail() {
     let email = document.getElementById("enter_email").value
     document.getElementById("enter_email").value = ""
@@ -43,7 +45,12 @@ function cambiarEmail() {
     document.getElementById("email").innerHTML = `${nombre}`*/
 }
 
-
+function cambiarImagen() {
+    let image = document.getElementById("enter_image").value
+    document.getElementById("enter_email").value = ""
+    document.getElementById("email").innerHTML = `${email}`
+    document.getElementById("ventana_email").style.width = "0%";
+}
 
   function openName() {
     document.getElementById("ventana_nombre").style.width = "100%";
