@@ -1,0 +1,47 @@
+@import url(../../header_footer/css/topbar_style.css);
+
+.btn-custom {
+  background-color: transparent;
+  color: #0f7173;
+  border: 2px solid #0f7173;
+}
+
+.btn-custom:hover {
+  background-color: #0f7173;
+  color: #fff; /* Cambiar el color del texto al pasar el mouse */
+}
+
+.btn-custom:focus {
+  background-color: #0f7173; /* Cambiar el color al hacer clic */
+  color: #fff;
+}
+
+.btn-custom-alt {
+  background-color: #0f7173;
+  color: white; /* Cambia el color del texto según tus necesidades */
+  /* Otros estilos personalizados según tus necesidades */
+}
+
+.btn-custom-alt:hover,
+.btn-custom-alt:active {
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #272932;
+  color: #fff; /* Color del texto */
+}
+
+.btn-secondary:hover {
+  background-color: #272932; /* Mismo color cuando se pasa el mouse */
+  color: #fff; /* Cambiar el color del texto al pasar el mouse (opcional) */
+}
+
+/* Estilos personalizados para el icono del carrito */
+.cart-icon {
+  font-size: 20px; /* Tamaño del icono (ajusta según sea necesario) */
+  color: #000; /* Color negro */
+  display: inline-flex; /* Para alinear verticalmente con el contenido de la barra de búsqueda */
+  align-items: center; /* Para alinear verticalmente con el contenido de la barra de búsqueda */
+  height: 100%; /* Igualar la altura con la barra de búsqueda */
+}
