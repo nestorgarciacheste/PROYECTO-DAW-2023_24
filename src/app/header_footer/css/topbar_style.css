@@ -23,14 +23,24 @@
 }
 
 
-.navbar .links_container {
+.links_container {
     display: flex;
 }
 
+.ham{
+    display: none !important;
+    justify-content: space-around;
+    background-color: #E7ECEF;
+}
 
-.navbar a {
-    display: block;
+.navbar .links_container a {
     color: white;
+}
+
+
+.links_container a {
+    display: block;
+    color: #0F7173;
     text-align: center;
     margin: 14px 30px;
     text-decoration: none;
@@ -108,6 +118,20 @@ footer {
     width: 100%;
 }
 
+.navbar .hamburger-menu {
+    display: none;
+}
+
 .text_footer {
     margin: 0;
+}
+
+@media screen and (max-width: 866px) {
+    .navbar .links_container {
+        display: none;
+    }
+
+    .ham{
+        display: flex !important;
+    }
 }
