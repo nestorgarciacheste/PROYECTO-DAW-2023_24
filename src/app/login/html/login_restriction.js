@@ -45,7 +45,7 @@ if (!isPasswordCorrect(password)) {
 
   /*if email is correct we`ll sign up */
   if (isCorrect(email) && isPasswordCorrect(password)) {
-    window.location.href = "http://localhost:5500/src/app/home/html/index.html";
+    window.location.href = "../../home/html/index.html";
   }
 
     /*here we change the logotype's position  */
