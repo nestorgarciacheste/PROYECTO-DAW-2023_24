@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 730px) {
     /* Estilos para pantallas de tamaño móvil */
     body {
       background-color: lightblue; /* Cambia el fondo para móvil */
@@ -14,6 +14,7 @@
   
     .main-container {
       width: 90%; /* Ajusta el ancho del contenedor principal para móvil */
+      margin: 0 auto; /* Centra el contenedor horizontalmente */
       margin-bottom: 30%;
     }
   
@@ -27,7 +28,8 @@
     }
   
     .main-container {
-      width: 70%; /* Ajusta el ancho del contenedor principal para portátil */
+      width: 50%; /* Ajusta el ancho del contenedor principal para portátil */
+      margin: 0 auto; /* Centra el contenedor horizontalmente */
     }
   
     /* Define más estilos específicos para portátil aquí */
@@ -41,7 +43,8 @@
   
     .main-container {
       width: 50%; /* Ajusta el ancho del contenedor principal para ordenador */
-      margin-bottom: 3%;
+      margin: 0 auto; /* Centra el contenedor horizontalmente */
+      margin-bottom: 6%;
     }
   
     /* Define más estilos específicos para ordenador aquí */
@@ -135,20 +138,32 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 5%;
 }
 
 .big-img{
-    width: 70%;
-    height: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-content: center;
-    margin: 2%;
+    align-items: center;
+    background-image: url('..//img/annie-spratt-QckxruozjRg-unsplash.jpg');
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen vertical y horizontalmente */
     border-radius: 5%;
     overflow: hidden;
 }
 
+
+.imagen-principal{
+    width: 42%;
+    height: 32.5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 1%;
+    border-radius: 5%;
+    overflow: hidden;
+}
 
 .imgs{
     width: 30%;
@@ -201,6 +216,29 @@
     
 }
 
+.segunda-imagen{
+    width: 42%;
+    height: 32.5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 1%;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.tercera-imagen{
+    width: 42%;
+    height: 32.5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 1%;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+
 .second-img{
     width: 40%;
     height: 100%;
@@ -221,3 +259,4 @@
     border-radius: 5%;
     overflow: hidden;
 }
+
