@@ -13,9 +13,31 @@ function validacion() {
       }
 
       // Validación contraseña
-      const password = document.getElementById("pass");
+      const password = document.getElementById("pass").value;
       const confPassword = form.querySelector('[name="confPassword"]').value;
       const contPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+      var contieneMayusculas = false;
+
+      for (var i = 0; i < password.length; i++) {
+          if (password[i] === password[i].toUpperCase() && password[i] !== password[i].toLowerCase()) {
+              contieneMayusculas = true;
+              break;
+          }
+      }
+
+      var contieneMinusculas = false;
+
+      for (var i = 0; i < password.length; i++) {
+          if (password[i] === password[i].toLowerCase() && password[i] !== password[i].toUpperCase()) {
+              contieneMinusculas = true;
+              break;
+          }
+      }
+
+      if (password.length >= 8 && contieneMayusculas == true && contieneMinusculas==true) {
+        
+      }
 
       if (!contPat.test(password)) {
         event.preventDefault();
