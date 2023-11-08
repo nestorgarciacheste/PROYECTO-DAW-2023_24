@@ -33,3 +33,10 @@ And u need this 2 lines in your html:
     <header id="header-container"></header>
     <footer id="footer-container"></footer>
 ~~~
+
+### HOME
+### HOME - TASKS - LORENZO
+<p>About us / OUR 25 YEARS OF EXPERIENCE / WHAT DO WE DO?</p>
+<p>Gallery Slider with photos</p>
+<p>Map with phone / hours / location </p>
+<p>Ad a UP button to go to the top of the web </p>

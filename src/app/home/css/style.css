@@ -15,16 +15,13 @@
 .textocartas{
     color: white ;
 }
-/*
-.card{
-    background-color: #d8a47f;
-    border: 0;
-}
-*/
+
+
 @media only screen and (min-width: 600px) {
   #banner-izquierda {
     position: absolute;
     left: 0px;
+    width: 115px;
     height: 800px;
     background-color: #f05d5e;
     text-align: right;
@@ -33,6 +30,7 @@
   #banner-derecha {
     position: absolute;
     right: 0px;
+    width: 115px;
     height: 800px;
     background-color: #f05d5e;
     text-align: right;
