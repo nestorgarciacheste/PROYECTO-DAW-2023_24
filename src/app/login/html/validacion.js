@@ -1,76 +1,126 @@
-function validacion() {
-  var forms = document.querySelectorAll(".needs-validation");
-  Array.from(forms).forEach((form) => {
-    form.addEventListener("submit", function (event) {
-      // Validación email
-      const email = form.querySelector('[name="email"]').value;
-      const emailPat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+const form = document.getElementById("myForm");
 
-      if (!emailPat.test(email)) {
-        event.preventDefault();
-        event.stopPropagation();
-        return;
-      }
+form.addEventListener("submit", function (event) {
+  //Validación nombre
+  const elemNombre = document.getElementById("myName");
+  const nombre = elemNombre.value;
 
-      // Validación contraseña
-      const password = document.getElementById("pass").value;
-      const confPassword = form.querySelector('[name="confPassword"]').value;
-      const contPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  if (nombre == "" || nombre == " ") {
+    elementoIncorrecto(elemNombre);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemNombre);
+  }
+  
+  //Validación apellido
+  const elemApellido = document.getElementById("mySurname");
+  const apellido = elemApellido.value;
 
-      var contieneMayusculas = false;
+  if (apellido == "" || apellido == " ") {
+    elementoIncorrecto(elemApellido);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemApellido);
+  }
+  
+  // Validación email
+  const elemEmail = document.getElementById("myEmail");
+  const email = elemEmail.value;
+  const emailPat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-      for (var i = 0; i < password.length; i++) {
-          if (password[i] === password[i].toUpperCase() && password[i] !== password[i].toLowerCase()) {
-              contieneMayusculas = true;
-              break;
-          }
-      }
+  if (!emailPat.test(email)) {
+    elementoIncorrecto(elemEmail);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemEmail);
+  }
 
-      var contieneMinusculas = false;
+  // Validación teléfono
+  const elemTel = document.getElementById("myPhone");
+  const telefono = elemTel.value;
+  const telPat = /^\d{9}$/;
 
-      for (var i = 0; i < password.length; i++) {
-          if (password[i] === password[i].toLowerCase() && password[i] !== password[i].toUpperCase()) {
-              contieneMinusculas = true;
-              break;
-          }
-      }
+  if (!telPat.test(telefono)) {
+    elementoIncorrecto(elemTel);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemTel);
+  }
 
-      if (password.length >= 8 && contieneMayusculas == true && contieneMinusculas==true) {
-        
-      }
+  // Validación contraseña
+  const elemPass = document.getElementById("myPassword");
+  const password = elemPass.value;
+  const contPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
-      if (!contPat.test(password)) {
-        event.preventDefault();
-        event.stopPropagation();
-        return;
-      }
+  if (!contPat.test(password)) {
+    elementoIncorrecto(elemPass);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemPass);
+  }
 
-      if (password !== confPassword) {
-        event.preventDefault();
-        event.stopPropagation();
-        return;
-      }
+  //Validación de que la confirmación de contraseña y la contraseña coinciden
+  const elemConfPass = document.getElementById("myConfPass");
+  const confPassword = elemConfPass.value;
+  if (password !== confPassword) {
+    elementoIncorrecto(elemConfPass);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemConfPass);
+  }
 
-      // Validación teléfono
-      const telefono = form.querySelector('[name="telefono"]').value;
-      const telPat = /^\d{9}$/;
+  //Validación ciudad
+  const elemCiudad = document.getElementById("myCity");
+  const ciudad = elemCiudad.value;
 
-      if (!telPat.test(telefono)) {
-        event.preventDefault();
-        event.stopPropagation();
-        return;
-      }
+  if (ciudad == "" || ciudad == " ") {
+    elementoIncorrecto(elemCiudad);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemCiudad);
+  }
 
-      // Validación código postal
-      const zip = form.querySelector('[name="zip"]').value;
-      const zipPat = /^\d{5}$/;
+  //Validación país
+  const elemPais = document.getElementById("myCountry");
+  const pais = elemPais.value;
 
-      if (!zipPat.test(zip)) {
-        event.preventDefault();
-        event.stopPropagation();
-        return;
-      }
-    });
-    form.classList.add("was-validated");
-  });
+  if (pais == "" || pais == " ") {
+    elementoIncorrecto(elemPais);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemPais);
+  }
+
+  // Validación código postal
+  const elemZip = document.getElementById("myZip");
+  const zip = elemZip.value;
+  const zipPat = /^\d{5}$/;
+
+  if (!zipPat.test(zip)) {
+    elementoIncorrecto(elemZip);
+    event.stopPropagation();
+    return;
+  }else{
+    elementoCorrecto(elemZip);
+  }
+  
+});
+
+
+function elementoIncorrecto(elemento) {
+  elemento.style.borderColor = "red";
+  elemento.style.borderWidth = "20px";
+}
+
+function elementoCorrecto(elemento) {
+  elemento.style.borderColor = "green";
+  elemento.style.borderWidth = "20px";
 }

@@ -42,3 +42,7 @@ tr,td{
    padding-bottom: 30px;
    vertical-align: top;
 }
+table{
+    height: 100%;
+    width: 100%;
+}
