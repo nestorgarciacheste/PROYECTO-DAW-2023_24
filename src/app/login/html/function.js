@@ -1,77 +1,86 @@
-var activa = true
+var activa = true;
 
+/* CHANGE SETTINGS */
 function edit() {
-    let nombre = document.getElementById('icono_nombre')
-    let email = document.getElementById('icono_email')
-    let editarFoto = document.getElementById('link_edit')
+  let nombre = document.getElementById("icono_nombre");
+  let email = document.getElementById("icono_email");
+  let editarFoto = document.getElementById("link_edit");
 
-    activa = !activa
+  activa = !activa;
 
-    if (activa) {
-        nombre.style.display = "none";
-        email.style.display = "none";
-        editarFoto.style.display = "none"
-    } else {
-        nombre.style.display = "flex";
-        email.style.display = "flex";
-        editarFoto.style.display = "flex";
-    }
+  if (activa) {
+    nombre.style.display = "none";
+    email.style.display = "none";
+    editarFoto.style.display = "none";
+  } else {
+    nombre.style.display = "flex";
+    email.style.display = "flex";
+    editarFoto.style.display = "flex";
+  }
 }
 
 /* CHANGE NAME */
 function cambiarNombre() {
-    let esValido = false;
-    let nombre = ""
-    while(esValido == false) {
-      nombre = document.getElementById("enter_name").value
-      if (nombre === "") {
-        esValido = false
-      } else {
-        esValido = true
-      }
-    }
-      document.getElementById("enter_name").value = ""
-      document.getElementById("nombre").innerHTML = `Buenas, ${nombre}`
-      document.getElementById("ventana_nombre").style.width = "0%";
+  let nombre = document.getElementById("enter_name").value;
+  if (nombre == "") {
+    alert("Está vacío")
+  } else {
+    document.getElementById("enter_name").value = "";
+    document.getElementById("nombre").innerHTML = `Welcome ${nombre}`;
+    document.getElementById("ventana_nombre").style.width = "0%";
+  }
 }
 
 /* CHANGE EMAIL */
 function cambiarEmail() {
-    let email = document.getElementById("enter_email").value
-    document.getElementById("enter_email").value = ""
-    document.getElementById("email").innerHTML = `${email}`
+  let email = document.getElementById("enter_email").value;
+  if (email == "") {
+    alert("Está vacio");
+  } else if (validarEmail(email)) {
+    alert("Se ha introducido correctamente");
+    document.getElementById("email").innerHTML = `${email}`;
     document.getElementById("ventana_email").style.width = "0%";
-    /*let nombre = prompt("Introduce el nombre")
-    document.getElementById("email").innerHTML = `${nombre}`*/
+  } else if (!validarEmail(email)) {
+    alert("El formato del email es incorrecto -> xxx@yyyyy.zzzz");
+    document.getElementById("enter_email").value = "";
+  }
 }
 
+function validarEmail(email) {
+  const regex = /\w+@\w{5}\.\w{3}/;
+  if (regex.test(email)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/* CHANGE IMAGE */
 function cambiarImagen() {
-    let image = document.getElementById("enter_image").value
-    document.getElementById("enter_email").value = ""
-    document.getElementById("email").innerHTML = `${email}`
-    document.getElementById("ventana_email").style.width = "0%";
+  let image = document.getElementById("enter_image").value;
+  document.getElementById("enter_email").value = "";
+  document.getElementById("email").innerHTML = `${email}`;
+  document.getElementById("ventana_email").style.width = "0%";
 }
 
-  function openName() {
-    document.getElementById("ventana_nombre").style.width = "100%";
-  }
-  
-  function closeName() {
-    document.getElementById("ventana_nombre").style.width = "0%";
-  }
+/* OPEN AND CLOSE OVERLAY */
+function openName() {
+  document.getElementById("ventana_nombre").style.width = "100%";
+}
+function closeName() {
+  document.getElementById("ventana_nombre").style.width = "0%";
+}
 
-  function openEmail() {
-    document.getElementById("ventana_email").style.width = "100%";
-  }
-  
-  function closeEmail() {
-    document.getElementById("ventana_email").style.width = "0%";
-  }
+function openEmail() {
+  document.getElementById("ventana_email").style.width = "100%";
+}
+function closeEmail() {
+  document.getElementById("ventana_email").style.width = "0%";
+}
 
-  function openImage() {
-    document.getElementById("ventana_imagen").style.width = "100%";
-  }
-
-  function closeImage() {
-    document.getElementById("ventana_imagen").style.width = "0%";
-  }
+function openImage() {
+  document.getElementById("ventana_imagen").style.width = "100%";
+}
+function closeImage() {
+  document.getElementById("ventana_imagen").style.width = "0%";
+}
