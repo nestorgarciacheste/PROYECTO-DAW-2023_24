@@ -1,0 +1,188 @@
+@import url(../../header_footer/css/topbar_style.css);
+
+/* Header and footer of the website */
+.custom-button {
+  width: 200px;
+  background-color: #0f7173;
+  color: #fff;
+  border-radius: 20px;
+  border: 0;
+  font-weight: bold;
+  padding-bottom: 1%;
+}
+
+/* mouse hover on button */
+.custom-button:hover {
+  background-color: #0f7173;
+  transform: scale(0.95);
+}
+
+/* links style */
+.links a {
+  color: gray;
+  text-align: center;
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #0f7173;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin: 4%;
+}
+
+/* the huge shadow--rectangle which contains the form */
+.shadow-rectangle {
+  background-image: url(../../../assets/img/vector-1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 47%;
+  min-width: 400px;
+  height: 60vh;
+  min-height: 400px;
+  background-color: #f2f6f7;
+  border-radius: 10px;
+  box-shadow: 1px 2px 13px 7px #c3c9cc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* styke of the form */
+.shadow-rectangle form {
+  width: 100%;
+  position: relative;
+  left: 15%;
+}
+
+.shadow-rectangle form .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* inputs of the form */
+.shadow-rectangle form input {
+  width: 350px;
+  border: 0;
+  padding-top: 10%;
+  border-bottom: 1px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  outline: none;
+}
+
+/* logotype of google and github */
+.text-center {
+  position: absolute;
+  top: 44%;
+  left: 74%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn.btn-floating {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20%;
+}
+
+.img-container {
+  width: 150px;
+  height: 150px;
+  background-image: url(../../../assets/img/logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+
+/* responsive media */
+
+/* for pc */
+@media screen and (max-width: 1350px) {
+  .shadow-rectangle {
+    background-image: url(../../../assets/img/logo-opacity.svg);
+    background-size: contain;
+    padding-left: 4%;
+  }
+
+  .shadow-rectangle form {
+    left: 0%;
+  }
+
+  .shadow-rectangle form input {
+    width: 250px;
+  }
+  .shadow-rectangle .container {
+    align-items: center;
+    text-align: center;
+  }
+  .text-center {
+    top: 44%;
+    left: 80%;
+  }
+}
+
+/*  for tablet */
+@media screen and (max-width: 1000px) {
+  .shadow-rectangle {
+    background-image: url(../../../assets/img/logo-opacity.svg);
+    background-size: cover;
+  }
+
+  .shadow-rectangle form {
+    left: 0%;
+  }
+  .shadow-rectangle form input {
+    width: 200px;
+  }
+  .shadow-rectangle form .container {
+    align-items: center;
+    text-align: center;
+  }
+  .text-center {
+    top: 155px;
+    left: 80%;
+  }
+}
+
+/*for mobile */
+@media screen and (max-width: 500px) {
+  .shadow-rectangle {
+    background-image: url(../../../assets/img/logo-opacity.svg);
+    background-size: cover;
+  }
+  .shadow-rectangle form {
+    left: 0%;
+  }
+  .shadow-rectangle form input {
+    width: 180px;
+  }
+  .shadow-rectangle form .container {
+    align-items: center;
+    text-align: center;
+  }
+  .text-center {
+    top: 46%;
+    left: 80%;
+  }
+}
+
+/*custom sweet alert */
+.custom-green-sweet-button {
+  background-color: #0f7173 !important; /* forced to be green */
+  color: white;
+}

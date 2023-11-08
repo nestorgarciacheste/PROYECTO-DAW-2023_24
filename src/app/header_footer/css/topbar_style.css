@@ -23,14 +23,24 @@
 }
 
 
-.navbar .links_container {
+.links_container {
     display: flex;
 }
 
+.ham{
+    display: none !important;
+    justify-content: space-around;
+    background-color: #E7ECEF;
+}
 
-.navbar a {
-    display: block;
+.navbar .links_container a {
     color: white;
+}
+
+
+.links_container a {
+    display: block;
+    color: #0F7173;
     text-align: center;
     margin: 14px 30px;
     text-decoration: none;
@@ -66,14 +76,6 @@
 }
 
 
-footer {
-    background-color: #0F7173;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-
 .contacto {
     font-size: 16px;
     margin-bottom: 10px;
@@ -84,12 +86,6 @@ footer {
     text-decoration: none;
     margin: 0 10px;
     color: white;
-}
-
-.redes-sociales img {
-    width: 30px;
-    height: 30px;
-    border: none;
 }
 
 
@@ -106,8 +102,26 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #0F7173;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar .hamburger-menu {
+    display: none;
 }
 
 .text_footer {
     margin: 0;
+}
+
+@media screen and (max-width: 866px) {
+    .navbar .links_container {
+        display: none;
+    }
+
+    .ham{
+        display: flex !important;
+    }
 }
