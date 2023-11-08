@@ -1,9 +1,16 @@
 # PROYECTO-DAW-2023_24
 
+### CUENTA:
+<hr>
+Nuestro apartado de Cuenta consta de lo esencial para que el usuario pueda registrarse en WebCode, iniciar sesión cuando deseé mediante diversos métodos, y configurar su cuenta de una manera cómoda y visual.
+
+Para realizar esto, hemos dividido nuestro apartado de Cuenta en varios apartados, con sus respectivos responsables:
+
+
+
 ### HOW TO INSERT THE HEADER AND FOOTER
 
 To insert the header and footer to each page u need to insert this in the js file:
-
 ~~~
 document.addEventListener("DOMContentLoaded", function () {
     const headerContainer = document.getElementById("header-container");
