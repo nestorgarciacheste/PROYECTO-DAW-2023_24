@@ -1,1 +1,15 @@
 @import url(../../header_footer/css/topbar_style.css);
+
+.bar {
+  background-color: #d8a47f;
+  height: 70px;
+  width: 100%;
+  display: flex;
+}
+
+.left-bar {
+  background-color: #f05d5e;
+  width: 100px;
+  height: 100%;
+  flex-grow: 1;
+}
