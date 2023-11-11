@@ -46,7 +46,7 @@ En el Login de WebCode nos encontramos con un **HTML** que hace de estructura - 
 Este HTML consta del uso de Bootstrap, así como de un extenso **CSS** enlazado y generado de manera que sea responsive y válido para varios navegadores. <br> <br>
 <details>
   <summary>Ver código HTML</summary>
-```html
+
 <body>
     <header id="header-container"></header>
     
@@ -95,14 +95,11 @@ Este HTML consta del uso de Bootstrap, así como de un extenso **CSS** enlazado 
         </form>
     </div>
     <footer id="footer-container"></footer>
-</body>
-```
+
 </details>
 <br>
 
-![LoginForm](https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/a9bad101-1847-4471-8156-8a6262b9d551)
-
-<br> Las **restricciones** mencionadas previamente son generadas cuando el usuario intenta acceder a la Web haciendo uso del botón de **Log in**. Pues este botón llama a una función realizada en `JavaScript` la cual comprueba dos aspectos esenciales:
+Las **restricciones** mencionadas previamente son generadas cuando el usuario intenta acceder a la Web haciendo uso del botón de **Log in**. Pues este botón llama a una función realizada en `JavaScript` la cual comprueba dos aspectos esenciales:
 
 - Correo electrónico:<br>
   `var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;`    
@@ -115,7 +112,72 @@ Este HTML consta del uso de Bootstrap, así como de un extenso **CSS** enlazado 
     - (?=.*\d) -> at least one digit
     - (?=.*[\W_]) -> at least a special character
     - {8,} -> minimum length of 8
+<br>
 
+### Login mediante Auth0
+Si así lo prefiere el usuario, podrá iniciar sesión en nuestra página Web mediante el registro con **Google** y **GitHub**. Esto se ha realizado mediante la plataforma de gestión de entidades y acceso Auth0. 
+
+<table>
+    <tr>
+        <th>Configuración en el sitio web de Auth0</th>
+        <th>Resultado en WebCode</th>
+    </tr>
+    <tr>
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b0fc71d7-21d5-4db2-95ca-d9227157ac0a"></td>        
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/307dca2f-4c7a-4447-b97d-99be35454a35"></td>        
+    </tr>
+</table>
+
+Para hacer esto posible, hemos añadido en el **Head** de nuestro proyecto las siguientes rutas:
+<code>
+    <script src="app.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+</code>
+
+El Script sirve para redirigir mediante la clave de usuario de Auth0 al servicio que deseemos. En el caso de **Google** el script sería este:
+<details>
+  
+<summary>Ver código JS</summary>
+
+~~~
+
+const auth0 = require('auth0');
+
+  function loginWithGoogle() {
+    const redirectUrl = 'http://localhost:5500/src/app/home/html/index.html';
+    const responseType = 'code';
+    const connection = 'google-oauth2';
+
+    const auth0Domain = 'dev-nt6cgad86rkuabgq.us.auth0.com';
+    const clientId = '15dHTMDSUZSYnvvxipcxTq70ccemkgC2';
+    const authorizeUrl = `https://${auth0Domain}/authorize?      
+    response_type=${responseType}&client_id=${clientId}&connection=${connection}&redirect_uri=${redirectUrl}`;
+  
+    window.location.href = authorizeUrl;
+  }
+  
+  ~~~
+
+</details>
+
+
+### Olvido de contraseña
+En caso de que el usuario envíe la contraseña para iniciar sesión, la administración de WebCode le enviará un correo con la recuperación de esta (de forma ficticia). Para ello, el usuario solo tendrá que situar un correo válido en un input que hemos modificado estéticamemente mediante la librería **SweetAlert2**.
+La cual hemos añadido en el **Head** de nuestro proyecto:
+<code>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</code>
+
+<table>
+    <tr>
+        <th>Configuración del Script</th>
+        <th>Resultado en WebCode</th>
+    </tr>
+    <tr>
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d47500b1-4e0a-4306-8e3c-2224a75cc7ae"></td>        
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/910e2a8e-a085-40f6-8b4d-f3e08f099b39"></td>        
+    </tr>
+</table>
 
 <br>
 
