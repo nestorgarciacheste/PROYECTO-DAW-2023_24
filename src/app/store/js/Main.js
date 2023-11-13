@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const productList = [];
-let selectedProductID = 0;
+let selectedProduct = 0;
 
 function addProduct(product) {
   const existingProduct = productList.find(
@@ -33,12 +33,20 @@ function addProduct(product) {
   }
 }
 
-function listProducts() {
-  productList.forEach((product) => {
-    console.log(
-      `${product.id}, ${product.title}, ${product.description}, ${product.price}€`
-    );
-  });
+function listProduct() {
+  if (selectedProduct) {
+    document.getElementById(
+      "Image"
+    ).style.backgroundImage = `url('${selectedProduct.image}')`;
+    document.getElementById("Title").innerText = selectedProduct.title;
+    document.getElementById("Description").innerText =
+      selectedProduct.description;
+    document.getElementById(
+      "Price"
+    ).innerText = `Price: ${selectedProduct.price}`;
+  } else {
+    console.error("Not selected product");
+  }
 }
 
 function deleteProduct(product) {
@@ -51,7 +59,7 @@ function deleteProduct(product) {
 }
 
 function selectProduct(id) {
-  selectedProductID = id;
+  selectedProduct = productList.find((product) => product.id === id);
 }
 
 function createProducts() {
