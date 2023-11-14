@@ -64,8 +64,8 @@
 
 
 
-.first-container{
-    height: 45%;
+.first-container {
+    height: 45%; /* Puedes ajustar esta altura según tus necesidades */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -141,14 +141,15 @@
     margin-bottom: 5%;
 }
 
-.big-img{
+.big-img {
+    height: 100%; /* Hace que big-img ocupe toda la altura de first-container */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-image: url('..//img/annie-spratt-QckxruozjRg-unsplash.jpg');
-    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-    background-position: center; /* Centra la imagen vertical y horizontalmente */
+    background-size: cover;
+    background-position: center;
     border-radius: 5%;
     overflow: hidden;
 }
@@ -166,7 +167,7 @@
 }
 
 .imgs{
-    width: 30%;
+    width: 26%;
     height: 90%;
     display: flex;
     flex-direction: column;
