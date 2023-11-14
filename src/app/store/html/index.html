@@ -29,8 +29,35 @@
   </head>
   <body>
     <header id="header-container"></header>
-    <div class="bar"><i class="fa fa-arrow-left"></i></div>
-    <div class="left-bar">a</div>
+    <div class="bar"></div>
+    <div class="arrow-ctn">
+      <i class="fa fa-arrow-left"></i><span><b>Back</b></span>
+    </div>
+    <div class="hero-ctn">
+      <div class="img-ctn"></div>
+      <div class="text-ctn">
+        <h3>Pagina de posicionamiento</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum vero vitae blanditiis nobis debitis, perspiciatis minus esse? Fugiat, amet id ipsum consequuntur iste minima, officia porro optio, praesentium nam veniam.</p>
+        <div class="price"><span class="price">290 €</span> <button>Comprar</button></div>
+      </div>
+    </div>
     <footer id="footer-container"></footer>
   </body>
+  <script>
+    const imgContainer = document.querySelector(".img-ctn");
+    const textContainer = document.querySelector(".text-ctn");
+
+    // Función para actualizar la altura en función del ancho
+    function updateHeight() {
+      const width = imgContainer.clientWidth;
+      imgContainer.style.height = `${width}px`;
+      textContainer.style.height = `${width}px`;
+    }
+
+    // Llama a la función inicialmente
+    updateHeight();
+
+    // Agrega un evento de escucha al cambio de tamaño de la ventana
+    window.addEventListener("resize", updateHeight);
+  </script>
 </html>
