@@ -5,9 +5,9 @@ form.addEventListener("submit", function (event) {
   const elemNombre = document.getElementById("myName");
   const nombre = elemNombre.value;
 
-  if (nombre == "" || nombre == " ") {
+  if (nombre.trim() == "") {
     elementoIncorrecto(elemNombre);
-    event.stopPropagation();
+    event.preventDefault();
     return;
   }else{
     elementoCorrecto(elemNombre);
@@ -17,9 +17,9 @@ form.addEventListener("submit", function (event) {
   const elemApellido = document.getElementById("mySurname");
   const apellido = elemApellido.value;
 
-  if (apellido == "" || apellido == " ") {
+  if (apellido.trim() == "") {
     elementoIncorrecto(elemApellido);
-    event.stopPropagation();
+    event.preventDefault();
     return;
   }else{
     elementoCorrecto(elemApellido);
@@ -32,7 +32,7 @@ form.addEventListener("submit", function (event) {
 
   if (!emailPat.test(email)) {
     elementoIncorrecto(elemEmail);
-    event.stopPropagation();
+    event.preventDefault();
     return;
   }else{
     elementoCorrecto(elemEmail);
@@ -45,7 +45,7 @@ form.addEventListener("submit", function (event) {
 
   if (!telPat.test(telefono)) {
     elementoIncorrecto(elemTel);
-    event.stopPropagation();
+    event.preventDefault();
     return;
   }else{
     elementoCorrecto(elemTel);
@@ -58,7 +58,7 @@ form.addEventListener("submit", function (event) {
 
   if (!contPat.test(password)) {
     elementoIncorrecto(elemPass);
-    event.stopPropagation();
+    event.preventDefault();
     return;
   }else{
     elementoCorrecto(elemPass);
@@ -69,7 +69,7 @@ form.addEventListener("submit", function (event) {
   const confPassword = elemConfPass.value;
   if (password !== confPassword) {
     elementoIncorrecto(elemConfPass);
-    event.stopPropagation();
+    event.preventDefault();
     return;
   }else{
     elementoCorrecto(elemConfPass);
@@ -81,7 +81,7 @@ form.addEventListener("submit", function (event) {
 
   if (ciudad == "" || ciudad == " ") {
     elementoIncorrecto(elemCiudad);
-    event.stopPropagation();
+    event.preventDefault();
     return;
   }else{
     elementoCorrecto(elemCiudad);
