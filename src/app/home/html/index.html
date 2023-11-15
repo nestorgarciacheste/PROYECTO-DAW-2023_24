@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="script.js"></script>
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="script.js"></script>
-  </head>
+  <!--Denise Audio-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+  <link rel="stylesheet" href="../Ejer4-UD1.ReprodcutorMultimedia/styleAudio.css" /> 
+</head>
+<body>
   <body>
     <header id="header-container"></header>
 
@@ -253,7 +244,7 @@
     <!-- mapa 5 PARTE-->
 
     <hr>
-    <div class="container">
+    <div class="container" style="margin-bottom: 10px;">
       <div class="row">
         <div class="col-md-6">
           <iframe
@@ -283,7 +274,7 @@
               ubicacion
             </div>
 
-            <div class="row contactMap">
+            <div class="row contactMaph">
               horario
             </div>
         </div>
@@ -291,7 +282,43 @@
     </div>
 
     <!-- fin mapa 5 PARTE-->
+    <!---button class="toggle-button">Mostrar Reproductor</->-->>
+    <!--Denise: Info de la canción cuando está sonando-->
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h4 id="title"></h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+          <span id="currTime" class="music-time">00:00</span>
+          <span id="durTime" class="music-time2">00:00</span>
+        </div>
+      </div>
 
+      <!--Denise: Primer audio a sonar-->
+      <audio src="music/Need to Know.mp3" id="audio"></audio>
+
+      <!--Denise: Primera imagen de la primera canción-->
+      <div class="img-container">
+        <img src="images/Need to Know.jpg" alt="music-cover" id="cover" />
+      </div>
+
+      <!--Denise: Menú de navegación de la canción-->
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <!--Denise: Lamamos al Script-->
+    <script src="../Ejer4-UD1.ReprodcutorMultimedia/scriptAudio.js"></script>
+    
     <!--Button up-->
 
     <!--cambiar a icono-->
