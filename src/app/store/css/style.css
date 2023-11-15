@@ -45,3 +45,9 @@
   align-items: center; /* Para alinear verticalmente con el contenido de la barra de búsqueda */
   height: 100%; /* Igualar la altura con la barra de búsqueda */
 }
+
+.card-img-top {
+  height: 55%; /* Tamaño fijo de altura */
+  object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsionar */
+}
+
