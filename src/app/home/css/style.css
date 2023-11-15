@@ -36,6 +36,8 @@
     text-align: right;
     border-radius: 0px 0px 0px 25px;
   }
+
+ 
 }
 
 @media only screen and (max-width: 600px) {
@@ -54,6 +56,30 @@
   .icono-esquina-inferior-derecha {
     display: none;
   }
+
+  .mapaNuevo {
+    width: 330px !important;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #banner-izquierda {
+    display: none;
+  }
+
+  #banner-derecha {
+    display: none;
+  }
+
+  .icono-esquina-inferior-izquierda {
+    display: none;
+  }
+
+  .icono-esquina-inferior-derecha {
+    display: none;
+  }
+
+   
 }
 
 .textoRecuadro {
@@ -106,6 +132,8 @@
 .contactMap{
   margin-top: 30px;
 }
+
+
 
 /*BUTTON UP*/
 #myBtn {
