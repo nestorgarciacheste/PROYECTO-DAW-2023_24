@@ -20,6 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error al cargar el footer:", error);
     });
 });
+
+const imgContainer = document.querySelector(".img-ctn");
+const textContainer = document.querySelector(".text-ctn");
+
+function updateHeight() {
+  const width = imgContainer.clientWidth;
+  imgContainer.style.height = `${width}px`;
+  textContainer.style.height = `${width}px`;
+}
+
+updateHeight();
+
+window.addEventListener("resize", updateHeight);
+
 /*
 const productList = [];
 let selectedProduct = null;

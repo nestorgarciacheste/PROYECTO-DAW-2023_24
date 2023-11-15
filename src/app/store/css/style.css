@@ -1,5 +1,6 @@
 @import url(../../header_footer/css/topbar_style.css);
 
+/* Barra superior que ocupa todo el ancho */
 .bar {
   background-color: #d8a47f;
   height: 70px;
@@ -45,17 +46,18 @@
 }
 
 .text-ctn h3 {
-  background-color: black;
+  background-color: #272932;
   text-transform: uppercase;
   padding: 10px 0px;
   width: 100%;
-  color: aliceblue;
+  color: #e7ecef;
 }
 
 .text-ctn > p {
-  background-color: #d9d9d9;
+  background-color: #e7ecef;
   padding: 10px;
   width: 90%;
+  color: #272932;
 }
 
 .text-ctn .price {
@@ -65,48 +67,75 @@
 }
 
 .text-ctn .price > span {
-  background-color: #d9d9d9;
+  background-color: #f05d5e;
   padding: 10px 20px;
   font-size: large;
   font-weight: bold;
   margin-right: 30px;
-}
-
-.opinion-block {
-  max-width: 600px;
-  width: 100%;
-  background-color: #272932;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #e7ecef;
 }
 
+/* Estilos para el contenedor de opiniones */
+.opinion-block {
+  max-width: 600px;
+  width: 80%;
+  margin: 4rem auto 2rem;
+  background-color: #e7ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #272932;
+  padding: 20px;
+  position: relative;
+}
+
 .customer-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background-color: #0f7173;
+  color: #e7ecef;
 }
 
 .customer-info img {
   border-radius: 50%;
-  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 
 .customer-name {
   font-size: 1.5em;
   font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .rating {
   font-size: 1.5em;
-  color: #ffd700;
+  color: #f05d5e;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .opinion-text {
-  padding: 20px;
   font-size: 1.2em;
   line-height: 1.6;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* Ajustes adicionales para otros elementos si es necesario */
+.text-ctn,
+.img-ctn {
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

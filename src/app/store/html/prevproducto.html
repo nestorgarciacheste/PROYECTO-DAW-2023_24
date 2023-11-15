@@ -56,37 +56,18 @@
 
     <div class="opinion-block">
       <div class="customer-info">
-        <img
-          src="ruta_de_la_imagen_del_cliente.jpg"
-          alt="Foto del Cliente"
-          width="50"
-        />
-        <div class="customer-name">Miguel Bellido</div>
+        <img src="../IMG/usuario.png" alt="Foto del Cliente" width="50" />
+        <div class="customer-name">Nestor Bellido</div>
         <div class="rating">4.5/5</div>
       </div>
       <div class="opinion-text">
-        <p>
-          ¡Aquí va la opinión del cliente! Puedes escribir varias líneas si es
-          necesario.
-        </p>
+        <p>Está flama el curso, recomendado.</p>
       </div>
     </div>
-
+    <br />
+    <br />
+    <br />
+    <br />
     <footer id="footer-container"></footer>
-
-    <script>
-      const imgContainer = document.querySelector(".img-ctn");
-      const textContainer = document.querySelector(".text-ctn");
-
-      function updateHeight() {
-        const width = imgContainer.clientWidth;
-        imgContainer.style.height = `${width}px`;
-        textContainer.style.height = `${width}px`;
-      }
-
-      updateHeight();
-
-      window.addEventListener("resize", updateHeight);
-    </script>
   </body>
 </html>
