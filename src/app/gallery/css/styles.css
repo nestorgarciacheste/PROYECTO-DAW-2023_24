@@ -261,3 +261,7 @@
     overflow: hidden;
 }
 
+first-container .img {
+    opacity: 0; /* Inicialmente establece la opacidad en 0 */
+    transition: opacity 0.5s ease-in-out; 
+}
