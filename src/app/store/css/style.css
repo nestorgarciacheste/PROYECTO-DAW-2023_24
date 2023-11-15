@@ -76,10 +76,19 @@
 }
 
 /* Estilos para el contenedor de opiniones */
+.opinions-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
 .opinion-block {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
   max-width: 600px;
   width: 80%;
-  margin: 4rem auto 2rem;
   background-color: #e7ecef;
   border-radius: 10px;
   overflow: hidden;

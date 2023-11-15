@@ -138,7 +138,6 @@ function createProducts() {
     addProduct(product);
     idProduct++;
   }
-  console.log("hlola");
   selectProduct(1);
   listProduct();
 }
@@ -153,9 +152,5 @@ function getRandomNumber(min, max) {
 
 function isOnSale() {
   return Math.random() < 0.5;
-}
-
-function hola() {
-  console.log("hola");
 }
 */
