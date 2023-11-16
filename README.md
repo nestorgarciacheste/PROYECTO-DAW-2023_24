@@ -188,6 +188,316 @@ La cual hemos añadido en el **Head** de nuestro proyecto:
 
 <br>
 
+### Registro
+En el registro de WebCode nos encontramos con un **HTML** que hace de estructura - generada mediante una tabla y divs - de un formulario de registro bastante detallado. A falta de una base de datos, el usuario podrá acceder al **Home** de la web mediante el buen cumplimiento de las restricciones del formulario (explicadas a continuación).
+Este HTML consta del uso de Bootstrap, así como de un extenso **CSS** enlazado. <br> <br>
+Las **restricciones** mencionadas previamente son generadas cuando el usuario intenta acceder a la Web haciendo uso del botón de **Submit form**. Este botón llama a una función realizada en `JavaScript` la cual comprueba los aspectos esenciales:
+
+<details>
+  <summary>Ver código JS</summary>
+
+  ~~~
+function validar() {
+  //Nombre
+  const elemNombre = document.getElementById("myName");
+  const nombre = elemNombre.value;
+
+  //Apellido
+  const elemApellido = document.getElementById("mySurname");
+  const apellido = elemApellido.value;
+
+  //Email
+  const elemEmail = document.getElementById("myEmail");
+  const email = elemEmail.value;
+  const emailPat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  //Teléfono
+  const elemTel = document.getElementById("myPhone");
+  const telefono = elemTel.value;
+  const telPat = /^\d{9}$/;
+
+  //Contraseña y confirmación de contraseña
+  const elemPass = document.getElementById("myPassword");
+  const password = elemPass.value;
+  const contPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  const elemConfPass = document.getElementById("myConfPass");
+  const confPassword = elemConfPass.value;
+
+  //Ciudad
+  const elemCiudad = document.getElementById("myCity");
+  const ciudad = elemCiudad.value;
+
+  //País
+  const elemPais = document.getElementById("myCountry");
+  const pais = elemPais.value;
+
+  //Código postal
+  const elemZip = document.getElementById("myZip");
+  const zip = elemZip.value;
+  const zipPat = /^\d{5}$/;
+
+  //About you
+  const op1 = document.getElementById("particular");
+  const op2 = document.getElementById("company");
+
+  //Observaciones
+  const obs = document.getElementById("observations");
+
+  //Términos y condiciones
+  const checkbox = document.getElementById("conditions");
+
+  
+
+  //Validación nombre
+  if (nombre.trim() == "") {
+    elementoIncorrecto(elemNombre);
+  } else {
+    elementoCorrecto(elemNombre);
+  }
+
+  //Validación apellido
+  if (apellido.trim() == "") {
+    elementoIncorrecto(elemApellido);
+  } else {
+    elementoCorrecto(elemApellido);
+  }
+
+  // Validación email
+  if (!emailPat.test(email)) {
+    elementoIncorrecto(elemEmail);
+  } else {
+    elementoCorrecto(elemEmail);
+  }
+
+  // Validación teléfono
+  if (!telPat.test(telefono)) {
+    elementoIncorrecto(elemTel);
+  } else {
+    elementoCorrecto(elemTel);
+  }
+
+  // Validación contraseña
+  if (!contPat.test(password)) {
+    elementoIncorrecto(elemPass);
+  } else {
+    elementoCorrecto(elemPass);
+  }
+
+  //Validación de que la confirmación de contraseña y la contraseña coinciden
+  if(password.trim() == ""){
+    elementoIncorrecto(elemConfPass);
+  }else if (password !== confPassword) {
+    elementoIncorrecto(elemConfPass);
+  } else {
+    elementoCorrecto(elemConfPass);
+  }
+
+  //Validación ciudad
+  if (ciudad.trim() == "") {
+    elementoIncorrecto(elemCiudad);
+  } else {
+    elementoCorrecto(elemCiudad);
+  }
+
+  //Validación país
+  if (pais.trim() == "") {
+    elementoIncorrecto(elemPais);
+  } else {
+    elementoCorrecto(elemPais);
+  }
+
+  // Validación código postal
+  if (!zipPat.test(zip)) {
+    elementoIncorrecto(elemZip);
+  } else {
+    elementoCorrecto(elemZip);
+  }
+
+  //Validación about you
+  if (!op1.checked && !op2.checked) {
+    elementoIncorrecto(op1);
+    elementoIncorrecto(op2);
+  } else if (op1.checked) {
+    elementoCorrecto(op1);
+    op1.style.backgroundColor = "green";
+    op2.style.borderColor = "black";
+    op2.style.borderWidth = "1px";
+  } else {
+    elementoCorrecto(op2);
+    op2.style.backgroundColor = "green";
+    op1.style.borderColor = "black";
+    op1.style.borderWidth = "1px";
+  }
+
+  //Las observaciones no tienen restricción porque da igual que estén vacías
+  elementoCorrecto(obs);
+
+  //Validación términos y condiciones
+  if (!checkbox.checked) {
+    elementoIncorrecto(checkbox);
+  } else {
+    elementoCorrecto(checkbox);
+    checkbox.style.backgroundColor = "green";
+  }
+
+  
+}
+
+function elementoIncorrecto(elemento) {
+  elemento.style.borderColor = "red";
+  elemento.style.borderWidth = "2px";
+}
+
+function elementoCorrecto(elemento) {
+  elemento.style.borderColor = "green";
+  elemento.style.borderWidth = "2px";
+}
+
+function enviarFormulario(){
+  validar();
+  const elementosIncorrectos = document.querySelectorAll("[style='border-color: red; border-width: 2px;']");
+  
+  if (elementosIncorrectos.length === 0) {
+    // Si no hay elementos incorrectos, envía el formulario
+    alert("Registro enviado con éxito");
+    document.getElementById("myForm").submit();
+    return true;
+    
+  } else {
+    // Si hay elementos incorrectos, muestra una alerta u otro tipo de retroalimentación
+    alert("Por favor, corrija los campos resaltados en rojo antes de enviar el registro.");
+    return false;
+  }
+}
+~~~
+</details>
+
+De esta manera la página **Sign up** quedará de la siguiente forma: <br><br>
+
+<table>
+    <tr>
+        <th>Registro</th>
+        <th>Registro con validación</th>
+    </tr>
+    <tr>
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/83a059b3-55d8-4527-93ea-767c47bf6771"></td> 
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865373/265f9bc7-ab6d-4f55-bfa2-e32f4b61bf8b"></td>
+    </tr>
+</table>
+<br>
+
+### Contact
+En el contacto de WebCode nos encontramos con un **HTML** que hace de estructura - generada mediante una tabla y divs - de un formulario de contacto. 
+Este HTML consta del uso de Bootstrap, así como de un extenso **CSS** enlazado. <br> <br>
+En este formulario, también hay **restricciones** que son generadas cuando el usuario intenta enviar un mensaje haciendo uso del botón de **Send**. Este botón llama a una función realizada en `JavaScript` la cual comprueba los aspectos esenciales:
+<details>
+  <summary>Ver código JS</summary>
+
+  ~~~
+function validarContact() {
+  //Nombre
+  const elemNombre = document.getElementById("myName");
+  const nombre = elemNombre.value;
+
+  //Apellido
+  const elemApellido = document.getElementById("mySurname");
+  const apellido = elemApellido.value;
+
+  //Email
+  const elemEmail = document.getElementById("myEmail");
+  const email = elemEmail.value;
+  const emailPat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  //Opción select
+  const selectElement = document.getElementById("info");
+  const opcionSeleccionada = selectElement.options[selectElement.selectedIndex].value;
+
+  //Observaciones
+  const elemWriteus = document.getElementById("write");
+  const writeus = elemWriteus.value;
+
+  //Validación nombre
+  if (nombre.trim() == "") {
+    elementoIncorrecto(elemNombre);
+  } else {
+    elementoCorrecto(elemNombre);
+  }
+
+  //Validación apellido
+  if (apellido.trim() == "") {
+    elementoIncorrecto(elemApellido);
+  } else {
+    elementoCorrecto(elemApellido);
+  }
+
+  // Validación email
+  if (!emailPat.test(email)) {
+    elementoIncorrecto(elemEmail);
+  } else {
+    elementoCorrecto(elemEmail);
+  }
+
+  //Validación desplegable
+  if (opcionSeleccionada == "type") {
+    elementoIncorrecto(selectElement);
+  } else {
+    elementoCorrecto(selectElement);
+  }
+
+  //Validación write us
+  if (writeus.trim() == "") {
+    elementoIncorrecto(elemWriteus);
+  } else {
+    elementoCorrecto(elemWriteus);
+  }
+}
+
+function elementoIncorrecto(elemento) {
+  elemento.style.borderColor = "red";
+  elemento.style.borderWidth = "2px";
+}
+
+function elementoCorrecto(elemento) {
+  elemento.style.borderColor = "green";
+  elemento.style.borderWidth = "2px";
+}
+
+function enviarFormulario() {
+  validarContact();
+  const elementosIncorrectos = document.querySelectorAll(
+    "[style='border-color: red; border-width: 2px;']"
+  );
+
+  if (elementosIncorrectos.length === 0) {
+    // Si no hay elementos incorrectos, envía el formulario
+    alert("Enviado con éxito");
+    //document.getElementById("myContact").submit();
+    return true;
+  } else {
+    // Si hay elementos incorrectos, muestra una alerta u otro tipo de retroalimentación
+    alert(
+      "Por favor, corrija los campos resaltados en rojo antes de enviar el mensaje."
+    );
+    return false;
+  }
+}
+~~~
+</details>
+
+De esta manera la página **Contact** quedará de la siguiente forma: <br><br>
+
+<table>
+    <tr>
+        <th>Contacto</th>
+        <th>Contacto con validación</th>
+    </tr>
+    <tr>
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/94504c03-a68a-426b-9aeb-ae0b39933484"></td> 
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865373/441a1ca9-124d-41c1-abe7-4c3b93c2883d"></td>
+    </tr>
+</table>
+<br>
+
 ## Home:
 
 En Home hemos creado una descripcion de lo que seria la empresa, algunos de nuestos ejemplos de posibles trabajos , mapa con la localizacion con una API y reproductor de música.
