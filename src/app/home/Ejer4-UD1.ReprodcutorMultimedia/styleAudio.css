@@ -238,5 +238,7 @@ Estilo de la barra de progreso
     top: 1550px; 
     right: 100px;
   }
-
+.greenbutton{
+  display: block;
+}
 }
