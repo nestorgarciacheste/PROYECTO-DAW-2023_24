@@ -80,7 +80,6 @@
   background-color: rgba(0, 0, 0, 0);
   border-radius: 0;
   outline: none;
-  -webkit-box-shadow: 0 0 0 30px #f2f6f7 inset !important; /* Cambia el color de fondo al que desees */
 }
 
 /* logotype of google and github */
