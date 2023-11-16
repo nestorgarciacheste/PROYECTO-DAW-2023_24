@@ -23,7 +23,7 @@
         <header id="header-container"></header>
         
         <div class="shadow-rectangle">
-            <form>
+            <form autocomplete="off">
                 <div class="container">
 
                     <div class="img-container">
@@ -31,15 +31,15 @@
 
                     <!-- Email -->
                     <div>
-                    <input type="email" id="email" placeholder="Email" title="Please write your email" required>
-                    <div class="invalid-feedback" id="emailError">
+                        <input type="email" id="email" placeholder="Email" title="Please write your email" required autocomplete="off">
+                        <div class="invalid-feedback" id="emailError">
                         Email must be xxx"@"yyyy"."zzzz.
                     </div>
                 </div>
 
                     <!-- Password -->
                     <div>
-                    <input type="password" id="password" placeholder="Password" title="Please write your password" required autocomplete="new-password" >
+                    <input type="password" id="password" placeholder="Password" title="Please write your password" required autocomplete="new-password" autocomplete="off">
                     <div class="invalid-feedback" id="passwordError">
                         Password must be at least 8 characters: <br>
                         one uppercase and lower case letter <br>
