@@ -215,5 +215,8 @@ Estilo de la barra de progreso
   }  
   .greenbutton {
     display: none;
-  }  
+  }
+  .music-ctn{
+    margin-top: 5rem;
+  }
 }
