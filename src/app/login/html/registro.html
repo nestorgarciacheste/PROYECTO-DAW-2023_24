@@ -15,6 +15,7 @@
     ></script>
     <title>Sign up</title>
     <script src="headerFooter.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <script src="validacion.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -22,7 +23,7 @@
   </head>
   <body>
     <header id="header-container"></header>
-    <form style="margin: 30px; padding: 0px" class="row g-3 needs-validation" id="miFormulario" novalidate>
+    <form onsubmit="return enviarFormulario()" style="margin: 30px; padding: 0px" id="myForm" action="#" novalidate>
       <table>
         <tr>
           <td colspan="3"><h2>Sign up</h2></td>
@@ -30,20 +31,14 @@
         <tr>
           <td>
             <div>
-              <label for="validationCustom01" class="form-label">Name</label>
-              <input type="text" class="form-control" id="miVal" required/>
-              <div class="valid-feedback">Looks good!</div>
-              <div class="invalid-feedback">Please provide a valid name.</div>
+              <label>Name</label>
+              <input type="text" class="form-control" id="myName" required/>
             </div>
           </td>
           <td>
             <div>
-              <label for="validationCustom02" class="form-label">Surname</label>
-              <input type="text" class="form-control" id="miVal" required/>
-              <div class="valid-feedback">Looks good!</div>
-              <div class="invalid-feedback">
-                Please provide a valid surname.
-              </div>
+              <label>Surname</label>
+              <input type="text" class="form-control" id="mySurname" required/>
             </div>
           </td>
           <td></td>
@@ -51,35 +46,14 @@
         <tr>
           <td>
             <div>
-              <label class="form-label">Email</label>
-              <input id="miVal" name="email" type="email" class="form-control" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required/>
-              <div class="invalid-feedback">Please select a valid email.</div>
+              <label>Email</label>
+              <input id="myEmail" type="email" class="form-control"  required/>
             </div>
           </td>
           <td>
             <div>
-              <label for="validationCustom04" class="form-label">Phone</label>
-              <input name="telefono" type="tel" class="form-control" id="miVal" pattern="[0-9]{9}" required/>
-              <div class="invalid-feedback">Please select a valid phone.</div>
-            </div>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <label for="validationCustom05" class="form-label">Password</label>
-              <input name="password" type="password" class="form-control" id="pass" pattern="[a-zA-Z0-9._-]{8,}" required/>
-              <div class="invalid-feedback">
-                Please select a valid password.
-              </div>
-            </div>
-          </td>
-          <td>
-            <div>
-              <label for="validationCustom06" class="form-label">Confirmation password</label>
-              <input name="passConf" type="password" class="form-control" id="miVal" required/>
-              <div class="invalid-feedback">Password not matched.</div>
+              <label>Phone</label>
+              <input type="tel" class="form-control" id="myPhone" required/>
             </div>
           </td>
           <td></td>
@@ -87,25 +61,35 @@
         <tr>
           <td>
             <div>
-              <label for="validationCustom07" class="form-label">City</label>
-              <input type="text" class="form-control" id="miVal" required/>
-              <div class="invalid-feedback">Please provide a valid city.</div>
+              <label>Password</label>
+              <input type="password" class="form-control" id="myPassword" required/>
             </div>
           </td>
           <td>
             <div>
-              <label for="validationCustom08" class="form-label">Country</label>
-              <input type="text" class="form-control" id="miVal" required/>
-              <div class="invalid-feedback">
-                Please provide a valid country.
-              </div>
+              <label>Confirmation password</label>
+              <input type="password" class="form-control" id="myConfPass" required/>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <label>City</label>
+              <input type="text" class="form-control" id="myCity" required/>
             </div>
           </td>
           <td>
             <div>
-              <label for="validationCustom09" class="form-label">Zip</label>
-              <input name="zip" type="text" class="form-control" id="miVal" maxlength="5" pattern="[0-9]{5}" required/>
-              <div class="invalid-feedback">Please provide a valid zip.</div>
+              <label>Country</label>
+              <input type="text" class="form-control" id="myCountry" required/>
+            </div>
+          </td>
+          <td>
+            <div>
+              <label>Zip</label>
+              <input type="text" class="form-control" id="myZip" maxlength="5" required/>
             </div>
           </td>
         </tr>
@@ -113,28 +97,28 @@
           <td>
             <div>
               <h2>About you</h2>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked/>
-                <label class="form-check-label" for="flexRadioDefault1">Particular</label>
+              <div>
+                <input class="form-check-input" type="radio" id="particular" name="option" value="particular"/>
+                <label>Particular</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                <label class="form-check-label" for="flexRadioDefault2">Company</label>
+              <div>
+                <input class="form-check-input" type="radio" id="company" name="option" value="company"/>
+                <label>Company</label>
               </div>
             </div>
           </td>
           <td>
             <div>
               <h2>Observations</h2>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" cols="25"></textarea>
+              <textarea class="form-control" id="observations" rows="5" cols="25"></textarea>
             </div>
           </td>
           <td style="vertical-align: bottom;">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required/>
-              <label class="form-check-label" for="invalidCheck2">Agree to terms and conditions</label>
+            <div>
+              <input class="form-check-input" type="checkbox" value="" id="conditions" required/>
+              <label>Agree to terms and conditions</label>
               <br /><br />
-              <button class="btn" onclick="validacion()">Submit form</button>
+              <button class="btn" type="submit">Submit form</button>
             </div>
           </td>
         </tr>
