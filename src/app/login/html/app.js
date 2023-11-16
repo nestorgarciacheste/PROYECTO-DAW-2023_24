@@ -1,7 +1,7 @@
 const auth0 = require('auth0');
 
 function loginWithGoogle() {
-  const redirectUrl = 'http://localhost:5500/src/app/home/html/index.html';
+  const redirectUrl = 'https://webcode.intecmedia.es/PROYECTO-DAW-2023_24/src/app/home/html/';
   const responseType = 'code';
   const connection = 'google-oauth2';
 
@@ -13,7 +13,7 @@ function loginWithGoogle() {
 }
 
 function loginWithGitHub() {
-    const redirectUrl = 'http://localhost:5500/src/app/home/html/index.html';
+    const redirectUrl = 'https://webcode.intecmedia.es/PROYECTO-DAW-2023_24/src/app/home/html/';
     const responseType = 'code';
     const connection = 'github';
 
