@@ -35,18 +35,17 @@
 
 .btn-secondary:hover {
   background-color: #272932; /* Mismo color cuando se pasa el mouse */
+  color: #F05D5E; /* Cambiar el color del texto al pasar el mouse (opcional) */
+  border: 2px solid #F05D5E;
+}
+
+/* Estilo cuando el botón está enfocado (seleccionado) */
+.btn-secondary:focus {
+  outline: none; /* Elimina el contorno predeterminado del foco */
+  background-color: #0f7173;
   color: #fff; /* Cambiar el color del texto al pasar el mouse (opcional) */
+  border: 2px solid #F05D5E;
 }
-
-/* Estilos personalizados para el icono del carrito */
-.cart-icon {
-  font-size: 20px; /* Tamaño del icono (ajusta según sea necesario) */
-  color: #000; /* Color negro */
-  display: inline-flex; /* Para alinear verticalmente con el contenido de la barra de búsqueda */
-  align-items: center; /* Para alinear verticalmente con el contenido de la barra de búsqueda */
-  height: 100%; /* Igualar la altura con la barra de búsqueda */
-}
-
 .card-img-top {
   height: 55%; /* Tamaño fijo de altura */
   object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsionar */

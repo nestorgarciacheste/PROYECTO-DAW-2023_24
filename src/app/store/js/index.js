@@ -19,55 +19,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/* Barra lateral comienza aquí */
+const imgContainer = document.querySelector(".img-ctn");
+const textContainer = document.querySelector(".text-ctn");
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  const showNavbar = (toggleId, navId, bodyId, headerId) => {
-    const toggle = document.getElementById(toggleId),
-      nav = document.getElementById(navId),
-      bodypd = document.getElementById(bodyId),
-      headerpd = document.getElementById(headerId);
+function updateHeight() {
+  const width = imgContainer.clientWidth;
+  imgContainer.style.height = `${width}px`;
+  textContainer.style.height = `${width}px`;
+}
 
-    // Validate that all variables exist
-    if (toggle && nav && bodypd && headerpd) {
-      toggle.addEventListener("click", () => {
-        // show navbar
-        nav.classList.toggle("show");
-        // change icon
-        toggle.classList.toggle("bx-x");
-        // add padding to body
-        bodypd.classList.toggle("body-pd");
-        // add padding to header
-        headerpd.classList.toggle("body-pd");
-      });
-    }
-  };
+updateHeight();
 
-  // Call showNavbar with appropriate parameters
-  showNavbar("toggleId", "navId", "bodyId", "headerId");
+window.addEventListener("resize", updateHeight);
+
+function verProducto(idProducto) {
+  var producto = document.getElementById(idProducto);
+  var titulo = producto.querySelector(".card-title").innerText;
+  var descripcion = producto.querySelector(".card-text").innerText;
+  var imagen = producto.querySelector(".card-img-top").src;
+
+  localStorage.setItem("tituloProducto", titulo);
+  localStorage.setItem("descripcionProducto", descripcion);
+  localStorage.setItem("imagenProducto", imagen);
+
+  window.location.href = "moreinfo.html";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var titulo = localStorage.getItem("tituloProducto");
+  var descripcion = localStorage.getItem("descripcionProducto");
+  var imagen = localStorage.getItem("imagenProducto");
+
+  document.getElementById("Title").innerText = titulo;
+  document.getElementById("Description").innerText = descripcion;
+  document.getElementById("Image").src = imagen;
 });
-
-function hideAllCards() {
-  const cards = document.querySelectorAll(".card");
-  for (const card of cards) {
-    card.style.display = "none";
-  }
-}
-
-// Agregar evento de clic a cada botón
-const buttons = document.querySelectorAll(".btn-custom");
-for (const button of buttons) {
-  button.addEventListener("click", function() {
-    // Obtener la categoría del botón
-    const category = button.dataset.category;
-
-    // Ocultar todas las cartas que no pertenecen a la categoría
-    hideAllCards();
-
-    // Mostrar las cartas que pertenecen a la categoría
-    const cards = document.querySelectorAll(".card[data-category='" + category + "']");
-    for (const card of cards) {
-      card.style.display = "block";
-    }
-  });
-}

@@ -1,4 +1,4 @@
-export class Opinion {
+/*class Opinion {
   constructor(user, rating, comment) {
     if (
       typeof user !== "string" ||
@@ -22,3 +22,6 @@ export class Opinion {
     this.date = new Date();
   }
 }
+
+export default Opinion;
+*/

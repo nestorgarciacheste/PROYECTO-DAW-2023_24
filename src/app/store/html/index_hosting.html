@@ -2,34 +2,39 @@
 <html lang="en">
 
 <head>
+  <!-- Se incluyen las hojas de estilo Bootstrap y Font Awesome para mejorar el diseño -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <!-- Se incluye una hoja de estilo personalizada -->
   <link rel="stylesheet" href="../css/style.css" />
+  <!-- Se incluye un script JavaScript externo -->
   <script src="../js/index.js"></script>
 </head>
 
 <body>
+  <!-- Cabecera -->
   <header id="header-container"></header>
+  
   <!-- Barra de búsqueda -->
   <div class="container text-center mt-5">
+    <!-- Se crea un grupo de entrada personalizado con una lupa para la barra de búsqueda -->
     <div class="custom-input-group input-group">
       <div class="input-group-prepend">
+        <!-- Icono de lupa en el grupo de entrada -->
         <span class="input-group-text" id="inputGroup-sizing-default">
           <img src="../../../assets/img/lupa.png" width="20" height="20" />
         </span>
       </div>
+      <!-- Input de búsqueda -->
       <input type="text" class="form-control rounded" aria-label="Default"
         aria-describedby="inputGroup-sizing-default" />
-      <!-- Icono de carrito -->
-      <a href="/carrito.html" class="btn btn-link cart-icon">
-        <!-- Aplica la clase cart-icon aquí -->
-        <i class="fas fa-shopping-cart"></i>
-      </a>
     </div>
   </div>
   <br />
+  
   <!-- Botones -->
   <div class="btn-toolbar d-flex justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+    <!-- Botones para filtrar productos por categoría -->
     <div class="btn-group mr-5" role="group" aria-label="First group">
       <button type="button" class="btn btn-custom" data-category="show-all"
         onclick="window.location.href='index.html'">Show all</button>
@@ -48,12 +53,17 @@
     </div>
   </div>
   <br />
+  
   <!-- Productos -->
   <div class="col-4">
+    <!-- Card para mostrar un producto -->
     <div class="card" style="border-radius: 20px; overflow: hidden;margin-left: 2%;">
+      <!-- Imagen del producto -->
       <img src="../../../assets/img/hosting_store.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
+        <!-- Título del producto -->
         <h5 class="card-title">DataGuard Hosting Services</h5>
+        <!-- Descripción del producto -->
         <p class="card-text">
           Safeguard your digital assets with our cutting-edge DataGuard Hosting Services. Our commitment to data
           resilience ensures that your valuable information remains secure and accessible at all times. Benefit from our
@@ -62,7 +72,7 @@
         </p>
       </div>
       <div class="card-footer text-center">
-        <!-- Agrega text-center aquí -->
+        <!-- Pie de la tarjeta con un botón centrado -->
         <small class="text-muted">
           <button type="button" class="btn btn-secondary">
             View Product
@@ -74,6 +84,8 @@
   <br />
   <br />
   <br />
+  
+  <!-- Pie de página -->
   <footer id="footer-container"></footer>
 </body>
 
