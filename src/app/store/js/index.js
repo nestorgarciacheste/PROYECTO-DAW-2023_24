@@ -23,9 +23,10 @@ const imgContainer = document.querySelector(".img-ctn");
 const textContainer = document.querySelector(".text-ctn");
 
 function updateHeight() {
-  const width = imgContainer.clientWidth;
+  let width = imgContainer.clientWidth;
+  width = imgContainer.clientWidth;
   imgContainer.style.height = `${width}px`;
-  textContainer.style.height = `${width}px`;
+  textContainer.style.minHeight = `${width}px`;
 }
 
 updateHeight();
@@ -37,6 +38,7 @@ function verProducto(idProducto) {
   var titulo = producto.querySelector(".card-title").innerText;
   var descripcion = producto.querySelector(".card-text").innerText;
   var imagen = producto.querySelector(".card-img-top").src;
+  console.log(imagen)
 
   localStorage.setItem("tituloProducto", titulo);
   localStorage.setItem("descripcionProducto", descripcion);
@@ -49,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var titulo = localStorage.getItem("tituloProducto");
   var descripcion = localStorage.getItem("descripcionProducto");
   var imagen = localStorage.getItem("imagenProducto");
-
+  console.log(imagen)
   document.getElementById("Title").innerText = titulo;
   document.getElementById("Description").innerText = descripcion;
-  document.getElementById("Image").src = imagen;
+  document.querySelector(".img-ctn").style.backgroundImage = `url(${imagen})`;
 });
