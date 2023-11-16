@@ -45,10 +45,3 @@ function checkform() {
     Swal.fire('Error', 'Please fill in all required fields with valid information.', 'error');
   }
 }
-function resaltarBorde(elemento) {
-  elemento.classList.add('formulario-input-focus');
-}
-
-function restaurarBorde(elemento) {
-  elemento.classList.remove('formulario-input-focus');
-}

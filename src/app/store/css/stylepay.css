@@ -32,11 +32,3 @@
     background-color: #e7ecef;
     color: #0f7173;
   }
-  .formulario-input {
-    border: 2px solid #ccc;
-    transition: border 0.3s ease; /* Agrega una transición para que sea suave */
-  }
-  
-  .formulario-input-focus {
-    border: 2px solid #2196F3; /* Cambia el color del borde al enfocar */
-  }
