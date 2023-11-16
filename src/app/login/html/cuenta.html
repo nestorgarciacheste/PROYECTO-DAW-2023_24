@@ -27,9 +27,9 @@
       <div class="overlay-content">
         <div>
           <h3>Change Image</h3>
-          <input type="file" id="enter_file">
+          <input type="file" id="enter_file" accept="image/*" style="display: none;">
           <div>
-            <button value="cambiar_nombre" onclick="cambiarImage()">Change</button>
+            <button value="cambiar_nombre" id="boton_imagen" onclick="cambiarImagen(event)">Change</button>
             <button value="cancelar" onclick="closeImage()">Cancel</button>
           </div>
         </div>

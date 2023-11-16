@@ -56,12 +56,26 @@ function validarEmail(email) {
 }
 
 /* CHANGE IMAGE */
-function cambiarImagen() {
-  let image = document.getElementById("enter_image").value;
-  document.getElementById("enter_email").value = "";
-  document.getElementById("email").innerHTML = `${email}`;
-  document.getElementById("ventana_email").style.width = "0%";
-}
+  function cambiarImagen(event) {
+    const inputImage = document.getElementById('enter_file');
+
+  inputImage.click(); // Simula el clic en el input de tipo file
+
+  inputImage.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
+      const imageUrl = event.target.result;
+      const preview = document.querySelector('.circulo');
+      preview.style.backgroundImage = `url(${imageUrl})`;
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  });
+  }
 
 /* OPEN AND CLOSE OVERLAY */
 function openName() {
