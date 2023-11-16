@@ -13,15 +13,15 @@ Importamos fuente de google
 Estilo del reproductor
 */
 .music-container {
+  display: none;
   width: 25%;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(222, 221, 235, 0.6);
-  display: flex;
   padding: 20px 30px;
   position: absolute;
   right: -5%; /*editado por Lorenzo */
-  top: 1600px;
+  top: 1200px;
   margin: 100px;
   margin-bottom: 200px;
 }
@@ -178,23 +178,29 @@ Estilo de la barra de progreso
   width: 0%;
   transition: width 0.1s linear;
 }
-.toggle-button {
-  padding: 10px 20px;
-  background-color: #3a8c77;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+
+.greenbutton {
   position: absolute;
-  right: 5%;
-  top: 1600px;
+  top: 1690px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(39, 92, 87);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../html/images/auriculares.PNG");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}  
 
-}
-
-.toggle-button:hover {
-  background-color: #276b5a;
+.greenbutton:hover {
+  opacity: 50%;
 }
 
 /* Para pantallas más pequeñas que 768px */
@@ -202,7 +208,8 @@ Estilo de la barra de progreso
   .music-container {
     width: 90%; 
     margin: 10px auto; 
-    top: 2550px; 
+    top: 2150px; 
+    left: -5px;
     position: absolute;
   }
   .action-btn {
@@ -215,13 +222,21 @@ Estilo de la barra de progreso
   .img-container::after {
     left: 60%;
   }  
+  .greenbutton {
+    display: none;
+  }  
 }
-
+@media (width: 768px) {
+  .greenbutton {
+    display: none;
+  } 
+}
 @media (min-width: 768px) {
   .music-container {
-    width: 25%; 
+    width: 22%; 
     margin: 100px; 
-    top: 1600px; 
+    top: 1550px; 
+    right: 100px;
   }
 
 }

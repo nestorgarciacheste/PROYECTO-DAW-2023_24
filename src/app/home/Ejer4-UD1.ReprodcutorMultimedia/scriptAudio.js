@@ -173,3 +173,20 @@ audio.addEventListener('ended', nextSong);
 audio.addEventListener('timeupdate',DurTime);
 
 const toggleButton = document.getElementById('toggle-button');
+
+let isPlaying = false; // Variable para mantener el estado de reproducción
+
+function ocultarAudio() {
+  if (musicContainer.style.display === 'none') {
+    musicContainer.style.display = 'flex';
+    if (isPlaying) {
+      audio.play();
+    }
+  } else {
+    isPlaying = !audio.paused;
+    if (isPlaying) {
+      audio.pause();
+    }
+    musicContainer.style.display = 'none';
+  }
+}
