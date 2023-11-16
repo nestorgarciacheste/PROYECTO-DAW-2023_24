@@ -29,13 +29,13 @@
     background-color: #0F7173;
 }
 .form-check-input:checked{
-    background-color: #EFE2D8;
-    border: 1px solid #e4d0c2;
-    box-shadow: #D8A47F;
+    background-color: black;
+    border: 1px solid black;
+    box-shadow: none;
 }
 .form-check-input:focus{
-    border: 1px solid #e4d0c2;
-    box-shadow: 0 0 10px #D8A47F;
+    border: 1px solid black;
+    box-shadow: none;
 }
 tr,td{
    padding-right: 50px;
@@ -46,3 +46,4 @@ table{
     height: 100%;
     width: 100%;
 }
+

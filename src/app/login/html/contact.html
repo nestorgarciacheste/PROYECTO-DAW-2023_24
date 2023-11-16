@@ -15,11 +15,13 @@
     ></script>
     <title>Contact</title>
     <script src="headerFooter.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="validacionContact.js"></script>
   </head>
   <body>
     <header id="header-container"></header>
-    <form style="margin: 30px; padding: 0px" class="row g-3 needs-validation" id="miFormulario" novalidate>
+    <form onsubmit="return enviarFormulario()" style="margin: 30px; padding: 0px" class="row g-3 needs-validation" id="myContact" novalidate>
       <table>
         <tr>
           <td colspan="2"><h2>Contact</h2></td>
@@ -27,28 +29,27 @@
         <tr>
           <td>
             <div>
-              <label for="validationCustom01" class="form-label">Name</label>
-              <input type="text" class="form-control" id="miVal" required/>
+              <label>Name</label>
+              <input type="text" class="form-control" id="myName" required/>
             </div>
           </td>
           <td>
             <div>
-              <label for="validationCustom02" class="form-label">Surname</label>
-              <input type="text" class="form-control" id="miVal" required/>
+              <label>Surname</label>
+              <input type="text" class="form-control" id="mySurname" required/>
             </div>
           </td>
         </tr>
         <tr>
           <td>
             <div>
-              <label class="form-label">Email</label>
-              <input id="miVal" name="email" type="email" class="form-control" required/>
-              <div class="invalid-feedback">Please select a valid email.</div>
+              <label>Email</label>
+              <input id="myEmail" type="email" class="form-control"  required/>
             </div>
           </td>
           <td>
             <div>
-              <label for="validationCustom04" class="form-label">Choose the type of information you wish to request</label>
+              <label class="form-label">Choose the type of information you wish to request</label>
               <select class="form-select" id="info" name="info">
                 <option value="type">Type of information</option>
                 <option value="Web maintenance">Web maintenance</option>
@@ -64,13 +65,13 @@
           <td colspan="2">
             <div>
               <h2>Write us</h2>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" cols="25"></textarea>
+              <textarea class="form-control" id="write" rows="10" cols="25"></textarea>
             </div>
           </td>
         </tr>
         <tr>
             <td>
-                <button class="btn">Send</button> 
+                <button class="btn" type="submit">Send</button> 
             </td>
         </tr>
       </table>
