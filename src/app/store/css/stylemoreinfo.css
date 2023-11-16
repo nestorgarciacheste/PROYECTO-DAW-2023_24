@@ -23,6 +23,7 @@
   margin: 0 auto;
   padding-top: 4rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .img-ctn {
@@ -32,6 +33,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 25px;
+  min-width: 350px;
 }
 
 .text-ctn {
@@ -42,7 +44,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  padding-left: 10%;
+  min-width: 350px;
 }
 
 .text-ctn h3 {
@@ -143,8 +145,6 @@
 }
 
 /* Ajustes adicionales para otros elementos si es necesario */
-.text-ctn,
 .img-ctn {
-  border-radius: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
