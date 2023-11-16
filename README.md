@@ -200,6 +200,7 @@ Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feat
         <li>About us</li>
         <li>Slider Galeria</li>
         <li>Creacion de Mapa mediante API <b>Leaflet</b></li>
+        <li>Boton UP para desplazarse al principio de la página</li>
     </ul>
     </li>
    <br>
