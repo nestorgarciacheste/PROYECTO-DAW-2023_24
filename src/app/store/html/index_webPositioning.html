@@ -58,7 +58,7 @@
   <!-- Productos -->
   <div class="card-deck">
     <!-- Deck de tarjetas para mostrar productos -->
-    <div class="card" style="
+    <div class="card" id="producto1" style="
           width: 18rem;
           border-radius: 20px;
           overflow: hidden;
@@ -78,13 +78,13 @@
       <div class="card-footer text-center">
         <!-- Pie de la tarjeta con un botón centrado -->
         <small class="text-muted">
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-secondary" onclick="verProducto('producto1')">
             View Product
           </button></small>
       </div>
     </div>
     <!-- Tarjeta para mostrar productos de la categoría "Web positioning" -->
-    <div class="card" style="width: 18rem; border-radius: 20px; overflow: hidden" data-category="web-positioning">
+    <div class="card" id="producto2" style="width: 18rem; border-radius: 20px; overflow: hidden" data-category="web-positioning">
       <img src="../../../assets/img/seo_store.png" class="card-img-top" alt="..." />
       <div class="card-body">
         <!-- Título y descripción del producto 2 -->
@@ -98,13 +98,13 @@
       <div class="card-footer text-center">
         <!-- Pie de la tarjeta con un botón centrado -->
         <small class="text-muted">
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-secondary" onclick="verProducto('producto2')">
             View Product
           </button></small>
       </div>
     </div>
     <!-- Tarjeta para mostrar productos de la categoría "Web positioning" -->
-    <div class="card" style="
+    <div class="card" id="producto3" style="
           width: 18rem;
           border-radius: 20px;
           overflow: hidden;
@@ -125,7 +125,7 @@
       <div class="card-footer text-center">
         <!-- Pie de la tarjeta con un botón centrado -->
         <small class="text-muted">
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-secondary" onclick="verProducto('producto3')">
             View Product
           </button></small>
       </div>
@@ -135,7 +135,7 @@
   <br />
   <!-- Otra tarjeta para mostrar productos de la categoría "Web positioning" -->
   <div class="col-4">
-    <div class="card" style="border-radius: 20px;
+    <div class="card" id="producto4" style="border-radius: 20px;
           overflow: hidden;
           margin-left: 2%;">
       <img src="../../../assets/img/ssl_store.jpg" class="card-img-top" alt="..." />
@@ -151,7 +151,7 @@
       <div class="card-footer text-center">
         <!-- Pie de la tarjeta con un botón centrado -->
         <small class="text-muted">
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-secondary" onclick="verProducto('producto4')">
             View Product
           </button></small>
       </div>
