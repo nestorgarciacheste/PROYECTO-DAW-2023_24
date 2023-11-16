@@ -9,22 +9,18 @@ Importamos fuente de google
 
 
 
+
 /* Denise:
 Estilo del reproductor
 */
 .music-container {
   display: none;
-  width: 25%;
-  background-color: #fff;
+  width: 425px;
+  background-color: bisque;
   border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(222, 221, 235, 0.6);
   padding: 20px 30px;
-  position: absolute;
-  right: -5%; /*editado por Lorenzo */
-  top: 1200px;
-  margin: 100px;
-  margin-bottom: 200px;
-}
+} 
 
 /* Denise:
 Posición de la imagen del disco
@@ -180,9 +176,6 @@ Estilo de la barra de progreso
 }
 
 .greenbutton {
-  position: absolute;
-  top: 1690px;
-  right: 30px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -207,10 +200,8 @@ Estilo de la barra de progreso
 @media (max-width: 767px) {
   .music-container {
     width: 90%; 
-    margin: 10px auto; 
-    top: 2150px; 
-    left: -5px;
-    position: absolute;
+    margin: 10px auto;
+    display: block;
   }
   .action-btn {
     font-size: 16px;
@@ -225,20 +216,4 @@ Estilo de la barra de progreso
   .greenbutton {
     display: none;
   }  
-}
-@media (width: 768px) {
-  .greenbutton {
-    display: none;
-  } 
-}
-@media (min-width: 768px) {
-  .music-container {
-    width: 22%; 
-    margin: 100px; 
-    top: 1550px; 
-    right: 100px;
-  }
-.greenbutton{
-  display: block;
-}
 }

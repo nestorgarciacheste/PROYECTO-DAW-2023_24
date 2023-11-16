@@ -1,5 +1,5 @@
 @import url(../../header_footer/css/topbar_style.css);
-
+@import url(../Ejer4-UD1.ReprodcutorMultimedia/styleAudio.css);
 .divrojo{
     background-color: #d8a47f;
     border-radius: 1.5rem;
@@ -358,3 +358,14 @@ transform: translateX(0);
   margin-left: 60px;
 }
 
+.music-ctn{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 7rem;
+  height: 105px;
+  align-items: end;
+}
+
+.greenbutton{
+  margin-left: 10px;
+}
