@@ -18,3 +18,39 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error al cargar el footer:", error);
     });
 });
+
+const imgContainer = document.querySelector(".img-ctn");
+const textContainer = document.querySelector(".text-ctn");
+
+function updateHeight() {
+  const width = imgContainer.clientWidth;
+  imgContainer.style.height = `${width}px`;
+  textContainer.style.height = `${width}px`;
+}
+
+updateHeight();
+
+window.addEventListener("resize", updateHeight);
+
+function verProducto(idProducto) {
+  var producto = document.getElementById(idProducto);
+  var titulo = producto.querySelector(".card-title").innerText;
+  var descripcion = producto.querySelector(".card-text").innerText;
+  var imagen = producto.querySelector(".card-img-top").src;
+
+  localStorage.setItem("tituloProducto", titulo);
+  localStorage.setItem("descripcionProducto", descripcion);
+  localStorage.setItem("imagenProducto", imagen);
+
+  window.location.href = "moreinfo.html";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var titulo = localStorage.getItem("tituloProducto");
+  var descripcion = localStorage.getItem("descripcionProducto");
+  var imagen = localStorage.getItem("imagenProducto");
+
+  document.getElementById("Title").innerText = titulo;
+  document.getElementById("Description").innerText = descripcion;
+  document.getElementById("Image").src = imagen;
+});
