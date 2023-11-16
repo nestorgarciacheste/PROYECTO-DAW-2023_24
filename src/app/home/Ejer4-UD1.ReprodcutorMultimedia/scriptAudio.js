@@ -16,7 +16,7 @@
 	const durTime = document.querySelector('#durTime');
 
 //Denise: Títulos de las canciones
-const songs = ['Rules', 'Streets', 'Need to Know'];
+const songs = ['Rules', 'Streets', 'Need to Know', 'new rules' ,'vampire'];
 
 //Denise: empezamos con la cancion i=2 del array (Need To Know)
 let songIndex = 2;

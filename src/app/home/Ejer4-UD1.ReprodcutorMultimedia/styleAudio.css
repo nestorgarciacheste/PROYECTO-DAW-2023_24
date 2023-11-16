@@ -20,7 +20,7 @@ Estilo del reproductor
   display: flex;
   padding: 20px 30px;
   position: absolute;
-  right: 5%;
+  right: -5%; /*editado por Lorenzo */
   top: 1600px;
   margin: 100px;
   margin-bottom: 200px;
