@@ -547,6 +547,55 @@ Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feat
 </table>
 <br>
 
+## Gallery:
+
+En el apartado de Gallery hemos desarrollado una galería, con las fotos de la web, teneiendo que utilizar los lenguajes de programación HTML, CSS y Java Script y de modod que sea Responsive.
+
+Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feature/home`, trabajo de cada miembro del grupo en su respectiva rama:
+
+<ul>
+  <li>Lorenzo <code>Home_Lorenzo</code> : encargado de la estructuracion y creacion de la mayor parte del <b>home</b> , creacion de textos , diseño y gestión.
+   <ul>
+        <li>About us</li>
+        <li>Slider Galeria</li>
+        <li>Creacion de Mapa mediante API <b>Leaflet</b></li>
+        <li>Boton UP para desplazarse al principio de la página</li>
+    </ul>
+    </li>
+   <br>
+  <li>Denise <code>main</code> creacion de reproductor de música </li>
+<br>
+  <ul>
+    
+  <li>Manu <code>home_Manu</code> : encargado de la seccion nuestros servicios e implentacion de opiniones
+    <ul>
+        <li>Our services</li>
+        <li>Opiniones</li>
+      </ul> 
+  </li>
+
+
+<br>
+  <li>Ruben <code>login_</code> </li>
+      
+</ul>
+<br>
+<table>
+    <tr>
+        <th>About us</th>
+        <th>Slider Galeria</th>
+        <th>Mapa</th>
+        <th>Reproductor de música</th>
+    </tr>
+    <tr>
+        <td> <img src="/src/assets/img/captura_readme_home_aboutUs.png"></td>        
+        <td> <img src="/src/assets/img/captura_readme_home_galleySlider.png"></td>        
+        <td> <img src="/src/assets/img/captura_readme_home_map.png"></td>        
+        <td> <img src=""></td>        
+    </tr>
+</table>
+<br>
+
 ### HOW TO INSERT THE HEADER AND FOOTER
 
 To insert the header and footer to each page u need to insert this in the js file:
