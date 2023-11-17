@@ -1,5 +1,5 @@
 @import url(../../header_footer/css/topbar_style.css);
-@import url(../Ejer4-UD1.ReprodcutorMultimedia/styleAudio.css);
+
 .divrojo{
     background-color: #d8a47f;
     border-radius: 1.5rem;
@@ -18,13 +18,76 @@
 .cardservices{
     background-color: #d8a47f;
     border: 0;
+    max-width: 100%;
 }
-/*
-.card{
-    background-color: #d8a47f;
-    border: 0;
+/* Seccion opiniones */
+/* Estilos para el contenedor de opiniones */
+.opi-ctn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem auto;
+  flex-wrap: wrap;
 }
-*/
+
+.opinion-block {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  max-width: 600px;
+  width: 80%;
+  background-color: #e7ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #272932;
+  padding: 20px;
+  position: relative;
+  min-width: 400px;
+}
+
+.customer-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0f7173;
+  color: #e7ecef;
+}
+
+.customer-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.customer-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rating {
+  font-size: 1.5em;
+  color: #f05d5e;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.opinion-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 80px;
+}
 @media only screen and (min-width: 600px) {
   #banner-izquierda {
     position: absolute;
@@ -352,10 +415,6 @@ transform: translateX(0);
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start { 
 transform: translateX(0);
-}
-
-.card {
-  margin-left: 60px;
 }
 
 .music-ctn{
