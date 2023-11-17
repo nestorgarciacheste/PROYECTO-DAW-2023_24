@@ -64,17 +64,10 @@ Para realizar esto, hemos dividido nuestro apartado de Cuenta en la rama `featur
         <th>Cuenta</th>
     </tr>
     <tr>
-<<<<<<< HEAD
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/83a059b3-55d8-4527-93ea-767c47bf6771"></td>        
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/94504c03-a68a-426b-9aeb-ae0b39933484"></td>        
         <td> <img width ="2000px" src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b19ee5ae-7480-462f-ab15-e34560312a7c"</td>        
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/ed3e51cb-1971-48ea-b07b-83be57446b07"></td>        
-=======
-        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
-        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
-        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
-        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
->>>>>>> feature/store
     </tr>
 </table>
 <br>
@@ -579,8 +572,6 @@ Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feat
     </tr>
 </table>
 <br>
-
-## Gallery:
 
 En el apartado de Gallery hemos desarrollado una galería, con las fotos de la web, teneiendo que utilizar los lenguajes de programación HTML, CSS y Java Script y de modod que sea Responsive.
 
