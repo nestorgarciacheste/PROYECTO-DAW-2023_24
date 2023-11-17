@@ -56,31 +56,54 @@ if (!isPasswordCorrect(password)) {
 }
 
   /*if user forget his password, they can send an email */
-function forgot(event) {
-  function isCorrect(email) {
-    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return emailRegex.test(email);
-  }
-  event.preventDefault();
-  Swal.fire({
-    title: 'Please, enter your email address',
-    input: 'text',
-    inputAttributes: {
-      autocapitalize: 'off'
-    },
-    showCancelButton: true,
-    confirmButtonText: 'Submit',
-    customClass: {
-      confirmButton: 'custom-green-sweet-button' 
-    }  }).then((result) => {
-    if (result.isConfirmed) {
-      console.log(result);
-        email = result.value;
-      if (isCorrect(email)) {
-        Swal.fire('Success', 'We have sent an email to.' + email, 'success');
-      } else {
-        Swal.fire('Error', 'The email address entered is not valid.', 'error');
-      }
+  function forgot(event) {
+    function isCorrect(email) {
+      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      return emailRegex.test(email);
     }
-  });
-}
+  
+    event.preventDefault();
+  
+    Swal.fire({
+      title: 'Please, enter your email address',
+      input: 'text',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Submit',
+      customClass: {
+        confirmButton: 'custom-green-sweet-button' 
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        var email = result.value;
+        if (isCorrect(email)) {
+          // Realizar la solicitud AJAX al script PHP
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "../../../services/formLogin.php", true);
+          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+              if (xhr.status == 200) {
+                // Respuesta del servidor
+                Swal.fire('Success', 'We have sent an email to ' + email, 'success');
+              } else {
+                // Manejo de errores
+                Swal.fire('Error', 'Error during AJAX request: ' + xhr.statusText, 'error');
+              }
+            }
+          };
+          xhr.onerror = function () {
+            // Manejo de errores de red
+            Swal.fire('Error', 'Network error during AJAX request', 'error');
+          };
+          // Enviar la dirección de correo electrónico al script PHP
+          xhr.send("email=" + email);
+        } else {
+          Swal.fire('Error', 'The email address entered is not valid.', 'error');
+        }
+      }
+    });
+  }
+  
