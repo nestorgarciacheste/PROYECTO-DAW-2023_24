@@ -195,7 +195,7 @@ const auth0 = require('auth0');
 
 
 ### Olvido de contraseña
-En caso de que el usuario envíe la contraseña para iniciar sesión, la administración de WebCode le enviará un correo con la recuperación de esta (de forma ficticia). Para ello, el usuario solo tendrá que situar un correo válido en un input que hemos modificado estéticamemente mediante la librería **SweetAlert2**.
+En caso de que el usuario envíe la contraseña para iniciar sesión, la administración de WebCode le enviará un correo con la recuperación de esta. Para ello, el usuario solo tendrá que situar un correo válido en un input que hemos modificado estéticamemente mediante la librería **SweetAlert2**.
 La cual hemos añadido en el **Head** de nuestro proyecto:
 <code>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -211,6 +211,51 @@ La cual hemos añadido en el **Head** de nuestro proyecto:
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/910e2a8e-a085-40f6-8b4d-f3e08f099b39"></td>        
     </tr>
 </table>
+
+Una vez hecho esto, nuestro **servidor de correo** junto a codigo de **PHP** (servidor y código gestionado por Denise de Login y Miguel de Store) y el método post, mandará a todos los usuarios un correo con la recuperación de la contraseña. La cual será válida para nuestra resticción del login y estará simulada para que el usuario la utilice una vez y luego deba cambiarla.
+<details>
+  
+<summary>Ver código PHP</summary>
+
+~~~
+
+<?php
+header("Access-Control-Allow-Origin: *"); 
+header("Access-Control-Allow-Methods: POST");
+header("Content-Type: application/json");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+
+    if (!empty($email)) {
+        $destinatario = $email;
+        $asunto = "Password recovery";
+
+        $cuerpoCorreo = "Hello, this is the WebCode team.\n";
+        $cuerpoCorreo .= "We are delighted to assist you in recovering your password,\n";
+        $cuerpoCorreo .= "Your temporary password is: 1WebCode-\n";
+        $cuerpoCorreo .= "We extended our thanks for your cooperatio.n\n";
+        $cuerpoCorreo .= "WebCode";
+
+        $remitente = "contact@webcode.intecmedia.com";
+
+        $headers = "From: $remitente";
+
+        if (mail($destinatario, $asunto, $cuerpoCorreo, $headers)) {
+            echo "Email sent successfully";
+        } else {
+            echo "Error sending email";
+        }
+    } else {
+        echo "The email address was not provided correclty.";
+    }
+} else {
+    http_response_code(405); 
+    echo "Method not allowed";
+}
+?>
+  ~~~
+
+</details>
 
 <br>
 
@@ -625,7 +670,21 @@ Nuestro equipo formado por Nestor, Cristian y David somos los encargados de hace
 
 Para realizar este apartado hemos hecho una rama principal llamada <code>features_gallery</code>, dividida esta rama, en tres subramas, una para cada integrante del equipo, para poder desarrollar nuestras tareas para el correcto funcionamiento de la web:
 
-  <li>Nestor, líder del grupo, con su rama <code>gallery_Nestor</code> : encargado del <b>JavaScript, TopBar, Footer</b>. La tarea consiste con JavaScript, una vez diseñada la estructura de <b>.html</b> y el diseño con <b>.css</b> darle funcionamiento para que las fotos cambien su distribucion de manera autónoma.</li>
+  <li>Nestor, líder del grupo, encargado del <b>JavaScript, TopBar, Footer</b>. La tarea consiste en desarrollar el código JavaScript, una vez diseñada la estructura de <b>.html</b> y el diseño con <b>.css</b> darle funcionamiento para que las fotos cambien su distribucion de manera autónoma.</li>
+    <ul>
+        <li>Organizador de commits de los diferentes equipos. </li>
+        <li>Dado que tres personas eran demasiadas para gallery, se ha basado más en ayudar a los compañeros con sus respectivas partes como:
+            <ul>
+                <li>Home (reproductor de video)</li>
+                <li>Store (moreinfo)</li>
+                <li>Login (ayudando a denise)</li>
+                <li>Hacer responsive gran parete de la web</li>
+                <li>Github</li>
+                <li>Y resolviendo dudas de compañeros </li>
+
+
+            </ul>
+</li>
 <br>
   <li>Cristian con su rama <code>gallery_Cristina</code> : encargado de hacer el <b>HTML, TopBar, Footer. </b> La tarea consiste en diseñar la estructura de la gellery, la cual se compone de un contenedor principal que dentro de este, encapsulamos todo el contenido que tendrá la web. Consiste en cuatro apartados:
     <ul>
@@ -680,7 +739,7 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
 <ul>
 </ul>
 
-  <li>Por último, mencionar que los tres integrantes del grupo, han trabajado juntos en el desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario. Por otro lado, en el <b>Footer</b> añadimos las redes sociales, en el caso de la web son: facebook, Instagram y Linkedin</li>
+  <li>Por último, mencionar que el grupo se ha encargado del desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario. Por otro lado, en el <b>Footer</b> hemos añadido las redes sociales, en el caso de la web son: facebook, Instagram y Linkedin</li>
 
 
 

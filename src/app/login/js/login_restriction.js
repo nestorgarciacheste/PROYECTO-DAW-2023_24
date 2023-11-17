@@ -79,26 +79,25 @@ if (!isPasswordCorrect(password)) {
       if (result.isConfirmed) {
         var email = result.value;
         if (isCorrect(email)) {
-          // Realizar la solicitud AJAX al script PHP
+          //*AJAX request to script PHP
           var xhr = new XMLHttpRequest();
           xhr.open("POST", "../../../services/formLogin.php", true);
           xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
               if (xhr.status == 200) {
-                // Respuesta del servidor
+                //*Server Answer
                 Swal.fire('Success', 'We have sent an email to ' + email, 'success');
               } else {
-                // Manejo de errores
+                //*Error fixing
                 Swal.fire('Error', 'Error during AJAX request: ' + xhr.statusText, 'error');
               }
             }
           };
           xhr.onerror = function () {
-            // Manejo de errores de red
             Swal.fire('Error', 'Network error during AJAX request', 'error');
           };
-          // Enviar la dirección de correo electrónico al script PHP
+          // *send the email
           xhr.send("email=" + email);
         } else {
           Swal.fire('Error', 'The email address entered is not valid.', 'error');
