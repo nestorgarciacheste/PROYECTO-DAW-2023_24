@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,29 +21,31 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <header id="header-container"></header>
-
     <div class="container">
-      <!-- 1 PARTE lorenzo-->
-
-      <!-- HAY QUE AJUSTAR LOS TEXOS Y BANNERS LATERALES AL TENER EL TEXTO EN INGLES-->
-
-      <!-- BANNERS derecha e izquierda-->
-      <div id="banner-izquierda">banner izquiero</div>
-      <div id="banner-derecha">banner derecha</div>
-
-      <!-- quienes somos -->
+      <div id="banner-izquierda"></div>
+      <div id="banner-derecha"></div>
       <div class="row">
         <div class="col-md-12">
           <h2 class="text-center">ABOUT US?</h2>
         </div>
       </div>
-
       <div class="row">
         <div
           class="col-md-8 textoRecuadro text-center"
@@ -67,14 +70,11 @@
         </div>
       </div>
       <p class="text-center flecha-home">&darr;</p>
-
-      <!-- 25 años experiencia -->
       <div class="row">
         <div class="col-md-12">
           <h2 class="text-center">OUR 25 YEARS OF EXPERIENCE</h2>
         </div>
       </div>
-
       <div class="row">
         <div
           class="col-md-8 textoRecuadro text-center"
@@ -92,14 +92,11 @@
         </div>
       </div>
       <p class="text-center flecha-home">&darr;</p>
-
-      <!-- que hacemos -->
       <div class="row">
         <div class="col-md-12">
           <h2 class="text-center">WHAT DO WE DO?</h2>
         </div>
       </div>
-
       <div class="row">
         <div
           class="col-md-8 textoRecuadro text-center"
@@ -121,93 +118,103 @@
       </div>
       <p class="text-center flecha-home">&darr;</p>
     </div>
-
-    <!-- FIN 1 PARTE-->
-
-    <!-- SLIDER 4 PARTE Lorenzo-->
-    <!-- HAY QUE AÑADIR LAS MISMAS IMAGENES QUE HAYA EN GALERIA-->
-    <!-- al añadir las fotos hay que actualizar lo que tiene el slider dentro-->
+    <hr>
     <div class="container-fluid text-center my-3">
-      <h2 class="font-weight-light">Galery</h2>
+      <h2 class="font-weight-light">Gallery</h2>
       <div class="row mx-auto my-auto justify-content-center">
         <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
               <div class="col-md-3">
+                <a href="../../gallery/html/index.html">
                 <div class="card">
                   <div class="card-img">
+                   
                     <img
-                      src="../../../assets/img/home_icon_3.png"
-                      class="img-fluid"
+                      src="../../gallery/img/img2.jpg"
+                      class="img-fluid gallery_img"
                     />
+                  
                   </div>
-                  <div class="card-img-overlay">Slide 1</div>
+                  <div class="card-img-overlay"></div>
                 </div>
+              </a>
               </div>
             </div>
             <div class="carousel-item">
               <div class="col-md-3">
+                <a href="../../gallery/html/index.html"></a>
                 <div class="card">
                   <div class="card-img">
+                    <a href="../../gallery/html/index.html">
                     <img
-                      src="../../../assets/img/home_icon_3.png"
+                      src="../../gallery/img/img1.jpg"
                       class="img-fluid"
                     />
                   </div>
-                  <div class="card-img-overlay">Slide 2</div>
+                  <div class="card-img-overlay"></div>
                 </div>
+              </a>
               </div>
             </div>
             <div class="carousel-item">
               <div class="col-md-3">
+                <a href="../../gallery/html/index.html">
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../../assets/img/home_icon_3.png"
+                      src="../../gallery/img/img3.jpg"
                       class="img-fluid"
                     />
                   </div>
-                  <div class="card-img-overlay">Slide 3</div>
+                  <div class="card-img-overlay"></div>
                 </div>
+              </a>
               </div>
             </div>
             <div class="carousel-item">
               <div class="col-md-3">
+                <a href="../../gallery/html/index.html">
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../../assets/img/home_icon_3.png"
+                      src="../../gallery/img/img1.jpg"
                       class="img-fluid"
                     />
                   </div>
-                  <div class="card-img-overlay">Slide 4</div>
+                  <div class="card-img-overlay"></div>
                 </div>
+              </a>
               </div>
             </div>
             <div class="carousel-item">
               <div class="col-md-3">
+                <a href="../../gallery/html/index.html">
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../../assets/img/home_icon_3.png"
+                      src="../../gallery/img/img2.jpg"
                       class="img-fluid"
                     />
                   </div>
-                  <div class="card-img-overlay">Slide 5</div>
+                  <div class="card-img-overlay"></div>
                 </div>
+              </a>
               </div>
             </div>
             <div class="carousel-item">
               <div class="col-md-3">
+                <a href="../../gallery/html/index.html">
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../../assets/img/home_icon_3.png"
+                      src="../../gallery/img/img3.jpg"
                       class="img-fluid"
                     />
                   </div>
-                  <div class="card-img-overlay">Slide 6</div>
+                  <div class="card-img-overlay"></div>
                 </div>
+              </a>
               </div>
             </div>
           </div>
@@ -230,7 +237,6 @@
         </div>
       </div>
     </div>
-
     <script>
       let items = document.querySelectorAll(".carousel .carousel-item");
 
@@ -239,7 +245,6 @@
         let next = el.nextElementSibling;
         for (var i = 1; i < minPerSlide; i++) {
           if (!next) {
-            // wrap carousel by using first child
             next = items[0];
           }
           let cloneChild = next.cloneNode(true);
@@ -248,53 +253,43 @@
         }
       });
     </script>
-    <!-- FIN SLIDER 4 PARTE-->
-
-    <!-- mapa 5 PARTE-->
-
-    <hr>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.3598589209123!2d-0.646900523569657!3d39.48378811189169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60f9d60915a7eb%3A0xb5b831592f21c304!2sCheste%20Complejo%20Deportivo!5e0!3m2!1ses!2ses!4v1698227267327!5m2!1ses!2ses"
-            width="400"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="col-md-6" style="padding-top: 30px;">
-            <div class="row contactMap">
-              INFORMACION CONTACTO
-            </div>
-
-            <div class="row contactMap">
-              telefono
-            </div>
-
-            <div class="row contactMap">
-              mail
-            </div>
-
-            <div class="row contactMap">
-              ubicacion
-            </div>
-
-            <div class="row contactMap">
-              horario
-            </div>
-        </div>
+   <hr>
+  <div class="container" style="display: block; margin-bottom: 20px">      
+    <div style="margin: 0 auto; text-align: center">
+        <h2 class="font-weight-light text-center">Find Us
+        </h2>
       </div>
+      <div class="col-md-8 mapaNuevo"
+        id="map"
+        style="
+          height: 500px;
+          width: 500px;
+          margin: 0 auto;
+          border-radius: 20px;
+          box-shadow: 7px 5px 5px black;
+         /* border: 5px solid rgb(64, 111, 7); */
+          position:sticky !important;
+        "
+      ></div>
     </div>
 
-    <!-- fin mapa 5 PARTE-->
+    <script>
 
-    <!--Button up-->
+      var map = L.map("map").setView([39.4788158, -0.6457348], 13);
 
-    <!--cambiar a icono-->
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+
+      var marker = L.marker([39.4788158, -0.6457348]).addTo(map);
+
+      var popup = L.popup()
+        .setLatLng([39.4788158 + 0.0051010101, -0.6457348])
+        .setContent("Nuestras instalaciones.")
+        .openOn(map);
+    </script>
     <button onclick="topFunction()" id="myBtn" title="Go to top">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -312,10 +307,7 @@
     </button>
 
     <script>
-      // Get the button:
       let mybutton = document.getElementById("myBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
       window.onscroll = function () {
         scrollFunction();
       };
@@ -330,14 +322,45 @@
           mybutton.style.display = "none";
         }
       }
-
-      // When the user clicks on the button, scroll to the top of the document
       function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
     </script>
-    <!-- DESCOMENTAR FOOTER -->
-    <footer id="footer-container"></footer>
+
+<div class="music-ctn">
+
+  <button onclick="ocultarAudio()" id="toggle-button" class="greenbutton"></button>
+
+  <div class="music-container" id="music-container" style="z-index: 1;">
+    <div class="music-info">
+      <h4 id="title"></h4>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+        <span id="currTime" class="music-time">00:00</span>
+        <span id="durTime" class="music-time2">00:00</span>
+      </div>
+    </div>
+    <audio src="music/Need to Know.mp3" id="audio"></audio>
+    <div class="img-container">
+      <img src="images/Need to Know.jpg" alt="music-cover" id="cover" />
+    </div>
+    <div class="navigation">
+      <button id="prev" class="action-btn">
+        <i class="fas fa-backward"></i>
+      </button>
+      <button id="play" class="action-btn action-btn-big">
+        <i class="fas fa-play"></i>
+      </button>
+      <button id="next" class="action-btn">
+        <i class="fas fa-forward"></i>
+      </button>
+    </div>
+  </div>
+  
+
+<script src="../Ejer4-UD1.ReprodcutorMultimedia/scriptAudio.js"></script>
+</div>
+    <footer id="footer-container" style="z-index: 1;" ></footer>
   </body>
 </html>

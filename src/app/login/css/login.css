@@ -81,7 +81,10 @@
   border-radius: 0;
   outline: none;
 }
-
+.password {
+  background-color: transparent !important;
+  /* Otros estilos */
+}
 /* logotype of google and github */
 .text-center {
   position: absolute;

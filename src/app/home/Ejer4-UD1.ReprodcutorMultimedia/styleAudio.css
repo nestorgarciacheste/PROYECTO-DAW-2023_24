@@ -1,0 +1,222 @@
+/* Denise:
+Importamos fuente de google
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+/* Denise:
+Estilo del reproductor
+*/
+.music-container {
+  display: none;
+  width: 425px;
+  background-color: bisque;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px 0 rgba(222, 221, 235, 0.6);
+  padding: 20px 30px;
+} 
+
+/* Denise:
+Posición de la imagen del disco
+*/
+.img-container {
+  position: relative;
+  width: 110px;
+}
+
+/* Denise:
+Imagen cuando está en reproducción la canción
+*/
+.img-container::after {
+  content: '';
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+/* Denise:
+Imagen cuando está en reproducción la canción
+*/
+.img-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 110px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+/* Denise:
+Animación de la imagen cuando está en reproducción la canción
+*/
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+/* Denise:
+Estilos botones de acción
+*/
+.action-btn {
+  background-color:transparent;
+  border: 0;
+  color: #eca2a2;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+/* Denise:
+Estilos botones play/pause
+*/
+.action-btn.action-btn-big {
+  color: #eca2a2;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+/* Denise:
+Estilos de la canción con la barra de progreso
+*/
+.music-info {
+  background-color: rgba(211, 211, 211, 0.301);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 15px 15px 15px 130px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+/* Denise:
+Estilo del tiempo de la canción
+*/
+.music-time
+{
+  position: absolute;
+  top: 70%; 
+  left: 40; 
+  transform: translateX(0%); 
+  font-size: 12px; 
+  color: #a5a5a5; 
+}
+
+/* Denise:
+Estilo del tiempo TOTAL de la canción
+*/
+.music-time2
+{
+  position: absolute;
+  top: 70%; 
+  left: 87%; 
+  transform: translateX(0%); 
+  font-size: 12px; 
+  color: #a5a5a5; 
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background:  #eca2a2;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 25px 0px;
+  height: 4px;
+  width: 100%;
+}
+
+/* Denise:
+Estilo de la barra de progreso
+*/
+.progress {
+  background-color: #3a8c77;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.greenbutton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(39, 92, 87);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../html/images/auriculares.PNG");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}  
+
+.greenbutton:hover {
+  opacity: 50%;
+}
+
+/* Para pantallas más pequeñas que 768px */
+@media (max-width: 767px) {
+  .music-container {
+    width: 90%; 
+    margin: 10px auto;
+    display: block;
+  }
+  .action-btn {
+    font-size: 16px;
+  }
+  .contactMaph{
+    margin-top: 35px;
+    margin-bottom: 300px;
+  }
+  .img-container::after {
+    left: 60%;
+  }  
+  .greenbutton {
+    display: none;
+  }
+  .music-ctn{
+    margin-top: 5rem;
+  }
+}

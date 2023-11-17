@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/login.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <script src="script.js"></script>
-        <script src="login_restriction.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/login_restriction.js"></script>
         <script src="headerFooter.js"></script>
 
         
@@ -23,7 +23,7 @@
         <header id="header-container"></header>
         
         <div class="shadow-rectangle">
-            <form>
+            <form autocomplete="off">
                 <div class="container">
 
                     <div class="img-container">
@@ -31,15 +31,15 @@
 
                     <!-- Email -->
                     <div>
-                    <input type="email" id="email" placeholder="Email" title="Please write your email" required>
-                    <div class="invalid-feedback" id="emailError">
+                        <input type="email" id="email" placeholder="Email" title="Please write your email" required autocomplete="off">
+                        <div class="invalid-feedback" id="emailError">
                         Email must be xxx"@"yyyy"."zzzz.
                     </div>
                 </div>
 
                     <!-- Password -->
                     <div>
-                    <input type="password" id="password" placeholder="Password" title="Please write your password" required>
+                    <input type="password" id="password" placeholder="Password" title="Please write your password" required autocomplete="new-password" autocomplete="off">
                     <div class="invalid-feedback" id="passwordError">
                         Password must be at least 8 characters: <br>
                         one uppercase and lower case letter <br>
@@ -50,7 +50,7 @@
                     <!-- Forgot password-->
                     <div class="links">
                         <a href="#" id="forgotPassword" onclick="forgot(event)">Forgot password?</a>
-                        <a href="">Sign up</a>
+                        <a href="../html/registro.html">Sign up</a>
                     </div>
 
                     <!-- Button -->
