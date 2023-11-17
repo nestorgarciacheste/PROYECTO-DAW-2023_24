@@ -154,3 +154,31 @@
 .img-ctn {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.btn-custom {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn-custom:hover {
+  background-color: #000;
+  color: #fff; /* Cambiar el color del texto al pasar el mouse */
+}
+
+.btn-custom:focus {
+  background-color: #000; /* Cambiar el color al hacer clic */
+  color: #fff;
+}
+
+.btn-custom-alt {
+  background-color: #000;
+
+  color: white; /* Cambia el color del texto según tus necesidades */
+  /* Otros estilos personalizados según tus necesidades */
+}
+
+.btn-custom-alt:hover,
+.btn-custom-alt:active {
+  color: white;
+}

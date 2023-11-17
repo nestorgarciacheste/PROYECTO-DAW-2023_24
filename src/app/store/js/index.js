@@ -56,3 +56,4 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("Description").innerText = descripcion;
   document.querySelector(".img-ctn").style.backgroundImage = `url(${imagen})`;
 });
+
