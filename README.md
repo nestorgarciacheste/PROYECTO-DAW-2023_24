@@ -683,15 +683,18 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
   <li>Por último, mencionar que los tres integrantes del grupo, han trabajado juntos en el desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario: </li>
 
 
-<br>
 <table>
     <tr>
-        <th>TopBar</th>
-        
+        <th>Código CSS</th>
+        <th>Tamaño Ordenador</th>
+        <th>Tamaño iPad</th>
+        <th>Tamaño Movil</th>
     </tr>
     <tr>
-        <td> <img src="/src/assets/img/header.PNG"></td>        
-             
+        <td> <img src="/src/assets/img/codigoGalleryResponsive.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaOrdenador.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaIpad.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaMovil.PNG"></td>      
     </tr>
 </table>
 <br>
