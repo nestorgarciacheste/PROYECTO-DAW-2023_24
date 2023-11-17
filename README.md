@@ -654,6 +654,7 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
 <br>
 
 <br>
+<ul>
   <li>David con su rama <code>gallery_DavidParedes</code> : encargado de <b>CSS, Responsive, TopBar y Footer</b>. La tarea consiste en darle diseño al <b>.html</b> y que sea <b>Responsive</b> para poder navegar por la web desde diferentes dispositivos.</li>
       <ul>
           <li>Con las clases de CSS añadirle estilos en el archivo .html</li>
