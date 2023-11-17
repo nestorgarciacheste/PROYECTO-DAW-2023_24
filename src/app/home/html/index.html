@@ -1,600 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    <!-- FIN MAPA CON API -->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
-  <style>
-    /* Estilos personalizados */
-    .glide {
-      width: 80%;
-      margin: 0 auto;
-      position: relative;
-      margin-top: 10px;
-      margin-bottom: 40px;
-    }
-    .glide__slide {
-      height: 300px;
-      width: 500px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      color: white;
-    }
-
-    .s1{
-        background-image: url(../img/chanel.svg);
-    }
-    .s2{
-        background-image: url(../img/consum.jpg);
-    }
-    .s3{
-        background-image: url(../img/lidl.svg);
-    }
-    .s4{
-        background-image: url(../img/pepsi.svg);
-    }
-    .s5{
-        background-image: url(../img/Gucci.svg);
-    }
-    .glide__slide {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    .glide__arrows {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
-    .glide__arrow {
-      background: rgba(255, 255, 255, 0);
-      border: none;
-      padding: 10px 15px;
-      font-size: 40px;
-      cursor: pointer;
-      margin: 0 20px; /* Añade margen a las flechas */
-    }
-    .glide__arrows--left {
-      left: -100px; /* Ajusta la posición de la flecha izquierda */
-    }
-    .glide__arrows--right {
-      right: -100px; /* Ajusta la posición de la flecha derecha */
-    }
-  </style>
-  </head>
-  <body>
-    <header id="header-container"></header>
-    <div class="container">
-      <div id="banner-izquierda"></div>
-      <div id="banner-derecha"></div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="text-center">ABOUT US?</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div
-          class="col-md-8 textoRecuadro text-center"
-          style="position: relative"
-        >
-          Welcome to WebCode solutions! We are a passionate team of web
-          designers and developers committed to creating Exceptional online
-          experiences. Based in [Location], we have been transforming ideas into
-          stunning websites since [Year of Foundation]. Our mission is to drive
-          the success of your business through innovative and functional web
-          design. At WebCode solutions, we understand that your online presence
-          is crucial in today's digital world. Is That's why we strive to offer
-          web design solutions of high quality that adapt perfectly to your
-          needs and goals. Whether you need a custom website, a store in online,
-          a blogging platform or any other type of online presence line, we are
-          here to help you stand out.
-          <img
-            class="icono-esquina-inferior-izquierda"
-            src="../../../assets/img/home_quienes_somos.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <p class="text-center flecha-home">&darr;</p>
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="text-center">OUR 25 YEARS OF EXPERIENCE</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div
-          class="col-md-8 textoRecuadro text-center"
-          style="position: relative"
-        >
-          At WebCode solutions, our 25 years of experience speaks for itself
-          same. For 25 years, we have been leading the way in the static web
-          design, positioning, hosting, e-commerce and more. join up us on this
-          digital journey of success.
-          <img
-            class="icono-esquina-inferior-derecha"
-            src="../../../assets/img/home_icon_2.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <p class="text-center flecha-home">&darr;</p>
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="text-center">WHAT DO WE DO?</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div
-          class="col-md-8 textoRecuadro text-center"
-          style="position: relative"
-        >
-          We define the digital future. At WebCode solutions, we create
-          exceptional web experiences that captivate your audience and expand
-          your online presence. From static web design to e-commerce development
-          and search engine optimization, Our customized solutions drive the
-          success of your business in the digital world. With a focus on
-          constant innovation, we are committed to delivering results that help
-          you stand out in the era digital in constant evolution.
-          <img
-            class="icono-esquina-inferior-izquierda"
-            src="../../../assets/img/home_icon_3.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <p class="text-center flecha-home">&darr;</p>
-    </div>
-
-
-    <div class="glide">
-      <div class="glide__arrows glide__arrows--left" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#129040;</button>
-      </div>
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide s1"></li>
-          <li class="glide__slide s2"></li>
-          <li class="glide__slide s3"></li>
-          <li class="glide__slide s4"></li>
-          <li class="glide__slide s5"></li>
-        </ul>
-      </div>
-      <div class="glide__arrows glide__arrows--right" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#129042;</button>
-      </div>
-    </div>
-
-    <!-- FIN 1 PARTE-->
-
-    <div class="container text-center">
-      <h2>OUR SERVICES</h2>
-    </div>
-
-    <div class="container divrojo">
-      <div class="row">
-        <div class="col d-flex justify-content-center p-3">
-          <div class="card cardservices" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../../../assets/img/Web-estatica-o-dinamica.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body cuerpocartas">
-              <p class="card-text textocartas">Dynamic / Static Web</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col d-flex justify-content-center p-3">
-          <div class="card cardservices" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../../../assets/img/seo.png"
-              alt="Card image cap"
-            />
-            <div class="card-body cuerpocartas">
-              <p class="card-text textocartas">SEO</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-100"></div>
-
-        <div class="col d-flex justify-content-center p-3">
-          <div class="card cardservices" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../../../assets/img/hosting.png"
-              alt="Card image cap"
-            />
-            <div class="card-body cuerpocartas">
-              <p class="card-text textocartas">Hosting</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col d-flex justify-content-center p-3">
-          <div class="card cardservices" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../../../assets/img/ecommerce.png"
-              alt="Card image cap"
-            />
-            <div class="card-body cuerpocartas">
-              <p class="card-text textocartas">Ecommerce</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <hr>
-    <!-- SLIDER 4 PARTE Lorenzo-->
-    <!-- HAY QUE AÑADIR LAS MISMAS IMAGENES QUE HAYA EN GALERIA-->
-    <!-- al añadir las fotos hay que actualizar lo que tiene el slider dentro-->
-    <div class="container-fluid text-center my-3">
-      <h2 class="font-weight-light">Gallery</h2>
-      <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="col-md-3">
-                <a href="../../gallery/html/index.html">
-                <div class="card">
-                  <div class="card-img">
-                   
-                    <img
-                      src="../../gallery/img/img2.avif"
-                      class="img-fluid gallery_img"
-                    />
-                  
-                  </div>
-                  <div class="card-img-overlay"></div>
-                </div>
-              </a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <a href="../../gallery/html/index.html"></a>
-                <div class="card">
-                  <div class="card-img">
-                    <a href="../../gallery/html/index.html">
-                    <img
-                      src="../../gallery/img/img1.avif"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="card-img-overlay"></div>
-                </div>
-              </a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <a href="../../gallery/html/index.html">
-                <div class="card">
-                  <div class="card-img">
-                    <img
-                      src="../../gallery/img/img3.avif"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="card-img-overlay"></div>
-                </div>
-              </a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <a href="../../gallery/html/index.html">
-                <div class="card">
-                  <div class="card-img">
-                    <img
-                      src="../../gallery/img/img1.avif"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="card-img-overlay"></div>
-                </div>
-              </a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <a href="../../gallery/html/index.html">
-                <div class="card">
-                  <div class="card-img">
-                    <img
-                      src="../../gallery/img/img2.avif"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="card-img-overlay"></div>
-                </div>
-              </a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <a href="../../gallery/html/index.html">
-                <div class="card">
-                  <div class="card-img">
-                    <img
-                      src="../../gallery/img/img3.avif"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="card-img-overlay"></div>
-                </div>
-              </a>
-              </div>
-            </div>
-          </div>
-          <a
-            class="carousel-control-prev bg-transparent w-aut"
-            href="#recipeCarousel"
-            role="button"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-          <a
-            class="carousel-control-next bg-transparent w-aut"
-            href="#recipeCarousel"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <script>
-      let items = document.querySelectorAll(".carousel .carousel-item");
-
-      items.forEach((el) => {
-        const minPerSlide = 4;
-        let next = el.nextElementSibling;
-        for (var i = 1; i < minPerSlide; i++) {
-          if (!next) {
-            next = items[0];
-          }
-          let cloneChild = next.cloneNode(true);
-          el.appendChild(cloneChild.children[0]);
-          next = next.nextElementSibling;
-        }
-      });
-    </script>
-    <!-- FIN SLIDER 4 PARTE-->
-<!-- // Seccion opiniones -->
-<!-- Contenedor para los bloques de opinión -->
-<div class="opi-ctn">
-  <!-- Bloque de opinión existente -->
-  <div class="opinion-block">
-    <div class="customer-info">
-      <img src="../IMG/usuario.jpg" alt="Foto del Cliente" width="50" />
-      <div class="customer-name">Nestor Garcia</div>
-      <div class="rating">4.5/5</div>
-    </div>
-    <div class="opinion-text">
-      <p>Buenos contenidos, recomendado.</p>
-    </div>
-  </div>
-
-  <!-- Primer nuevo bloque de opinión -->
-  <div class="opinion-block">
-    <div class="customer-info">
-      <img src="../IMG/usuario2.jpg" alt="Foto del Cliente" width="50" />
-      <div class="customer-name">Miguel García</div>
-      <div class="rating">2/5</div>
-    </div>
-    <div class="opinion-text">
-      <p>El profesor no se explica muy bien.</p>
-    </div>
-  </div>
-
-  <!-- Segundo nuevo bloque de opinión -->
-  <div class="opinion-block">
-    <div class="customer-info">
-      <img src="../IMG/usuario3.jpg" alt="Foto del Cliente" width="50" />
-      <div class="customer-name">Denise Garrido</div>
-      <div class="rating">5/5</div>
-    </div>
-    <div class="opinion-text">
-      <p>Perfe, explica muy bien el profesor.</p>
-    </div>
-  </div>
-</div>
-    <!-- mapa 5 PARTE-->
-<!--
-    <hr>
-    
-    <div class="container">
-      <h2 class="font-weight-light text-center">Find us</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.3598589209123!2d-0.646900523569657!3d39.48378811189169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60f9d60915a7eb%3A0xb5b831592f21c304!2sCheste%20Complejo%20Deportivo!5e0!3m2!1ses!2ses!4v1698227267327!5m2!1ses!2ses"
-            width="400"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="col-md-6" style="padding-top: 30px;">
-            <div class="row contactMap">
-              CONTACT US
-            </div>
-
-            <div class="row contactMap">
-              Phone: 678 89 88 99
-            </div>
-
-            <div class="row contactMap">
-              contacto@webcode.com
-            </div>
-
-            <div class="row contactMap">
-              Cheste Complejo Deportivo 46380 Cheste, Valencia
-            </div>
-
-        </div>
-      </div>
-    </div>
--->
-    <!-- fin mapa 5 PARTE-->
-
-<!--NUEVO  mapa 5 PARTE-->
-
-<hr>
-     <div class="container" style="display: block">
-      <div style="margin: 0 auto; text-align: center">
-        <h2 class="font-weight-light text-center">Find Us
-        </h2>
-      </div>
-      <div class="col-md-8 mapaNuevo"
-        id="map"
-        style="
-          height: 500px;
-          width: 500px;
-          margin: 0 auto;
-          border-radius: 20px;
-          box-shadow: 7px 5px 5px black;
-         /* border: 5px solid rgb(64, 111, 7); */
-          position:sticky !important;
-        "
-      ></div>
-    </div>
-
-    <script>
-
-      var map = L.map("map").setView([39.4788158, -0.6457348], 13);
-
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
-
-      var marker = L.marker([39.4788158, -0.6457348]).addTo(map);
-
-      var popup = L.popup()
-        .setLatLng([39.4788158 + 0.0051010101, -0.6457348])
-        .setContent("Nuestras instalaciones.")
-        .openOn(map);
-    </script>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="35"
-        height="35"
-        fill="currentColor"
-        class="bi bi-arrow-up-circle"
-        viewBox="0 0 16 16"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
-        />
-      </svg>
-    </button>
-
-    <script>
-      let mybutton = document.getElementById("myBtn");
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <style>
+      /* Estilos personalizados */
+      .glide {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
       }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+      .glide__slide {
+        height: 300px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
       }
-    </script>
-
-<div class="music-ctn">
-
-  <button onclick="ocultarAudio()" id="toggle-button" class="greenbutton"></button>
-
-  <div class="music-container" id="music-container" style="z-index: 1;">
-    <div class="music-info">
-      <h4 id="title"></h4>
-      <div class="progress-container" id="progress-container">
-        <div class="progress" id="progress"></div>
-        <span id="currTime" class="music-time">00:00</span>
-        <span id="durTime" class="music-time2">00:00</span>
-      </div>
-    </div>
-    <audio src="music/Need to Know.mp3" id="audio"></audio>
-    <div class="img-container">
-      <img src="images/Need to Know.jpg" alt="music-cover" id="cover" />
-    </div>
-    <div class="navigation">
-      <button id="prev" class="action-btn">
-        <i class="fas fa-backward"></i>
-      </button>
-      <button id="play" class="action-btn action-btn-big">
-        <i class="fas fa-play"></i>
-      </button>
-      <button id="next" class="action-btn">
-        <i class="fas fa-forward"></i>
-      </button>
-    </div>
-  </div>
   
+      .s1{
+          background-image: url(../img/chanel.svg);
+      }
+      .s2{
+          background-image: url(../img/consum.jpg);
+      }
+      .s3{
+          background-image: url(../img/lidl.svg);
+      }
+      .s4{
+          background-image: url(../img/pepsi.svg);
+      }
+      .s5{
+          background-image: url(../img/Gucci.svg);
+      }
+      .glide__slide {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .glide__arrows {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+      }
+      .glide__arrow {
+        background: rgba(255, 255, 255, 0);
+        border: none;
+        padding: 10px 15px;
+        font-size: 40px;
+        cursor: pointer;
+        margin: 0 20px; /* Añade margen a las flechas */
+      }
+      .glide__arrows--left {
+        left: -100px; /* Ajusta la posición de la flecha izquierda */
+      }
+      .glide__arrows--right {
+        right: -100px; /* Ajusta la posición de la flecha derecha */
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+      <h1>EN MANTENIMIENTO</h1>
 
-<script src="../Ejer4-UD1.ReprodcutorMultimedia/scriptAudio.js"></script>
 
 <div class="glide">
   <div class="glide__arrows glide__arrows--left" data-glide-el="controls">
@@ -635,9 +146,6 @@
   }).mount();
 </script>
 
+
 </body>
-</html>
-    
-    <footer id="footer-container" ></footer>
-  </body>
 </html>
