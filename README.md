@@ -634,7 +634,9 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
        <li>Tercer apartado. Diseñado con un contenedor <b>therd_container</b>, desarrollado con dos etiquetas <b>div</b>, la primera a la parte izquierda, con un texto dividido en tres párrafod y el segundo <b>div</b> desarrollado con una imagen centrada</li>
         <li>Cuarto apartado. Diseñado con una etiqueta <b>videoWrapper</b>, desarrollado con un video</li>
     </ul>
-
+  </li>
+</ul>
+<br>
     <table>
     <tr>
         <th>Primer Apartado</th>
