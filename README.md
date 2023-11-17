@@ -516,7 +516,14 @@ Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feat
    <br>
   <li>Denise <code>main</code> creacion de reproductor de música </li>
 <br>
-  <li>Manu <code>login_</code>
+  <ul>
+    
+  <li>Manu <code>home_Manu</code> : encargado de la seccion nuestros servicios e implentacion de opiniones
+    </ul>
+      <ul>
+        <li>Our services</li>
+        <li>Opiniones</li>
+      </ul>     
     
   </li>
 <br>
