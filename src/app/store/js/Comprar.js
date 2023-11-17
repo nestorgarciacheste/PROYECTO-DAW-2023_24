@@ -58,7 +58,7 @@ function sendEmail(email) {
   // El código a continuación es un ejemplo simplificado y debe ser adaptado según tu configuración.
 
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "../../../services/formLogin.php", true);
+  xhr.open("POST", "../../../services/formPayment.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4) {
