@@ -103,6 +103,7 @@
   color: #272932;
   padding: 20px;
   position: relative;
+  min-width: 400px;
 }
 
 .customer-info {
