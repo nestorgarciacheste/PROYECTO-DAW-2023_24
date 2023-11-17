@@ -680,19 +680,9 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
 <ul>
 </ul>
 
-  <li>Por último, mencionar que los tres integrantes del grupo, han trabajado juntos en el desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario: </li>
+  <li>Por último, mencionar que los tres integrantes del grupo, han trabajado juntos en el desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario. Por otro lado, en el <b>Footer</b> añadimos las redes sociales, en el caso de la web son: facebook, Instagram y Linkedin</li>
 
 
-<table>
-    <tr>
-        <th>TopBar</th>
-        
-    </tr>
-    <tr>
-        <td> <img src="/src/assets/img/vistaMovil.PNG"></td>        
-            
-    </tr>
-</table>
-<br>
+
       
   
