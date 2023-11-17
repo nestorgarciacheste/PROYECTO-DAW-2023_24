@@ -685,16 +685,12 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
 
 <table>
     <tr>
-        <th>Código CSS</th>
-        <th>Tamaño Ordenador</th>
-        <th>Tamaño iPad</th>
-        <th>Tamaño Movil</th>
+        <th>TopBar</th>
+        
     </tr>
     <tr>
-        <td> <img src="/src/assets/img/codigoGalleryResponsive.PNG"></td>        
-        <td> <img src="/src/assets/img/vistaOrdenador.PNG"></td>        
-        <td> <img src="/src/assets/img/vistaIpad.PNG"></td>        
-        <td> <img src="/src/assets/img/vistaMovil.PNG"></td>      
+        <td> <img src="/src/assets/img/header.PNG"></td>        
+            
     </tr>
 </table>
 <br>
