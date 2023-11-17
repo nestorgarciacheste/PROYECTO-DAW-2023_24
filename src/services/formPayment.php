@@ -9,12 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($email)) {
         // Configurar el correo electrónico
         $destinatario = $email;
-        $asunto = "Recuperacio de contraseña";
+        $asunto = "Nuevo pedido Web Code";
 
         // Construir el cuerpo del correo
         $cuerpoCorreo = "Hola, somos de WebCode\n";
-        $cuerpoCorreo .= "Estamos encantados de poder ayudarte a recuperar tu contraseña\n";
-        $cuerpoCorreo .= "Tu contraseña provisional es: 1WebCode.\n";
+        $cuerpoCorreo .= "Te damos la gracias por tu compra\n";
+        $cuerpoCorreo .= "En menos de 24h tendras tu pedido.\n";
 
         // Configurar el remitente fijo
         $remitente = "contact@webcode.intecmedia.com";
