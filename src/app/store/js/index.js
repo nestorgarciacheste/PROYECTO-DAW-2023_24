@@ -57,22 +57,3 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".img-ctn").style.backgroundImage = `url(${imagen})`;
 });
 
-//Barra de busqueda
-var searchInput = document.getElementById('searchInput');
-
-searchInput.addEventListener('input', function () {
-  // Obtener el valor de búsqueda
-  var searchValue = searchInput.value.trim().toLowerCase();
-
-  // Obtener todas las cards de productos
-  var cards = document.querySelectorAll('.card');
-
-  // Iterar sobre las cards y mostrar/ocultar según el criterio de búsqueda
-  cards.forEach(function (card) {
-    var title = card.querySelector('.card-title').textContent.toLowerCase();
-    var shouldShow = title.includes(searchValue);
-
-    // Mostrar u ocultar la card
-    card.style.display = shouldShow ? 'block' : 'none';
-  });
-});
