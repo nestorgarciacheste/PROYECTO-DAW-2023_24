@@ -625,7 +625,10 @@ Nuestro equipo formado por Nestor, Cristian y David somos los encargados de hace
 
 Para realizar este apartado hemos hecho una rama principal llamada <code>features_gallery</code>, dividida esta rama, en tres subramas, una para cada integrante del equipo, para poder desarrollar nuestras tareas para el correcto funcionamiento de la web:
 
-  <li>Nestor, líder del grupo, con su rama <code>gallery_Nestor</code> : encargado del <b>JavaScript, TopBar, Footer</b>. La tarea consiste con JavaScript, una vez diseñada la estructura de <b>.html</b> y el diseño con <b>.css</b> darle funcionamiento para que las fotos cambien su distribucion de manera autónoma.</li>
+  <li>Nestor, líder del grupo, encargado del <b>JavaScript, TopBar, Footer</b>. La tarea consiste en desarrollar el código JavaScript, una vez diseñada la estructura de <b>.html</b> y el diseño con <b>.css</b> darle funcionamiento para que las fotos cambien su distribucion de manera autónoma.</li>
+    <ul>
+        <li>Organizador de commits de los diferentes equipo. </li>
+        <li>Dado que tres personas eran demasiadas para gallery, se ha basado más en ayudar a los compañeros con sus respectivas partes.</li>
 <br>
   <li>Cristian con su rama <code>gallery_Cristina</code> : encargado de hacer el <b>HTML, TopBar, Footer. </b> La tarea consiste en diseñar la estructura de la gellery, la cual se compone de un contenedor principal que dentro de este, encapsulamos todo el contenido que tendrá la web. Consiste en cuatro apartados:
     <ul>
