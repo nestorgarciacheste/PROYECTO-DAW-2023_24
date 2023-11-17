@@ -656,8 +656,6 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
       <ul>
           <li>Con las clases de CSS añadirle estilos en el archivo .html</li>
           <li>con @media establecemos dependiendo del dispositivos un tamaño determinado al <code>body</code> y al <code>main-container</code></li>
-          
-    </ul>
 </ul>
 <br>
 <table>
