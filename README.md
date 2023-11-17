@@ -633,7 +633,11 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
                 <li>Home (reproductor de video)</li>
                 <li>Store (moreinfo)</li>
                 <li>Login (ayudando a denise)</li>
+                <li>Hacer responsive gran parete de la web</li>
+                <li>Github</li>
                 <li>Y resolviendo dudas de compañeros </li>
+
+
             </ul>
 </li>
 <br>
