@@ -676,3 +676,24 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
     </tr>
 </table>
 <br>
+
+<li>Por último, mencionar que los tres integrantes del grupo, han trabajado juntos en el desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario: </li>
+      <ul>
+        <li>Login</li>
+        <li>Home</li>
+        <li>Store</li>
+        <li>Gallery</li>
+      </ul> 
+<table>
+    <tr>
+        <th>TopBar</th>
+        
+    </tr>
+    <tr>
+        <td> <img src="/src/assets/img/header.PNG"></td>        
+             
+    </tr>
+</table>
+<br>
+      
+  
