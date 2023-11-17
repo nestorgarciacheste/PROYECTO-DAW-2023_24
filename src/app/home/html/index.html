@@ -35,6 +35,69 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <!-- FIN MAPA CON API -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <style>
+    /* Estilos personalizados */
+    .glide {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .glide__slide {
+      height: 300px;
+      width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: white;
+    }
+
+    .s1{
+        background-image: url(../img/chanel.svg);
+    }
+    .s2{
+        background-image: url(../img/consum.jpg);
+    }
+    .s3{
+        background-image: url(../img/lidl.svg);
+    }
+    .s4{
+        background-image: url(../img/pepsi.svg);
+    }
+    .s5{
+        background-image: url(../img/Gucci.svg);
+    }
+    .glide__slide {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .glide__arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+    .glide__arrow {
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      padding: 10px 15px;
+      font-size: 40px;
+      cursor: pointer;
+      margin: 0 20px; /* Añade margen a las flechas */
+    }
+    .glide__arrows--left {
+      left: -100px; /* Ajusta la posición de la flecha izquierda */
+    }
+    .glide__arrows--right {
+      right: -100px; /* Ajusta la posición de la flecha derecha */
+    }
+  </style>
   </head>
   <body>
     <header id="header-container"></header>
@@ -117,6 +180,25 @@
         </div>
       </div>
       <p class="text-center flecha-home">&darr;</p>
+    </div>
+
+
+    <div class="glide">
+      <div class="glide__arrows glide__arrows--left" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#129040;</button>
+      </div>
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide s1"></li>
+          <li class="glide__slide s2"></li>
+          <li class="glide__slide s3"></li>
+          <li class="glide__slide s4"></li>
+          <li class="glide__slide s5"></li>
+        </ul>
+      </div>
+      <div class="glide__arrows glide__arrows--right" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#129042;</button>
+      </div>
     </div>
 
     <!-- FIN 1 PARTE-->
@@ -513,7 +595,49 @@
   
 
 <script src="../Ejer4-UD1.ReprodcutorMultimedia/scriptAudio.js"></script>
+
+<div class="glide">
+  <div class="glide__arrows glide__arrows--left" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#129040;</button>
+  </div>
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide s1"></li>
+      <li class="glide__slide s2"></li>
+      <li class="glide__slide s3"></li>
+      <li class="glide__slide s4"></li>
+      <li class="glide__slide s5"></li>
+    </ul>
+  </div>
+  <div class="glide__arrows glide__arrows--right" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#129042;</button>
+  </div>
 </div>
-    <footer id="footer-container" style="z-index: 1;" ></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+  new Glide('.glide', {
+    type: 'slider',
+    startAt: 0,
+    perView: 3,
+    focusAt: 'center',
+    gap: 20,
+    autoplay: 3000,
+    rewind: true,
+    breakpoints: {
+      800: {
+        perView: 1
+      },
+      480: {
+        perView: 1
+      }
+    }
+  }).mount();
+</script>
+
+</body>
+</html>
+    
+    <footer id="footer-container" ></footer>
   </body>
 </html>
