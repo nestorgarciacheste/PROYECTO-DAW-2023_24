@@ -49,6 +49,8 @@
       width: 80%;
       margin: 0 auto;
       position: relative;
+      margin-top: 10px;
+      margin-bottom: 40px;
     }
     .glide__slide {
       height: 300px;
@@ -196,6 +198,25 @@
         </div>
       </div>
       <p class="text-center flecha-home">&darr;</p>
+    </div>
+
+
+    <div class="glide">
+      <div class="glide__arrows glide__arrows--left" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#129040;</button>
+      </div>
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide s1"></li>
+          <li class="glide__slide s2"></li>
+          <li class="glide__slide s3"></li>
+          <li class="glide__slide s4"></li>
+          <li class="glide__slide s5"></li>
+        </ul>
+      </div>
+      <div class="glide__arrows glide__arrows--right" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#129042;</button>
+      </div>
     </div>
 
     <!-- FIN 1 PARTE-->
@@ -588,24 +609,6 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
     </script>
-
-<div class="glide">
-  <div class="glide__arrows glide__arrows--left" data-glide-el="controls">
-    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#129040;</button>
-  </div>
-  <div class="glide__track" data-glide-el="track">
-    <ul class="glide__slides">
-      <li class="glide__slide s1"></li>
-      <li class="glide__slide s2"></li>
-      <li class="glide__slide s3"></li>
-      <li class="glide__slide s4"></li>
-      <li class="glide__slide s5"></li>
-    </ul>
-  </div>
-  <div class="glide__arrows glide__arrows--right" data-glide-el="controls">
-    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#129042;</button>
-  </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 <script>
