@@ -1,13 +1,19 @@
 @import url(../../header_footer/css/topbar_style.css);
+/* Seccion nuestros servicios */
+.divrojo {
+  background-color: #d8a47f;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center the content inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.divrojo{
-    background-color: #d8a47f;
-    border-radius: 1.5rem;
-    width: 70%;
-    border: 0;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}   
+
+
 .cuerpocartas{
     background-color: #f05d5e;
     border-radius: 0 0 15px 15px;
