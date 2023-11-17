@@ -689,7 +689,7 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
         
     </tr>
     <tr>
-        <td> <img src="/src/assets/img/header.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaMovil.PNG"></td>        
             
     </tr>
 </table>
