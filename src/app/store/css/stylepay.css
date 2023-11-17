@@ -1,0 +1,34 @@
+@import url("../../header_footer/css/topbar_style.css");
+  /* Estilos para el formulario de facturación */
+  #billing-name,
+  #billing-email-address,
+  #billing-phone,
+  #billing-address,
+  #billing-city,
+  #zip-code,
+  .form-select {
+    background-color: #EFE2D8;
+    color: #272932;
+    border: 1px solid #EFE2D8;
+  }
+  #billing-name,
+  #billing-email-address,
+  #billing-phone,
+  #billing-address,
+  #billing-city,
+  #zip-code,
+  .form-select {
+    border-radius: 5px;
+  }
+  /* Estilos para los botones */
+  .btn-success {
+    background-color: #0f7173;
+    color: #e7ecef;
+    border-radius: 5px;
+  }
+
+  .btn-success:hover,
+  .btn-link:hover {
+    background-color: #e7ecef;
+    color: #0f7173;
+  }

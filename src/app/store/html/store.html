@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header id="header-container"></header>
+    <!-- Barra de búsqueda -->
+    <div class="container text-center mt-5">
+      <div class="custom-input-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">
+            <img src="64673.png" width="20" height="20" />
+          </span>
+        </div>
+        <input
+          type="text"
+          class="form-control rounded"
+          aria-label="Default"
+          aria-describedby="inputGroup-sizing-default"
+        />
+        <!-- Icono de carrito -->
+        <a href="/carrito.html" class="btn btn-link cart-icon">
+          <!-- Aplica la clase cart-icon aquí -->
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </div>
+    <br />
+    <!-- Botones -->
+    <div
+      class="btn-toolbar d-flex justify-content-center"
+      role="toolbar"
+      aria-label="Toolbar with button groups"
+    >
+      <div class="btn-group mr-5" role="group" aria-label="First group">
+        <button type="button" class="btn btn-custom" data-category="show-all">
+          Show all
+        </button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Second group">
+        <button
+          type="button"
+          class="btn btn-custom"
+          data-category="web-positioning"
+        >
+          Web positioning
+        </button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Third group">
+        <button type="button" class="btn btn-custom" data-category="hosting">
+          Hosting
+        </button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Fourth group">
+        <button type="button" class="btn btn-custom" data-category="e-commerce">
+          E-Commerce
+        </button>
+      </div>
+      <div class="btn-group" role="group" aria-label="Fifth group">
+        <select class="btn btn-custom-alt" id="filterSelect">
+          <option value="#">Filter by</option>
+          <option value="asc">Lowest Price</option>
+          <option value="desc">Highest Price</option>
+          <option value="alpha">Alphabetical</option>
+          <option value="ven">Best Sellers</option>
+          <option value="nov">New Arrivals</option>
+          <option value="rel">Relevance</option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <!-- Productos -->
+    <div class="card-deck">
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-left: 2%;
+        "
+      >
+        <img
+          src="../../../assets/img/WebDevelopment_store.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Custom Web Design and Development</h5>
+          <p class="card-text">
+            Create a unique online presence with our custom web design and
+            development services. We tailor websites to suit your brand and
+            business needs, whether it's a corporate site, blog, or e-commerce
+            platform.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              View Product
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="width: 18rem; border-radius: 20px; overflow: hidden"
+        data-category="web-positioning"
+      >
+        <img
+          src="../../../assets/img/seo_store.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Search Engine Optimization (SEO) Packages</h5>
+          <p class="card-text">
+            Boost your online visibility with our SEO packages. We optimize your
+            website to rank higher in search engine results, helping you attract
+            more organic traffic and potential customers.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              View Product
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-right: 2%;
+        "
+        data-category="web-positioning"
+      >
+        <img
+          src="../../../assets/img/sem_store.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            Online Advertising Management (SEM) Services
+          </h5>
+          <p class="card-text">
+            Drive targeted traffic to your website with our online advertising
+            management services. We create and oversee effective ad campaigns on
+            platforms like Google Ads and social media, ensuring maximum ROI.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              View Product
+            </button></small
+          >
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="card-deck">
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-left: 2%;
+        "
+      >
+        <img
+          src="../../../assets/img/ssl_store.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">SSL Certificates and Online Security</h5>
+          <p class="card-text">
+            Protect your website and customer data with our SSL certificates and
+            online security services. Safeguard against cyber threats and build
+            trust with secure, encrypted connections.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              View Product
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="width: 18rem; border-radius: 20px; overflow: hidden"
+      >
+        <img
+          src="../../../assets/img/backup_store.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Backup and Data Recovery Solutions</h5>
+          <p class="card-text">
+            Ensure data resilience with our backup and data recovery solutions.
+            We provide secure and automated backups, so you can recover critical
+            information quickly in case of data loss or disasters.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              View Product
+            </button></small
+          >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          width: 18rem;
+          border-radius: 20px;
+          overflow: hidden;
+          margin-right: 2%;
+        "
+        data-category="e-commerce"
+      >
+        <img
+          src="../../../assets/img/ecommerce_store.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">E-commerce Consulting Services</h5>
+          <p class="card-text">
+            Maximize your online store's potential with our e-commerce
+            consulting services. We guide businesses in selecting the right
+            platforms, optimizing the user experience, and increasing online
+            sales for a competitive edge.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <!-- Agrega text-center aquí -->
+          <small class="text-muted">
+            <button type="button" class="btn btn-secondary">
+              View Product
+            </button></small
+          >
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer id="footer-container"></footer>
+  </body>
+</html>

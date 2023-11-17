@@ -31,10 +31,10 @@ Para realizar esto, hemos dividido nuestro apartado de Cuenta en la rama `featur
         <th>Cuenta</th>
     </tr>
     <tr>
-        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/83a059b3-55d8-4527-93ea-767c47bf6771"></td>        
-        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/94504c03-a68a-426b-9aeb-ae0b39933484"></td>        
-        <td> <img width ="2000px" src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b19ee5ae-7480-462f-ab15-e34560312a7c"</td>        
-        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/ed3e51cb-1971-48ea-b07b-83be57446b07"></td>        
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d3b5e1e0-bace-417f-900c-c3d1e4d5be48"></td>        
     </tr>
 </table>
 <br>
@@ -117,28 +117,22 @@ Las **restricciones** mencionadas previamente son generadas cuando el usuario in
 ### Login mediante Auth0
 Si así lo prefiere el usuario, podrá iniciar sesión en nuestra página Web mediante el registro con **Google** y **GitHub**. Esto se ha realizado mediante la plataforma de gestión de entidades y acceso Auth0. 
 
-<br>
-
 <table>
     <tr>
         <th>Configuración en el sitio web de Auth0</th>
         <th>Resultado en WebCode</th>
     </tr>
     <tr>
-        <td> <img width="550px" src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b0fc71d7-21d5-4db2-95ca-d9227157ac0a"></td>      
-        <td> <img width="400px" src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/307dca2f-4c7a-4447-b97d-99be35454a35"></td>      
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b0fc71d7-21d5-4db2-95ca-d9227157ac0a"></td>        
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/307dca2f-4c7a-4447-b97d-99be35454a35"></td>        
     </tr>
 </table>
-
-<br>
 
 Para hacer esto posible, hemos añadido en el **Head** de nuestro proyecto las siguientes rutas:
 <code>
     <script src="app.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
 </code>
-
-<br>
 
 El Script sirve para redirigir mediante la clave de usuario de Auth0 al servicio que deseemos. En el caso de **Google** el script sería este:
 <details>
@@ -166,7 +160,6 @@ const auth0 = require('auth0');
 
 </details>
 
-<br>
 
 ### Olvido de contraseña
 En caso de que el usuario envíe la contraseña para iniciar sesión, la administración de WebCode le enviará un correo con la recuperación de esta (de forma ficticia). Para ello, el usuario solo tendrá que situar un correo válido en un input que hemos modificado estéticamemente mediante la librería **SweetAlert2**.
