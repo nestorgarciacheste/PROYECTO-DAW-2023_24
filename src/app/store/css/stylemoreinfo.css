@@ -1,0 +1,150 @@
+@import url(../../header_footer/css/topbar_style.css);
+
+/* Barra superior que ocupa todo el ancho */
+.bar {
+  background-color: #d8a47f;
+  height: 70px;
+  width: 100%;
+  display: flex;
+}
+
+.arrow-ctn {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.arrow-ctn span {
+  margin-left: 5px;
+}
+
+.hero-ctn {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-ctn {
+  width: 50%;
+  background-image: url(../../../assets/img/photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  min-width: 350px;
+}
+
+.text-ctn {
+  padding: 12% 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  min-width: 350px;
+}
+
+.text-ctn h3 {
+  background-color: #272932;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  width: 100%;
+  color: #e7ecef;
+}
+
+.text-ctn > p {
+  background-color: #e7ecef;
+  padding: 10px;
+  width: 90%;
+  color: #272932;
+}
+
+.text-ctn .price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.text-ctn .price > span {
+  background-color: #f05d5e;
+  padding: 10px 20px;
+  font-size: large;
+  font-weight: bold;
+  margin-right: 30px;
+  color: #e7ecef;
+}
+
+/* Estilos para el contenedor de opiniones */
+.opinions-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.opinion-block {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  max-width: 600px;
+  width: 80%;
+  background-color: #e7ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #272932;
+  padding: 20px;
+  position: relative;
+}
+
+.customer-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0f7173;
+  color: #e7ecef;
+}
+
+.customer-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.customer-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rating {
+  font-size: 1.5em;
+  color: #f05d5e;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.opinion-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* Ajustes adicionales para otros elementos si es necesario */
+.img-ctn {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
