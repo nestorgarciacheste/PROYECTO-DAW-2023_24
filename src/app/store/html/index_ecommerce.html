@@ -2,89 +2,92 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Se incluyen las hojas de estilo Bootstrap y Font Awesome para mejorar el diseño -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <!-- Se incluye una hoja de estilo personalizada -->
   <link rel="stylesheet" href="../css/style.css" />
-  <!-- Se incluye un script JavaScript externo -->
   <script src="../js/index.js"></script>
+  <!-- Se incluye el script JavaScript externo para la barra de búsqueda -->
+  <script src="../js/search.js"></script>
 </head>
 
 <body>
   <!-- Cabecera -->
   <header id="header-container"></header>
-  
-  <!-- Barra de búsqueda -->
-  <div class="container text-center mt-5">
-    <!-- Se crea un grupo de entrada personalizado con una lupa para la barra de búsqueda -->
-    <div class="custom-input-group input-group">
-      <div class="input-group-prepend">
-        <!-- Icono de lupa en el grupo de entrada -->
-        <span class="input-group-text" id="inputGroup-sizing-default">
-          <img src="../../../assets/img/lupa.png" width="20" height="20" />
-        </span>
+
+  <!-- Barra de búsqueda y botones -->
+  <div class="container text-center mt-3">
+    <!-- Se crea un formulario para la barra de búsqueda -->
+    <form id="searchForm">
+      <div class="custom-input-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">
+            <img src="../../../assets/img/lupa.png" width="20" height="20" />
+          </span>
+        </div>
+        <!-- Input de búsqueda -->
+        <input id="searchInput" type="text" class="form-control rounded" aria-label="Default"
+          aria-describedby="inputGroup-sizing-default" placeholder="Search products..." />
       </div>
-      <!-- Input de búsqueda -->
-      <input type="text" class="form-control rounded" aria-label="Default"
-        aria-describedby="inputGroup-sizing-default" />
-    </div>
-  </div>
-  <br />
-  
-  <!-- Botones -->
-  <div class="btn-toolbar d-flex justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+    </form>
+
     <!-- Botones para filtrar productos por categoría -->
-    <div class="btn-group mr-5" role="group" aria-label="First group">
-      <button type="button" class="btn btn-custom" data-category="show-all"
-        onclick="window.location.href='index.html'">Show all</button>
-    </div>
-    <div class="btn-group mr-5" role="group" aria-label="Second group">
-      <button type="button" class="btn btn-custom" data-category="web-positioning"
-        onclick="window.location.href='index_webPositioning.html'">Web positioning</button>
-    </div>
-    <div class="btn-group mr-5" role="group" aria-label="Third group">
-      <!-- Botón para la categoría de Hosting -->
-      <button type="button" class="btn btn-custom" data-category="hosting" onclick="window.location.href='index_hosting.html'">Hosting</button>
-    </div>  
-    <div class="btn-group mr-5" role="group" aria-label="Fourth group">
-      <!-- Botón para la categoría de E-Commerce -->
-      <button type="button" class="btn btn-custom-alt" data-category="e-commerce" onclick="window.location.href='index_ecommerce.html'">E-Commerce</button>
+    <div class="btn-toolbar d-flex justify-content-center mt-3" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-5" role="group" aria-label="First group">
+        <button type="button" class="btn btn-custom" data-category="show-all"
+          onclick="window.location.href='index.html'">Show all</button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Second group">
+        <button type="button" class="btn btn-custom" data-category="web-positioning"
+          onclick="window.location.href='index_webPositioning.html'">Web positioning</button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Third group">
+        <!-- Botón para la categoría de Hosting -->
+        <button type="button" class="btn btn-custom" data-category="hosting"
+          onclick="window.location.href='index_hosting.html'">Hosting</button>
+      </div>
+      <div class="btn-group mr-5" role="group" aria-label="Fourth group">
+        <!-- Botón para la categoría de E-Commerce -->
+        <button type="button" class="btn btn-custom-alt" data-category="e-commerce"
+          onclick="window.location.href='index_ecommerce.html'">E-Commerce</button>
+      </div>
     </div>
   </div>
   <br />
-  
+
   <!-- Productos -->
-  <div class="col-4">
-    <!-- Card para mostrar un producto -->
-    <div class="card" id="producto6" style="border-radius: 20px; overflow: hidden;margin-left: 2%;">
-      <!-- Imagen del producto -->
-      <img src="../../../assets/img/ecommerce_store.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <!-- Título del producto -->
-        <h5 class="card-title">E-commerce Consulting Services</h5>
-        <!-- Descripción del producto -->
-        <p class="card-text">
-          Maximize your online store's potential with our e-commerce
-          consulting services. We guide businesses in selecting the right
-          platforms, optimizing the user experience, and increasing online
-          sales for a competitive edge.
-        </p>
-      </div>
-      <div class="card-footer text-center">
-        <!-- Pie de la tarjeta con un botón centrado -->
-        <small class="text-muted">
-          <button type="button" class="btn btn-secondary" onclick="verProducto('producto6')">
-            View Product
-          </button></small>
+  <div class="container" id="productosContainer">
+    <div class="row">
+      <!-- Producto -->
+      <div class="col-12 col-sm-6 col-md-4" id="producto6" data-category="e-commerce">
+        <div class="card" style="border-radius: 20px; overflow: hidden;">
+          <img src="../../../assets/img/ecommerce_store.jpg" class="card-img-top img-fluid" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Consulting Services</h5>
+            <p class="card-text">
+              Maximize your online store's potential with our e-commerce
+              consulting services. We guide businesses in selecting the right
+              platforms, optimizing the user experience, and increasing online
+              sales for a competitive edge.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <small class="text-muted">
+              <button type="button" class="btn btn-secondary" onclick="verProducto('producto6')">
+                View Product
+              </button>
+            </small>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <br />
   <br />
-  <br />
-  <br />
-  
+  <br>
+  <br>
   <!-- Pie de página -->
   <footer id="footer-container"></footer>
 </body>
