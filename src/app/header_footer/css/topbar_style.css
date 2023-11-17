@@ -20,6 +20,7 @@
 .navbar img {
     height: 80%;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 
