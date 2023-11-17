@@ -40,6 +40,7 @@ function cambiarEmail() {
     alert("Se ha introducido correctamente");
     document.getElementById("email").innerHTML = `${email}`;
     document.getElementById("ventana_email").style.width = "0%";
+    document.getElementById("enter_email").value = " ";
   } else if (!validarEmail(email)) {
     alert("El formato del email es incorrecto -> xxx@yyyyy.zzzz");
     document.getElementById("enter_email").value = "";
@@ -57,16 +58,16 @@ function validarEmail(email) {
 
 /* CHANGE IMAGE */
   function cambiarImagen(event) {
-    const inputImage = document.getElementById('enter_file');
+  const inputImage = document.getElementById('enter_file');
 
   inputImage.click(); // Simula el clic en el input de tipo file
 
   inputImage.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    const reader = new FileReader();
+    const file = e.target.files[0]; /* Extraer el archivo en el primero elemento, input crea una lista de imagenes */
+    const reader = new FileReader(); /* Sirve para leer el archivo */
 
-    reader.onload = function(event) {
-      const imageUrl = event.target.result;
+    reader.onload = function(event) { /* La  */
+      const imageUrl = event.target.result; /* Extrae la URL dentro de input file */
       const preview = document.querySelector('.circulo');
       preview.style.backgroundImage = `url(${imageUrl})`;
     };
