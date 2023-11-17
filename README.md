@@ -620,3 +620,58 @@ Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feat
 </table>
 <br>
 
+## Gallery:
+Nuestro equipo formado por Nestor, Cristian y David somos los encargados de hacer el apartado de Gallery de WebCode, la galería de la web.
+
+Para realizar este apartado hemos hecho una rama principal llamada <code>features_gallery</code>, dividida esta rama, en tres subramas, una para cada integrante del equipo, para poder desarrollar nuestras tareas para el correcto funcionamiento de la web:
+<ul>
+  <li>Nestor, líder del grupo, con su rama <code>gallery_Nestor</code> : encargado del <b>JavaScript, TopBar, Footer</b>. La tarea consiste con JavaScript, una vez diseñada la estructura de <b>.html</b> y el diseño con <b>.css</b> darle funcionamiento para que las fotos cambien su distribucion de manera autónoma.</li>
+<br>
+  <li>Cristian con su rama <code>gallery_Cristina</code> : encargado de hacer el <b>HTML, TopBar, Footer. </b> La tarea consiste en diseñar la estructura de la gellery, la cual se compone de un contenedor principal que dentro de este, encapsulamos todo el contenido que tendrá la web. Consiste en cuatro apartados:
+    <ul>
+      <li>Primer apartado. Diseñado con un contenedor <b>firts_container</b>, desarrollado con dos etiquetas <b>div</b>, la primera con una imagen que ocupe toda la altura del contenedor y el segundo <b>div</b> desarrollado con tres fotos, colocadas una encima de otra.</li>
+      <li>Segundo apartado. Diseñado con un contenedor <b>second_container</b>, desarrollado con dos etiquetas <b>div</b>, la primera a la parte izquierda, con una imagen que este centrada y el segundo <b>div</b> desarrollado con un texto de tres párrafos.</li>
+       <li>Tercer apartado. Diseñado con un contenedor <b>therd_container</b>, desarrollado con dos etiquetas <b>div</b>, la primera a la parte izquierda, con un texto dividido en tres párrafod y el segundo <b>div</b> desarrollado con una imagen centrada</li>
+        <li>Cuarto apartado. Diseñado con una etiqueta <b>videoWrapper</b>, desarrollado con un video</li>
+    </ul>
+  </li>
+
+    <table>
+    <tr>
+        <th>Primer Apartado</th>
+        <th>Segundo Apartado</th>
+        <th>Tercer Apartado</th>
+        <th>Cuarto Apartado</th>
+    </tr>
+    <tr>
+        <td> <img src="/src/assets/img/conenedor_principal.PNG"></td>        
+        <td> <img src="/src/assets/img/segundo_contenedor.PNG"></td>        
+        <td> <img src="/src/assets/img/tercerContenedor.PNG"></td>        
+        <td> <img src="/src/assets/img/cuartoContenedor.PNG"></td>          
+    </tr>
+</table>
+
+<br>
+  <li>David con su rama <code>gallery_DavidParedes</code> : encargado de <b>CSS, Responsive, TopBar y Footer</b>. La tarea consiste en darle diseño al <b>.html</b> y que sea <b>Responsive</b> para poder navegar por la web desde diferentes dispositivos.</li>
+      <ul>
+          <li>Con las clases de CSS añadirle estilos en el archivo .html</li>
+          <li>con @media establecemos dependiendo del dispositivos un tamaño determinado al <code>body</code> y al <code>main-container</code></li>
+          
+    </ul>
+</ul>
+<br>
+<table>
+    <tr>
+        <th>Código CSS</th>
+        <th>Tamaño Ordenador</th>
+        <th>Tamaño iPad</th>
+        <th>Tamaño Movil</th>
+    </tr>
+    <tr>
+        <td> <img src="/src/assets/img/codigoGalleryResponsive.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaOrdenador.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaIpad.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaMovil.PNG"></td>      
+    </tr>
+</table>
+<br>
