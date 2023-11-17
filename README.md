@@ -637,20 +637,21 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
   </li>
 </ul>
 <br>
-    <table>
+   <table>
     <tr>
-        <th>Primer Apartado</th>
-        <th>Segundo Apartado</th>
-        <th>Tercer Apartado</th>
-        <th>Cuarto Apartado</th>
+        <th>Código CSS</th>
+        <th>Tamaño Ordenador</th>
+        <th>Tamaño iPad</th>
+        <th>Tamaño Movil</th>
     </tr>
     <tr>
-        <td> <img src="/src/assets/img/conenedor_principal.PNG"></td>        
-        <td> <img src="/src/assets/img/segundo_contenedor.PNG"></td>        
-        <td> <img src="/src/assets/img/tercerContenedor.PNG"></td>        
-        <td> <img src="/src/assets/img/cuartoContenedor.PNG"></td>          
+        <td> <img src="/src/assets/img/codigoGalleryResponsive.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaOrdenador.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaIpad.PNG"></td>        
+        <td> <img src="/src/assets/img/vistaMovil.PNG"></td>      
     </tr>
 </table>
+<br>
 
 <br>
   <li>David con su rama <code>gallery_DavidParedes</code> : encargado de <b>CSS, Responsive, TopBar y Footer</b>. La tarea consiste en darle diseño al <b>.html</b> y que sea <b>Responsive</b> para poder navegar por la web desde diferentes dispositivos.</li>
