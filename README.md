@@ -684,7 +684,8 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
         <li>Store</li>
         <li>Gallery</li>
       </ul> 
-<table>
+<br>
+     <table>
     <tr>
         <th>TopBar</th>
         
@@ -694,6 +695,5 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
              
     </tr>
 </table>
-<br>
       
   
