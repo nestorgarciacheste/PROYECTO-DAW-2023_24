@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Checkout WebCode</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/stylepay.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+
+<body>
+  <script src="../js/HeaderFooter.js"></script>
+
+  <header id="header-container"></header>
+  <div class="container">
+    <div>
+      <div>
+        <ol class="activity-checkout mb-4 px-4 mt-3">
+          <li class="checkout-item">
+            <div class="avatar checkout-icon p-1"></div>
+            <div>
+              <h5 class="font-size-16 mb-1">Billing Information</h5>
+              <p class="text-muted text-truncate mb-4">
+                Fill in these details to facilitate the purchase and billing of your products.
+              </p>
+              <form>
+                <div class="row mb-3">
+                  <div class="col-lg-4">
+                    <label class="form-label" for="billing-name">Full Name</label>
+                    <input type="text" class="form-control" id="billing-name" placeholder="Full Name" required />
+                  </div>
+                  <div class="col-lg-4">
+                    <label class="form-label" for="billing-email-address">Email</label>
+                    <input type="email" class="form-control" id="billing-email-address" placeholder="Email" required />
+                  </div>
+                  <div class="col-lg-4">
+                    <label class="form-label" for="billing-phone">Phone</label>
+                    <input type="text" class="form-control" id="billing-phone" placeholder="Phone" required />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="billing-address">Complete Address</label>
+                  <textarea class="form-control" id="billing-address" rows="3" placeholder="Complete Address" required></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <label class="form-label">Country</label>
+                    <select id="billing-country" class="form-control form-select" title="Country" required>
+                      <option value="0">Select your country</option>
+                      <option value="AF">Afghanistan</option>
+                      <option value="AL">Albania</option>
+                      <option value="DZ">Algeria</option>
+                      <option value="AS">American Samoa</option>
+                      <option value="AD">Andorra</option>
+                      <option value="AO">Angola</option>
+                      <option value="AI">Anguilla</option>
+                      <option value="ES">Spain</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-4">
+                    <label class="form-label" for="billing-city">City</label>
+                    <input type="text" class="form-control" id="billing-city" placeholder="City" required />
+                  </div>
+                  <div class="col-lg-4">
+                    <label class="form-label" for="zip-code">Postal Code</label>
+                    <input type="text" class="form-control" id="zip-code" placeholder="Postal Code" required />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+          <br>
+          <li class="checkout-item">
+            <div class="avatar checkout-icon p-1"></div>
+            <div>
+              <h5 class="font-size-16 mb-1">Payment Gateway</h5>
+              <p class="text-muted text-truncate mb-4">
+                Choose your preferred option to proceed with the payment.
+              </p>
+              <h5 class="font-size-14 mb-3">Accepted Methods :</h5>
+              <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                  <label class="card-radio-label">
+                    <input type="radio" name="pay-method" id="pay-methodoption1" class="card-radio-input" />
+                    <span class="card-radio py-3 text-center text-truncate">
+                      <i class="bx bx-credit-card d-block h2 mb-3"></i>
+                      Credit/Debit Card
+                    </span>
+                  </label>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <label class="card-radio-label">
+                    <input type="radio" name="pay-method" id="pay-methodoption2" class="card-radio-input" />
+                    <span class="card-radio py-3 text-center text-truncate">
+                      <i class="bx bxl-paypal d-block h2 mb-3"></i>
+                      Paypal
+                    </span>
+                  </label>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <label class="card-radio-label">
+                    <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked />
+                    <span class="card-radio py-3 text-center text-truncate">
+                      <i class="bx bx-money d-block h2 mb-3"></i>
+                      Cash on Delivery
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col">
+        <a href="../html/index.html" class="btn btn-link text-muted">
+          <i class="mdi mdi-arrow-left me-1"></i> Add more services
+        </a>
+      </div>
+      <div class="col">
+        <div class="text-end mt-2 mt-sm-0">
+          <a href="#" class="btn btn-success" onclick="checkform()">
+            <i class="mdi mdi-cart-outline me-1"></i> Buy
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer-container"></footer>
+  <script src="../js/Comprar.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
-import { Opinion } from "./Opinion.js";
+/*const { Product } = require("./Opinion.js");
 
-export class Product {
+class Product {
   #id;
   #title;
   #description;
@@ -26,7 +26,6 @@ export class Product {
       description.length < 2 ||
       typeof price !== "number" ||
       typeof id !== "number" ||
-      typeof image !== "string" ||
       image.length === 0
     ) {
       throw new Error("Provided values are not valid");
@@ -123,3 +122,6 @@ export class Product {
     this.#image = image;
   }
 }
+
+module.expo;
+*/
