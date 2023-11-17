@@ -678,8 +678,10 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
 <br>
 
 <ul>
-  <li>Por último, mencionar que los tres integrantes del grupo, han trabajado juntos en el desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario: </li>
 </ul>
+
+  <li>Por último, mencionar que los tres integrantes del grupo, han trabajado juntos en el desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario: </li>
+
 
 <br>
 <table>
