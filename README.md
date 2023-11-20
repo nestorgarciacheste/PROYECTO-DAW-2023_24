@@ -562,9 +562,9 @@ All the work has gone through several branches of work, the main one being `feat
 <table>
     <tr>
         <th>About us</th>
-        <th>Slider Galeria</th>
-        <th>Mapa</th>
-        <th>Reproductor de música</th>
+        <th>Gallery slider</th>
+        <th>Map</th>
+        <th>Music player</th>
     </tr>
     <tr>
         <td> <img src="/src/assets/img/captura_readme_home_aboutUs.png"></td>        
