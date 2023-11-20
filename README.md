@@ -627,80 +627,42 @@ All the work has gone through several branches of work, the main one being `feat
 <br>
 
 ## Gallery:
-Nuestro equipo formado por Nestor, Cristian y David somos los encargados de hacer el apartado de Gallery de WebCode, la galería de la web.
+# WebCode Gallery Section
 
-Para realizar este apartado hemos hecho una rama principal llamada <code>features_gallery</code>, dividida esta rama, en tres subramas, una para cada integrante del equipo, para poder desarrollar nuestras tareas para el correcto funcionamiento de la web:
+Our team, consisting of Nestor, Cristian, and David, is responsible for creating the Gallery section of WebCode, the web gallery.
 
-  <li>Nestor, líder del grupo, encargado del <b>JavaScript, TopBar, Footer</b>. La tarea consiste en desarrollar el código JavaScript, una vez diseñada la estructura de <b>.html</b> y el diseño con <b>.css</b> darle funcionamiento para que las fotos cambien su distribucion de manera autónoma.</li>
-    <ul>
-        <li>Organizador de commits de los diferentes equipos. </li>
-        <li>Dado que tres personas eran demasiadas para gallery, se ha basado más en ayudar a los compañeros con sus respectivas partes como:
-            <ul>
-                <li>Home (reproductor de video)</li>
-                <li>Store (moreinfo)</li>
-                <li>Login (ayudando a denise)</li>
-                <li>Hacer responsive parte de la web</li>
-                <li>Github</li>
-                <li>Y resolviendo dudas de compañeros </li>
+To implement this section, we have created a main branch named `features_gallery`, divided into three sub-branches, one for each team member, to develop our tasks for the proper functioning of the web:
 
+- **Nestor** (team leader):
+  - Responsible for JavaScript, TopBar, and Footer.
+  - Task involves developing JavaScript code to make photos change their distribution autonomously, following the HTML structure and design with CSS.
+  - Organized commits from different teams.
+  - Assisted teammates with their respective tasks in Home (video player), Store (moreinfo), Login (assisting Denise), making parts of the web responsive, and handling GitHub. Also, resolved teammates' doubts.
 
-            </ul>
-</li>
-<br>
-  <li>Cristian con su rama <code>gallery_Cristina</code> : encargado de hacer el <b>HTML, TopBar, Footer. </b> La tarea consiste en diseñar la estructura de la gellery, la cual se compone de un contenedor principal que dentro de este, encapsulamos todo el contenido que tendrá la web. Consiste en cuatro apartados:
-    <ul>
-      <li>Primer apartado. Diseñado con un contenedor <b>firts_container</b>, desarrollado con dos etiquetas <b>div</b>, la primera con una imagen que ocupe toda la altura del contenedor y el segundo <b>div</b> desarrollado con tres fotos, colocadas una encima de otra.</li>
-      <li>Segundo apartado. Diseñado con un contenedor <b>second_container</b>, desarrollado con dos etiquetas <b>div</b>, la primera a la parte izquierda, con una imagen que este centrada y el segundo <b>div</b> desarrollado con un texto de tres párrafos.</li>
-       <li>Tercer apartado. Diseñado con un contenedor <b>therd_container</b>, desarrollado con dos etiquetas <b>div</b>, la primera a la parte izquierda, con un texto dividido en tres párrafod y el segundo <b>div</b> desarrollado con una imagen centrada</li>
-        <li>Cuarto apartado. Diseñado con una etiqueta <b>videoWrapper</b>, desarrollado con un video</li>
-    </ul>
-  </li>
-</ul>
-<br>
-   <table>
-    <tr>
-        <th>Primer Apartado</th>
-        <th>Segundo Apartado</th>
-        <th>Tercer Apartado</th>
-        <th>Cuarto Apartado</th>
-    </tr>
-    <tr>
-        <td> <img src="/src/assets/img/conededor_principal.PNG"></td>        
-        <td> <img src="/src/assets/img/segundo_contenedor.PNG"></td>        
-        <td> <img src="/src/assets/img/tercerContenedor.PNG"></td>        
-        <td> <img src="/src/assets/img/cuartoContenedor.PNG"></td>      
-    </tr>
-</table>
-<br>
+- **Cristian** (branch: `gallery_Cristina`):
+  - In charge of HTML, TopBar, and Footer for the Gallery.
+  - Task involves designing the Gallery structure, which includes a main container encapsulating all web content with four sections.
+  - Sections include images, text, and a video player.
+  
+  ### Gallery Structure
+  
+  | First Section | Second Section | Third Section | Fourth Section |
+  |---------------|-----------------|----------------|----------------|
+  | ![First Section](/src/assets/img/contenedor_principal.PNG) | ![Second Section](/src/assets/img/segundo_contenedor.PNG) | ![Third Section](/src/assets/img/tercerContenedor.PNG) | ![Fourth Section](/src/assets/img/cuartoContenedor.PNG) |
 
-<br>
-<ul>
-  <li>David con su rama <code>gallery_DavidParedes</code> : encargado de <b>CSS, Responsive, TopBar y Footer</b>. La tarea consiste en darle diseño al <b>.html</b> y que sea <b>Responsive</b> para poder navegar por la web desde diferentes dispositivos.</li>
-      <ul>
-          <li>Con las clases de CSS añadirle estilos en el archivo .html</li>
-          <li>con @media establecemos dependiendo del dispositivos un tamaño determinado al <code>body</code> y al <code>main-container</code></li>
-</ul>
-<br>
-<table>
-    <tr>
-        <th>Código CSS</th>
-        <th>Tamaño Ordenador</th>
-        <th>Tamaño iPad</th>
-        <th>Tamaño Movil</th>
-    </tr>
-    <tr>
-        <td> <img src="/src/assets/img/codigoGalleryResponsive.PNG"></td>        
-        <td> <img src="/src/assets/img/vistaOrdenador.PNG"></td>        
-        <td> <img src="/src/assets/img/vistaIpad.PNG"></td>        
-        <td> <img src="/src/assets/img/vistaMovil.PNG"></td>      
-    </tr>
-</table>
-<br>
+- **David** (branch: `gallery_DavidParedes`):
+  - Responsible for CSS, Responsive design, TopBar, and Footer.
+  - Task involves styling the HTML with CSS and making it responsive for various devices.
+  - Used CSS classes and media queries to set specific styles and sizes for different devices.
+  
+  ### Responsive Design
+  
+  | CSS Code | Desktop View | iPad View | Mobile View |
+  |----------|--------------|-----------|-------------|
+  | ![CSS Code](/src/assets/img/codigoGalleryResponsive.PNG) | ![Desktop View](/src/assets/img/vistaOrdenador.PNG) | ![iPad View](/src/assets/img/vistaIpad.PNG) | ![Mobile View](/src/assets/img/vistaMovil.PNG) |
 
-<ul>
-</ul>
+- The team collectively worked on the development of TopBar and Footer, providing navigation links to different pages, a search bar, and user profile information. The Footer also includes links to social media platforms, such as Facebook, Instagram, and LinkedIn.
 
-  <li>Por último, mencionar que el grupo se ha encargado del desarrollo del <b>TopBar</b> y del <b>Footer</b> para poder navegar por toda la web, añadiendo enlaces para navegar en las diferentes páginas, con un buscador y el perfil del usuario. Por otro lado, en el <b>Footer</b> hemos añadido las redes sociales, en el caso de la web son: facebook, Instagram y Linkedin</li>
 
 
 
