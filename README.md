@@ -195,7 +195,7 @@ const auth0 = require('auth0');
 
 
 ### Olvido de contraseña
-En caso de que el usuario envíe la contraseña para iniciar sesión, la administración de WebCode le enviará un correo con la recuperación de esta. Para ello, el usuario solo tendrá que situar un correo válido en un input que hemos modificado estéticamemente mediante la librería **SweetAlert2**.
+En caso de que el usuario envíe la contraseña para iniciar sesión, la administración de WebCode le enviará un correo con la recuperación de esta (de forma ficticia). Para ello, el usuario solo tendrá que situar un correo válido en un input que hemos modificado estéticamemente mediante la librería **SweetAlert2**.
 La cual hemos añadido en el **Head** de nuestro proyecto:
 <code>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -211,51 +211,6 @@ La cual hemos añadido en el **Head** de nuestro proyecto:
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/910e2a8e-a085-40f6-8b4d-f3e08f099b39"></td>        
     </tr>
 </table>
-
-Una vez hecho esto, nuestro **servidor de correo** junto a codigo de **PHP** (servidor y código gestionado por Denise de Login y Miguel de Store) y el método post, mandará a todos los usuarios un correo con la recuperación de la contraseña. La cual será válida para nuestra resticción del login y estará simulada para que el usuario la utilice una vez y luego deba cambiarla.
-<details>
-  
-<summary>Ver código PHP</summary>
-
-~~~
-
-<?php
-header("Access-Control-Allow-Origin: *"); 
-header("Access-Control-Allow-Methods: POST");
-header("Content-Type: application/json");
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = isset($_POST["email"]) ? $_POST["email"] : "";
-
-    if (!empty($email)) {
-        $destinatario = $email;
-        $asunto = "Password recovery";
-
-        $cuerpoCorreo = "Hello, this is the WebCode team.\n";
-        $cuerpoCorreo .= "We are delighted to assist you in recovering your password,\n";
-        $cuerpoCorreo .= "Your temporary password is: 1WebCode-\n";
-        $cuerpoCorreo .= "We extended our thanks for your cooperatio.n\n";
-        $cuerpoCorreo .= "WebCode";
-
-        $remitente = "contact@webcode.intecmedia.com";
-
-        $headers = "From: $remitente";
-
-        if (mail($destinatario, $asunto, $cuerpoCorreo, $headers)) {
-            echo "Email sent successfully";
-        } else {
-            echo "Error sending email";
-        }
-    } else {
-        echo "The email address was not provided correclty.";
-    }
-} else {
-    http_response_code(405); 
-    echo "Method not allowed";
-}
-?>
-  ~~~
-
-</details>
 
 <br>
 
@@ -678,7 +633,7 @@ Para realizar este apartado hemos hecho una rama principal llamada <code>feature
                 <li>Home (reproductor de video)</li>
                 <li>Store (moreinfo)</li>
                 <li>Login (ayudando a denise)</li>
-                <li>Hacer responsive gran parete de la web</li>
+                <li>Hacer responsive parte de la web</li>
                 <li>Github</li>
                 <li>Y resolviendo dudas de compañeros </li>
 
