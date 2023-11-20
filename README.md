@@ -570,7 +570,7 @@ All the work has gone through several branches of work, the main one being `feat
         <td> <img src="/src/assets/img/captura_readme_home_aboutUs.png"></td>        
         <td> <img src="/src/assets/img/captura_readme_home_galleySlider.png"></td>        
         <td> <img src="/src/assets/img/captura_readme_home_map.png"></td>        
-        <td> <img src="/src/assets/img/captura_readme_reproductor.png"></td>        
+        <td> <img src="/src/assets/img/captura_readme_home_reproductor.png"></td>        
     </tr>
 </table>
 <br>
