@@ -33,6 +33,12 @@ And u need this 2 lines in your html:
     <footer id="footer-container"></footer>
 ~~~
 
+# WebCode
+Our **WebCode website** is a platform where the client can acquire web services and products. Therefore, users can obtain not only knowledge about websites and their maintenance but also acquire their own webpage.
+
+This group idea originated from the sketch created in **Figma**, outlining the interaction, fonts, colors, and other aspects of the website.
+![Captura](https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/27a22729-458d-4f62-b784-07299fa084a2)
+
 ## Account:
 Our Account section contains the essentials for the user to register with WebCode, log in at any time using a variety of methods, and set up their account in a convenient and visual way.
 
