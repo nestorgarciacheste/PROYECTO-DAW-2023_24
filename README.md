@@ -582,7 +582,7 @@ At Home we have created a description of what the company would be, some of our 
 All the work has gone through several branches of work, the main one being `feature/home`, the work of each member of the group in their respective branch:
 
 <ul>
-  <li>Lorenzo <code>Home_Lorenzo</code> : Responsible for the structuring and creation of most of the <b>home</b>, text creation, design and management.
+  <li>Lorenzo <code>Home_Lorenzo</code> : text creation, design and management.
    <ul>
         <li>About us</li>
         <li>Gallery slider</li>
@@ -595,7 +595,7 @@ All the work has gone through several branches of work, the main one being `feat
 <br>
   <ul>
     
-  <li>Manu <code>home_Manu</code> : encargado de la seccion nuestros servicios e implentacion de opiniones
+  <li>Manu <code>home_Manu</code> : encargado de la seccion nuestros servicios e implentacion de opiniones, también resolucion de bugs
     <ul>
         <li>Our services</li>
         <li>Opiniones</li>
