@@ -528,21 +528,21 @@ This way the **Contact** page will look like this: <br><br>
 
 ## Home:
 
-En Home hemos creado una descripcion de lo que seria la empresa, algunos de nuestos ejemplos de posibles trabajos , mapa con la localizacion con una API y reproductor de música.
+At Home we have created a description of what the company would be, some of our examples of possible jobs, a map with the location with an API and a music player.
 
-Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feature/home`, trabajo de cada miembro del grupo en su respectiva rama:
+All the work has gone through several branches of work, the main one being `feature/home`, the work of each member of the group in their respective branch:
 
 <ul>
-  <li>Lorenzo <code>Home_Lorenzo</code> : encargado de la estructuracion y creacion de la mayor parte del <b>home</b> , creacion de textos , diseño y gestión.
+  <li>Lorenzo <code>Home_Lorenzo</code> : Responsible for the structuring and creation of most of the <b>home</b>, text creation, design and management.
    <ul>
         <li>About us</li>
-        <li>Slider Galeria</li>
-        <li>Creacion de Mapa mediante API <b>Leaflet</b></li>
-        <li>Boton UP para desplazarse al principio de la página</li>
+        <li>Gallery slider</li>
+        <li>Map creation via API <b>Leaflet</b></li>
+        <li>UP button to move to the top of the page</li>
     </ul>
     </li>
    <br>
-  <li>Denise <code>main</code> creacion de reproductor de música </li>
+  <li>Denise <code>main</code> music player creation </li>
 <br>
   <ul>
     
@@ -570,7 +570,7 @@ Todo el trabajo ha pasado por varias ramas de trabajo, siendo la principal `feat
         <td> <img src="/src/assets/img/captura_readme_home_aboutUs.png"></td>        
         <td> <img src="/src/assets/img/captura_readme_home_galleySlider.png"></td>        
         <td> <img src="/src/assets/img/captura_readme_home_map.png"></td>        
-        <td> <img src=""></td>        
+        <td> <img src="/src/assets/img/captura_readme_reproductor.png"></td>        
     </tr>
 </table>
 <br>
