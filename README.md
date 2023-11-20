@@ -33,35 +33,35 @@ And u need this 2 lines in your html:
     <footer id="footer-container"></footer>
 ~~~
 
-## Cuenta:
-Nuestro apartado de Cuenta consta de lo esencial para que el usuario pueda registrarse en WebCode, iniciar sesión cuando desé mediante diversos métodos, y configurar su cuenta de una manera cómoda y visual.
+## Account:
+Our Account section contains the essentials for the user to register with WebCode, log in at any time using a variety of methods, and set up their account in a convenient and visual way.
 
-Para realizar esto, hemos dividido nuestro apartado de Cuenta en la rama `feature/login` en varios subapartados, con sus respectivos responsables y ramas:
+To do this, we have divided our Account section in the `feature/login` branch into several sub-sections, with their respective managers and branches:
 <ul>
-  <li>Cecilia <code>login_Cecilia</code> : encargada del <b>registro</b> del usuario mediante campos con validación. Así como del apartado de <b>contacto</b> para los usuarios.</li>
+  <li>Cecilia <code>login_Cecilia</code> : responsible for user <b>registration</b> using fields with validation. Also responsible for the <b>contact</b> section for users.
 <br>
-  <li>Denise <code>login_Denise</code> : encargada de hacer el <b>login</b> de usuarios mediante:
+  <li>Denise <code>login_Denise</code> : Responsible for <b> user login </b> by:
     <ul>
-      <li>Validación de formularios (email y contraseña).</li>
-      <li>Autenticación con Google y GitHub (mediante Auth0).</li>
-      <li>Recuperación de contraseña mediante SweetAlert2.</li>
+      <li>Validating forms (email and password).</li>
+      <li>Authenticating with Google and GitHub (via Auth0).</li>
+      <li>Password recovery using SweetAlert2.</li>
     </ul>
   </li>
 <br>
-  <li>Alex <code>login_Alex</code> : encargado de la <b>configuración de la cuenta</b>:</li>
+  <li>Alex <code>login_Alex</code> : in charge of <b>account configuration</b>:</li>
       <ul>
-          <li>Editar credenciales del usuario.</li>
-          <li>Acceder al contacto de WebCode.</li>
-          <li>Realizar el LogOut</li>
+          <li>Editing user credentials.</li>
+          <li>Editing user credentials.</li>
+          <li>Performing LogOut.</li>
     </ul>
 </ul>
 <br>
 <table>
     <tr>
-        <th>Registro</th>
-        <th>Contacto</th>
+        <th>Registration</th>
+        <th>Contact</th>
         <th>Login</th>
-        <th>Cuenta</th>
+        <th>Account</th>
     </tr>
     <tr>
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/83a059b3-55d8-4527-93ea-767c47bf6771"></td>        
@@ -74,11 +74,11 @@ Para realizar esto, hemos dividido nuestro apartado de Cuenta en la rama `featur
 
 ### Login
 
-En el Login de WebCode nos encontramos con un **HTML** que hace de estructura - principalmente generada con divs - de un breve formulario el cual le pide al usuario su correo electrónico y contraseña. A falta de una base de datos, el usuario podrá acceder al **Home** de la web mediante el buen cumplimiento de las restricciones del formulario (explicadas a continuación). 
+The WebCode login consists of an **HTML** structure mainly generated with divs, creating a brief form that requests the user's email and password. In the absence of a database, successful completion of the form's restrictions (explained below) grants users access to the web's Home page.
 
-Este HTML consta del uso de Bootstrap, así como de un extenso **CSS** enlazado y generado de manera que sea responsive y válido para varios navegadores. <br> <br>
+This HTML involves the usage of Bootstrap and an extensive **CSS linked and generated for responsiveness** and cross-browser compatibility. <br> <br>
 <details>
-  <summary>Ver código HTML</summary>
+  <summary>See HTML code</summary>
 
 <body>
     <header id="header-container"></header>
@@ -132,13 +132,13 @@ Este HTML consta del uso de Bootstrap, así como de un extenso **CSS** enlazado 
 </details>
 <br>
 
-Las **restricciones** mencionadas previamente son generadas cuando el usuario intenta acceder a la Web haciendo uso del botón de **Log in**. Pues este botón llama a una función realizada en `JavaScript` la cual comprueba dos aspectos esenciales:
+The aforementioned **restrictions** occur when the user attempts to access the website using the Log in button. This button triggers a JavaScript function that checks two essential aspects:
 
-- Correo electrónico:<br>
+- Email adress:<br>
   `var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;`    
-    - Debe contener el @.
-    - Debe contener el .(TLD).
-- Contraseña:<br>
+    - Must contain '@'.
+    - Must contain a top-level domain (TLD) ('.').
+- Password:<br>
   `var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;`
     - (?=.*[a-z])-> at least a lower case
     - (?=.*[A-Z]) -> at least a upper case
@@ -147,13 +147,12 @@ Las **restricciones** mencionadas previamente son generadas cuando el usuario in
     - {8,} -> minimum length of 8
 <br>
 
-### Login mediante Auth0
-Si así lo prefiere el usuario, podrá iniciar sesión en nuestra página Web mediante el registro con **Google** y **GitHub**. Esto se ha realizado mediante la plataforma de gestión de entidades y acceso Auth0. 
-
+### Auth0 Login 
+Users can choose to log in to our website using their **Google** and **GitHub accounts**. This functionality is implemented through the **Auth0** entity and access management platform.
 <table>
     <tr>
-        <th>Configuración en el sitio web de Auth0</th>
-        <th>Resultado en WebCode</th>
+        <th>Configuration on Auth0 Website</th>
+        <th>Outcome on WebCode</th>
     </tr>
     <tr>
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b0fc71d7-21d5-4db2-95ca-d9227157ac0a"></td>        
@@ -161,16 +160,17 @@ Si así lo prefiere el usuario, podrá iniciar sesión en nuestra página Web me
     </tr>
 </table>
 
-Para hacer esto posible, hemos añadido en el **Head** de nuestro proyecto las siguientes rutas:
+To enable this feature, we've added the following paths to our **project's Head**:
 <code>
     <script src="app.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
 </code>
 
-El Script sirve para redirigir mediante la clave de usuario de Auth0 al servicio que deseemos. En el caso de **Google** el script sería este:
+The script redirects users using the Auth0 user key to the desired service. For **Google**, the script appears as follows:
+
 <details>
   
-<summary>Ver código JS</summary>
+<summary>See JS code</summary>
 
 ~~~
 
@@ -194,17 +194,17 @@ const auth0 = require('auth0');
 </details>
 
 
-### Olvido de contraseña
-En caso de que el usuario envíe la contraseña para iniciar sesión, la administración de WebCode le enviará un correo con la recuperación de esta (de forma ficticia). Para ello, el usuario solo tendrá que situar un correo válido en un input que hemos modificado estéticamemente mediante la librería **SweetAlert2**.
-La cual hemos añadido en el **Head** de nuestro proyecto:
+### Password Recovery
+If the user sends a password request to log in, WebCode's administration will send an email with the password recovery. For this purpose, the user only needs to enter a valid email in an input field that we've aesthetically modified using the **SweetAlert2** library.
+We've added this library to the **Head** of our project:
 <code>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </code>
 
 <table>
     <tr>
-        <th>Configuración del Script</th>
-        <th>Resultado en WebCode</th>
+        <th>Script Configuration</th>
+        <th>Outcome in WebCode</th>
     </tr>
     <tr>
         <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/d47500b1-4e0a-4306-8e3c-2224a75cc7ae"></td>        
@@ -212,7 +212,50 @@ La cual hemos añadido en el **Head** de nuestro proyecto:
     </tr>
 </table>
 
-<br>
+Through our email server and PHP code, this email is sent in real, not simulated, to the user. This email contains a temporary password that the user can utilize to access the website.
+<details>
+  
+<summary>See PHP code</summary>
+
+~~~
+<?php
+header("Access-Control-Allow-Origin: *"); 
+header("Access-Control-Allow-Methods: POST");
+header("Content-Type: application/json");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+
+    if (!empty($email)) {
+        $destinatario = $email;
+        $asunto = "Password recovery";
+
+        $cuerpoCorreo = "Hello, this is the WebCode team.\n";
+        $cuerpoCorreo .= "We are delighted to assist you in recovering your password.\n";
+        $cuerpoCorreo .= "Your temporary password is: 1WebCode-\n";
+        $cuerpoCorreo .= "We extended our thanks for your cooperation.\n";
+        $cuerpoCorreo .= "WebCode";
+
+        $remitente = "contact@webcode.intecmedia.com";
+
+        $headers = "From: $remitente";
+
+        if (mail($destinatario, $asunto, $cuerpoCorreo, $headers)) {
+            echo "Email sent successfully";
+        } else {
+            echo "Error sending email";
+        }
+    } else {
+        echo "The email address was not provided correclty.";
+    }
+} else {
+    http_response_code(405); 
+    echo "Method not allowed";
+}
+?>
+  
+  ~~~
+
+</details>
 
 ### Sign up
 
