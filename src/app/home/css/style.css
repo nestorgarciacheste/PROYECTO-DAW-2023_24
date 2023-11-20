@@ -1,90 +1,13 @@
-.carrusel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 100vh; /* Opcional: ajusta la altura del contenedor al tamaño de la ventana */
-  }
-  
-  .carrusel {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 70%; /* Ajusta el ancho del carrusel según tu preferencia */
-    max-width: 100%; /* Evita que el carrusel sea más grande que el viewport */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Añadir desplazamiento suave en Safari */
-    padding-bottom: 20px; /* Para evitar que las flechas se superpongan al contenido al llegar al final */
-    align-items: center;
-  }
-  /* Oculta la barra de desplazamiento en Chrome y Safari */
-.carrusel::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Estilos adicionales para Firefox */
-  .carrusel {
-    scrollbar-width: none;
-  }
-  
-  .elemento {
-    flex: 0 0 auto;
-    margin: 0 80px; /* Ajusta el margen para separar las imágenes */
-    width: 300px; /* Ancho deseado */
-    height: 200px; /* Altura deseada */
-    scroll-snap-align: start;
-      transition: transform 0.3s ease; /* Agrega una transición suave para el escalado */
-
-  }  
-  
-  .elemento img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta el tamaño de la imagen dentro de su contenedor */
-  }
-  
-  .arrow-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1; /* Para que estén sobre el carrusel */
-  }
-  
-  #prevBtn {
-    left: 10px;
-    margin-top: 6%;
-  }
-  
-  #nextBtn {
-    right: 10px;
-    margin-top: 6%;
-  }
-
-  .elemento-central{
-    height: 500px;
-  }
 @import url(../../header_footer/css/topbar_style.css);
-/* Seccion nuestros servicios */
-.divrojo {
-  background-color: #d8a47f;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  box-sizing: border-box;
-  margin: 0 auto; /* Center the container horizontally */
-  text-align: center; /* Center the content inside */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
+@import url(../Ejer4-UD1.ReprodcutorMultimedia/styleAudio.css);
+.divrojo{
+    background-color: #d8a47f;
+    border-radius: 1.5rem;
+    width: 70%;
+    border: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}   
 .cuerpocartas{
     background-color: #f05d5e;
     border-radius: 0 0 15px 15px;
@@ -95,76 +18,13 @@
 .cardservices{
     background-color: #d8a47f;
     border: 0;
-    max-width: 100%;
 }
-/* Seccion opiniones */
-/* Estilos para el contenedor de opiniones */
-.opi-ctn{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 2rem auto;
-  flex-wrap: wrap;
+/*
+.card{
+    background-color: #d8a47f;
+    border: 0;
 }
-
-.opinion-block {
-  flex: 0 0 calc(33.33% - 20px);
-  margin: 10px;
-  max-width: 600px;
-  width: 80%;
-  background-color: #e7ecef;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: #272932;
-  padding: 20px;
-  position: relative;
-  min-width: 400px;
-}
-
-.customer-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #0f7173;
-  color: #e7ecef;
-}
-
-.customer-info img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
-
-.customer-name {
-  font-size: 1.5em;
-  font-weight: bold;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.rating {
-  font-size: 1.5em;
-  color: #f05d5e;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.opinion-text {
-  font-size: 1.2em;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 80px;
-}
+*/
 @media only screen and (min-width: 600px) {
   #banner-izquierda {
     position: absolute;
@@ -492,6 +352,10 @@ transform: translateX(0);
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start { 
 transform: translateX(0);
+}
+
+.card {
+  margin-left: 60px;
 }
 
 .music-ctn{
