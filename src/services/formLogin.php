@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $asunto = "Password recovery";
 
         $cuerpoCorreo = "Hello, this is the WebCode team.\n";
-        $cuerpoCorreo .= "We are delighted to assist you in recovering your password,\n";
+        $cuerpoCorreo .= "We are delighted to assist you in recovering your password.\n";
         $cuerpoCorreo .= "Your temporary password is: 1WebCode-\n";
-        $cuerpoCorreo .= "We extended our thanks for your cooperatio.n\n";
+        $cuerpoCorreo .= "We extended our thanks for your cooperation.\n";
         $cuerpoCorreo .= "WebCode";
 
         $remitente = "contact@webcode.intecmedia.com";

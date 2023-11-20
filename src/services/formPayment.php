@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cuerpoCorreo .= "Your order is being processed and will be delivered within the next 24 hours.\n";
         $cuerpoCorreo .= "We appreciate your trust in our services and hope you enjoy your products.\n";
         $cuerpoCorreo .= "If you have any further questions or need assistance, feel free to contact us.\n";
-        $cuerpoCorreo .= "Thank ypu once again for choosing WebCode.";
+        $cuerpoCorreo .= "Thank you once again for choosing WebCode.\n";
         $cuerpoCorreo .= "WebCode";
 
         $remitente = "contact@webcode.intecmedia.com";
