@@ -35,6 +35,68 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <style>
+    /* Estilos personalizados */
+    .glide {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .glide__slide {
+      height: 300px;
+      width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: white;
+    }
+
+    .s1{
+        background-image: url(../img/chanel.svg);
+    }
+    .s2{
+        background-image: url(../img/consum.jpg);
+    }
+    .s3{
+        background-image: url(../img/lidl.svg);
+    }
+    .s4{
+        background-image: url(../img/pepsi.svg);
+    }
+    .s5{
+        background-image: url(../img/Gucci.svg);
+    }
+    .glide__slide {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .glide__arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+    .glide__arrow {
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      padding: 10px 15px;
+      font-size: 40px;
+      cursor: pointer;
+      margin: 0 20px; /* Añade margen a las flechas */
+    }
+    .glide__arrows--left {
+      left: -100px; /* Ajusta la posición de la flecha izquierda */
+    }
+    .glide__arrows--right {
+      right: -100px; /* Ajusta la posición de la flecha derecha */
+    }
+  </style>
   </head>
   <body>
     <header id="header-container"></header>
@@ -118,7 +180,96 @@
       </div>
       <p class="text-center flecha-home">&darr;</p>
     </div>
+
+
+    <div class="glide">
+      <div class="glide__arrows glide__arrows--left" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#129040;</button>
+      </div>
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide s1"></li>
+          <li class="glide__slide s2"></li>
+          <li class="glide__slide s3"></li>
+          <li class="glide__slide s4"></li>
+          <li class="glide__slide s5"></li>
+        </ul>
+      </div>
+      <div class="glide__arrows glide__arrows--right" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#129042;</button>
+      </div>
+    </div>
+
+    <!-- FIN 1 PARTE-->
+
+    <div class="container text-center">
+      <h2>OUR SERVICES</h2>
+    </div>
+
+    <div class="container divrojo">
+      <div class="row">
+        <div class="col d-flex justify-content-center p-3">
+          <div class="card cardservices" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../../../assets/img/Web-estatica-o-dinamica.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body cuerpocartas">
+              <p class="card-text textocartas">Dynamic / Static Web</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex justify-content-center p-3">
+          <div class="card cardservices" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../../../assets/img/seo.png"
+              alt="Card image cap"
+            />
+            <div class="card-body cuerpocartas">
+              <p class="card-text textocartas">SEO</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-100"></div>
+
+        <div class="col d-flex justify-content-center p-3">
+          <div class="card cardservices" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../../../assets/img/hosting.png"
+              alt="Card image cap"
+            />
+            <div class="card-body cuerpocartas">
+              <p class="card-text textocartas">Hosting</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex justify-content-center p-3">
+          <div class="card cardservices" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../../../assets/img/ecommerce.png"
+              alt="Card image cap"
+            />
+            <div class="card-body cuerpocartas">
+              <p class="card-text textocartas">Ecommerce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
     <hr>
+    <!-- SLIDER 4 PARTE Lorenzo-->
+    <!-- HAY QUE AÑADIR LAS MISMAS IMAGENES QUE HAYA EN GALERIA-->
+    <!-- al añadir las fotos hay que actualizar lo que tiene el slider dentro-->
     <div class="container-fluid text-center my-3">
       <h2 class="font-weight-light">Gallery</h2>
       <div class="row mx-auto my-auto justify-content-center">
@@ -131,7 +282,7 @@
                   <div class="card-img">
                    
                     <img
-                      src="../../gallery/img/img2.jpg"
+                      src="../../gallery/img/img2.avif"
                       class="img-fluid gallery_img"
                     />
                   
@@ -148,7 +299,7 @@
                   <div class="card-img">
                     <a href="../../gallery/html/index.html">
                     <img
-                      src="../../gallery/img/img1.jpg"
+                      src="../../gallery/img/img1.avif"
                       class="img-fluid"
                     />
                   </div>
@@ -163,7 +314,7 @@
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../gallery/img/img3.jpg"
+                      src="../../gallery/img/img3.avif"
                       class="img-fluid"
                     />
                   </div>
@@ -178,7 +329,7 @@
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../gallery/img/img1.jpg"
+                      src="../../gallery/img/img1.avif"
                       class="img-fluid"
                     />
                   </div>
@@ -193,7 +344,7 @@
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../gallery/img/img2.jpg"
+                      src="../../gallery/img/img2.avif"
                       class="img-fluid"
                     />
                   </div>
@@ -208,7 +359,7 @@
                 <div class="card">
                   <div class="card-img">
                     <img
-                      src="../../gallery/img/img3.jpg"
+                      src="../../gallery/img/img3.avif"
                       class="img-fluid"
                     />
                   </div>
@@ -253,9 +404,92 @@
         }
       });
     </script>
-   <hr>
-  <div class="container" style="display: block; margin-bottom: 20px">      
-    <div style="margin: 0 auto; text-align: center">
+    <!-- FIN SLIDER 4 PARTE-->
+<!-- // Seccion opiniones -->
+<!-- Contenedor para los bloques de opinión -->
+<div class="opi-ctn">
+  <!-- Bloque de opinión existente -->
+  <div class="opinion-block">
+    <div class="customer-info">
+      <img src="../../../assets/img/usuario.jpg" alt="Foto del Cliente" width="50" />
+      <div class="customer-name">Nestor Garcia</div>
+      <div class="rating">4.5/5</div>
+    </div>
+    <div class="opinion-text">
+      <p>Buenos contenidos, recomendado.</p>
+    </div>
+  </div>
+
+  <!-- Primer nuevo bloque de opinión -->
+  <div class="opinion-block">
+    <div class="customer-info">
+      <img src="../../../assets/img/usuario2.jpg" alt="Foto del Cliente" width="50" />
+      <div class="customer-name">Miguel García</div>
+      <div class="rating">2/5</div>
+    </div>
+    <div class="opinion-text">
+      <p>El profesor no se explica muy bien.</p>
+    </div>
+  </div>
+
+  <!-- Segundo nuevo bloque de opinión -->
+  <div class="opinion-block">
+    <div class="customer-info">
+      <img src="../../../assets/img/usuario3.jpg" alt="Foto del Cliente" width="50" />
+      <div class="customer-name">Denise Garrido</div>
+      <div class="rating">5/5</div>
+    </div>
+    <div class="opinion-text">
+      <p>Perfe, explica muy bien el profesor.</p>
+    </div>
+  </div>
+</div>
+    <!-- mapa 5 PARTE-->
+<!--
+    <hr>
+    
+    <div class="container">
+      <h2 class="font-weight-light text-center">Find us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.3598589209123!2d-0.646900523569657!3d39.48378811189169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60f9d60915a7eb%3A0xb5b831592f21c304!2sCheste%20Complejo%20Deportivo!5e0!3m2!1ses!2ses!4v1698227267327!5m2!1ses!2ses"
+            width="400"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="col-md-6" style="padding-top: 30px;">
+            <div class="row contactMap">
+              CONTACT US
+            </div>
+
+            <div class="row contactMap">
+              Phone: 678 89 88 99
+            </div>
+
+            <div class="row contactMap">
+              contacto@webcode.com
+            </div>
+
+            <div class="row contactMap">
+              Cheste Complejo Deportivo 46380 Cheste, Valencia
+            </div>
+
+        </div>
+      </div>
+    </div>
+-->
+    <!-- fin mapa 5 PARTE-->
+
+<!--NUEVO  mapa 5 PARTE-->
+
+<hr>
+     <div class="container" style="display: block">
+      <div style="margin: 0 auto; text-align: center">
         <h2 class="font-weight-light text-center">Find Us
         </h2>
       </div>
@@ -327,6 +561,30 @@
         document.documentElement.scrollTop = 0;
       }
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+  new Glide('.glide', {
+    type: 'slider',
+    startAt: 0,
+    perView: 3,
+    focusAt: 'center',
+    gap: 20,
+    autoplay: 3000,
+    rewind: true,
+    breakpoints: {
+      800: {
+        perView: 1
+      },
+      480: {
+        perView: 1
+      }
+    }
+  }).mount();
+</script>
+
+</body>
+</html>
 
 <div class="music-ctn">
 
