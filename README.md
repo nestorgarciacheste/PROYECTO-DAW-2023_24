@@ -629,6 +629,42 @@ All the work has gone through several branches of work, the main one being `feat
 
 <br>
 
+
+## Store:
+Our team, comprised of Carlos, Toni, and Miguel, is tasked with developing the Store section of WebCode, the online marketplace.
+
+To bring this section to life, we've established a main branch named features_store, which is further divided into three sub-branches, each assigned to a team member. This structure allows us to efficiently tackle the implementation of product sales, customer reviews, and the payment gateway to ensure seamless transactions on the website.
+
+- **Carlos** (team leader branch: `store_Carlos`):
+  - Designed and implemented the HTML structure and styling with CSS for the Store page.
+  - Developed JavaScript code to autonomously adjust the distribution of photos in the Store page, aligning with the HTML structure.
+  - Orchestrated organized commits, merges, and uploads to GitHub for the Store section.
+  - Assisted Toni with design aspects on their respective page.
+
+<br>
+
+![Captura](/src/assets/img/Captura_Store.png)
+
+## Store Filters
+
+| Web Positioning               | Hosting                       | E-Commerce                    |
+| ----------------------------- | ------------------------------| ------------------------------|
+| ![Web Positioning](/src/assets/img/Captura_Storef1.png) | ![Hosting](/src/assets/img/Captura_Storef2.png) | ![E-Commerce](/src/assets/img/Captura_Storef3.png) |
+
+<br>
+
+- **Toni** (branch: `store_Peral`):
+  - 
+  - 
+  - 
+  
+- **Miguel** (branch: `store_Miguel`):
+  - 
+  - 
+  - 
+
+
+
 ## Gallery:
 # WebCode Gallery Section
 
