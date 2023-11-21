@@ -57,7 +57,8 @@ To do this, we have divided our Account section in the `feature/login` branch in
   <li>Alex <code>login_Alex</code> : in charge of <b>account configuration</b>:</li>
       <ul>
           <li>Editing user credentials.</li>
-          <li>Editing user credentials.</li>
+          <li>Editing email credentials.</li>
+          <li>Profile image editing.</li>
           <li>Performing LogOut.</li>
     </ul>
 </ul>
