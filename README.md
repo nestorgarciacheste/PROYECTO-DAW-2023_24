@@ -37,7 +37,7 @@ And u need this 2 lines in your html:
 Our **WebCode website** is a platform where the client can acquire web services and products. Therefore, users can obtain not only knowledge about websites and their maintenance but also acquire their own webpage.
 
 This group idea originated from the sketch created in **Figma**, outlining the interaction, fonts, colors, and other aspects of the website.
-![Captura](https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/27a22729-458d-4f62-b784-07299fa084a2)
+![Captura](https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/blob/main/src/assets/img/PAGINA%20DE%20DISE%C3%91O.png)
 
 ## Account:
 Our Account section contains the essentials for the user to register with WebCode, log in at any time using a variety of methods, and set up their account in a convenient and visual way.
@@ -670,12 +670,158 @@ To bring this section to life, we've established a main branch named `feature/st
 
 <br>
   
-- **Miguel** (branch: `store_Miguel`):
-  - 
-  - 
-  - 
+  **Miguel** (branch: `store_Miguel`):
+
+  - **Server Configuration for Hosting the Website on a Redmi Device:**
+    - Cloning the GitHub repository on the server.
+    - DNS configuration.
+    - Implementation of redirects.
+    - Configuration of the mail server.
 
 
+    | GitHub repository | Redirects |
+    | -----------------------------  | --------- |
+    | ![Cloning the GitHub repository](/src/assets/img/TerminalGitHubServer.PNG)  | ![Redirects](/src/assets/img/redirecciones.PNG) |
+
+    | DNS  | Mail Server |
+    | ------------------ | ------------ |
+    | ![DNS Configuration](/src/assets/img/DNSServidor.PNG) | ![Mail Server](/src/assets/img/mailServer.PNG) |
+
+  - **Payment Gateway and Related JavaScript Configuration:**
+    - Implementation of corrections to enhance user data input.<br>
+    ![Payment Gateway Configuration](/src/assets/img/Captura.PNG)
+
+  - **Collaboration with Denise on JavaScript and PHP Configuration:**
+    - Collaborated closely with Denise to develop and configure functions in JavaScript and PHP. These functions, when using the "Forgot my password" option in the login or when placing an order, automatically send a message to the associated email.
+<details>
+  <summary>JavaScript Code:</summary>
+
+  ```javascript
+  function checkform() {
+    function isCorrectE(email) {
+      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (emailRegex.test(email)) {
+        return true;
+      } else {
+        Swal.fire('Error', 'Please enter a valid e-mail.', 'error');
+        return false;
+      }
+    }
+
+    function isCorrectT(numero) {
+      var phoneNumber = /^[0-9]{9}$/;
+      if (phoneNumber.test(numero)) {
+        return true;
+      else {
+        Swal.fire('Error', 'Please enter a valid phone number.', 'error');
+        return false;
+      }
+    }
+
+    function isCorrectZ(codigo) {
+      var postalCode = /^\d{5}$/;
+      if (postalCode.test(codigo)) {
+        return true;
+      } else {
+        Swal.fire('Error', 'Please enter a valid postal code.', 'error');
+        return false;
+      }
+    }
+
+    // Obtén los valores de los campos
+    var fullName = document.getElementById('billing-name').value;
+    var email = document.getElementById('billing-email-address').value;
+    var phone = document.getElementById('billing-phone').value;
+    var address = document.getElementById('billing-address').value;
+    var country = document.getElementById('billing-country').value;
+    var city = document.getElementById('billing-city').value;
+    var postalCode = document.getElementById('zip-code').value;
+    var paymentMethod = document.querySelector('input[name="pay-method"]:checked').value;
+
+    // Verifica si todos los campos están completos y el email es correcto
+    if (fullName && address && country && city) {
+      // Envía la información al servidor o realiza la acción deseada
+      if (isCorrectE(email) && isCorrectT(phone) && isCorrectZ(postalCode)) {
+        // Envia el correo utilizando SendGrid o la API de correo que prefieras
+        sendEmail(email);
+        Swal.fire('Success', 'We have sent an email to ' + email + ' with order confirmation', 'success');
+      }
+    } else {
+      Swal.fire('Error', 'Please fill in all required fields with valid information.', 'error');
+    }
+  }
+
+  function sendEmail(email) {
+    // Aquí debes implementar la lógica para enviar el correo utilizando la API de SendGrid o tu proveedor de correo preferido.
+    // Puedes hacer una solicitud AJAX al backend que maneje el envío del correo.
+    // El código a continuación es un ejemplo simplificado y debe ser adaptado según tu configuración.
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "../../../services/formPayment.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          // Respuesta del servidor
+          console.log('Email sent successfully');
+        } else {
+          // Manejo de errores
+          console.error('Error during email sending: ' + xhr.statusText);
+        }
+      }
+    };
+    xhr.onerror = function () {
+      // Manejo de errores de red
+      console.error('Network error during email sending');
+    };
+    // Enviar la dirección de correo electrónico al backend
+    xhr.send("email=" + email);
+  }
+```
+</details>
+
+<details>
+  <summary>PHP Code:</summary>
+
+```php
+<?php
+header("Access-Control-Allow-Origin: *"); 
+header("Access-Control-Allow-Methods: POST");
+header("Content-Type: application/json");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+
+    if (!empty($email)) {
+        $destinatario = $email;
+        $asunto = "New order from Web Code";
+
+        $cuerpoCorreo = "Hello, this is the WebCode team\n";
+        $cuerpoCorreo .= "We sincerely thank you for your purchase with us.\n";
+        $cuerpoCorreo .= "Your order is being processed and will be delivered within the next 24 hours.\n";
+        $cuerpoCorreo .= "We appreciate your trust in our services and hope you enjoy your products.\n";
+        $cuerpoCorreo .= "If you have any further questions or need assistance, feel free to contact us.\n";
+        $cuerpoCorreo .= "Thank you once again for choosing WebCode.\n";
+        $cuerpoCorreo .= "WebCode";
+
+        $remitente = "contact@webcode.intecmedia.com";
+
+        $headers = "From: $remitente";
+
+        if (mail($destinatario, $asunto, $cuerpoCorreo, $headers)) {
+            echo "Email sent successfully";
+        } else {
+            echo "Error sending email";
+        }
+    } else {
+        echo "The email address was not provided correctly.";
+    }
+} else {
+    http_response_code(405); 
+    echo "Method not allowed";
+}
+?>
+```
+</details>
 
 ## Gallery:
 # WebCode Gallery Section
