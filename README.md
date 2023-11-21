@@ -595,12 +595,15 @@ All the work has gone through several branches of work, the main one being `feat
 <br>
   <ul>
     
-  <li>Manu <code>home_Manu</code> : encargado de la seccion nuestros servicios e implentacion de opiniones, también resolucion de bugs
+  <li>
+    Manu <code>home_Manu</code>: in charge of the "Our Services" section and implementation of opinions, also bug resolution.
     <ul>
         <li>Our services</li>
-        <li>Opiniones</li>
-      </ul> 
-  </li>
+        <li>Opinions</li>
+        <li>Bug resolution</li>
+    </ul> 
+</li>
+
 
 
 <br>
