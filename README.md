@@ -665,7 +665,7 @@ To bring this section to life, we've established a main branch named `feature/st
 
 | More Info about the product               | Opinions                   |
 | ----------------------------------------- | ---------------------------|
-| ![More Info](/src/assets/img/Captura_cap1.png) |![Opinions](/src/assets/img/Captura_cap2.png) |
+| ![More Info](/src/assets/img/cap1.png) |![Opinions](/src/assets/img/cap2.png) |
 
 <br>
   
