@@ -661,13 +661,11 @@ To bring this section to life, we've established a main branch named `feature/st
 
 <br>
 
-![Captura]()
-
 ## More Info products
 
-| More Info about the product               | 
-| ----------------------------------------- | 
-| ![More Info]() |
+| More Info about the product               | Opinions                   |
+| ----------------------------------------- | ---------------------------|
+| ![More Info](/src/assets/img/Captura_cap1.png) |![Opinions](/src/assets/img/Captura_cap2.png) |
 
 <br>
   
