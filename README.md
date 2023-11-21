@@ -653,10 +653,23 @@ To bring this section to life, we've established a main branch named `feature/st
 
 <br>
 
-- **Toni** (branch: `store_Peral`):
-  - 
-  - 
-  - 
+- **Toni** [js enjoyer] (branch: `store_Peral`):
+  - Designed and implemented the HTML structure and styling using CSS for the 'More Info' page, ensuring a user-friendly interface and cohesive visual presentation.
+  - Played a key role in developing the majority of the JavaScript functionality, which is currently undergoing further development due to time constraints.
+  - Proactively identified and resolved performance issues, optimizing code for efficiency and reliability.
+  - Collaborated closely with Carlos to integrate his contributions with the 'More Info' section. This involved refining certain elements of his code, particularly enhancing the button functionalities for seamless navigation between different sections of the               application.
+
+<br>
+
+![Captura]()
+
+## More Info products
+
+| More Info about the product               | 
+| ----------------------------------------- | 
+| ![More Info]() |
+
+<br>
   
 - **Miguel** (branch: `store_Miguel`):
   - 
