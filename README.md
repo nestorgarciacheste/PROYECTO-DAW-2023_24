@@ -23,7 +23,8 @@
 </table>
 
 
-### HOW TO INSERT THE HEADER AND FOOTER
+
+### TO OUR DEVELOPERS: HOW TO INSERT THE HEADER AND FOOTER
 
 To insert the header and footer to each page u need to insert this in the js file:
 ~~~
