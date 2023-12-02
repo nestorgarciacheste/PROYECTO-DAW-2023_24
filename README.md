@@ -23,40 +23,6 @@
 </table>
 
 
-
-### TO OUR DEVELOPERS: HOW TO INSERT THE HEADER AND FOOTER
-
-To insert the header and footer to each page u need to insert this in the js file:
-~~~
-document.addEventListener("DOMContentLoaded", function () {
-    const headerContainer = document.getElementById("header-container");
-    const footerContainer = document.getElementById("footer-container");
-    fetch("../../header_footer/html/header.html")
-        .then(response => response.text())
-        .then(data => {
-            headerContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Error al cargar el header:", error);
-        });
-    fetch("../../header_footer/html/footer.html")
-        .then(response => response.text())
-        .then(data => {
-            footerContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Error al cargar el footer:", error);
-        });
-});
-~~~
-
-And u need this 2 lines in your html:
-
-~~~
-    <header id="header-container"></header>
-    <footer id="footer-container"></footer>
-~~~
-
 # WebCode
 Our **WebCode website** is a platform where the client can acquire web services and products. Therefore, users can obtain not only knowledge about websites and their maintenance but also acquire their own webpage.
 
@@ -883,6 +849,41 @@ To implement this section, we have created a main branch named `features_gallery
   | ![CSS Code](/src/assets/img/codigoGalleryResponsive.PNG) | ![Desktop View](/src/assets/img/vistaOrdenador.PNG) | ![iPad View](/src/assets/img/vistaIpad.PNG) | ![Mobile View](/src/assets/img/vistaMovil.PNG) |
 
 - The team collectively worked on the development of TopBar and Footer, providing navigation links to different pages, a search bar, and user profile information. The Footer also includes links to social media platforms, such as Facebook, Instagram, and LinkedIn.
+
+
+### TO OUR DEVELOPERS: HOW TO INSERT THE HEADER AND FOOTER
+
+To insert the header and footer to each page u need to insert this in the js file:
+~~~
+document.addEventListener("DOMContentLoaded", function () {
+    const headerContainer = document.getElementById("header-container");
+    const footerContainer = document.getElementById("footer-container");
+    fetch("../../header_footer/html/header.html")
+        .then(response => response.text())
+        .then(data => {
+            headerContainer.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error al cargar el header:", error);
+        });
+    fetch("../../header_footer/html/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            footerContainer.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error al cargar el footer:", error);
+        });
+});
+~~~
+
+And u need this 2 lines in your html:
+
+~~~
+    <header id="header-container"></header>
+    <footer id="footer-container"></footer>
+~~~
+
 
 
 
