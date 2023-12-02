@@ -1,4 +1,27 @@
-# PROYECTO-DAW-2023_24
+# PROJECT-DAW-2023_24
+
+### HOW TO RUN OUR WEBSITE ON YOUR PC
+1. Install [Node.js](https://nodejs.org/en) in your computer.
+2. Download GIT [GIT](https://git-scm.com/downloads) and get this repository using `git clone "url of the project"`.
+3. In **Visual Studio Code** (or the code editor you prefer), inside the project's directory, you have to run these commands to install all the dependecies you need: <br>
+    `npm install -g npm"` <br>
+    `npm install bootstrap"` <br>
+    `npm install auth0"`
+   
+    ![npm](https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/e7a4000e-bc6a-44cc-940d-d524584d43c2)
+
+4. Lastly, you can download in Visual Studio Code the **Live Server** extension, to see the project properly.
+   <table>
+    <tr>
+        <th>Extension</th>
+        <th>WebCode's website</th>
+    </tr>
+    <tr>
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b15074ea-b162-4047-8c05-e0575a5f6779"></td>        
+        <td> <img width ="500px" src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b19ee5ae-7480-462f-ab15-e34560312a7c"</td>        
+    </tr>
+</table>
+
 
 ### HOW TO INSERT THE HEADER AND FOOTER
 
